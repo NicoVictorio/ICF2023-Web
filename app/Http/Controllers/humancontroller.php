@@ -7,4 +7,5 @@ use Illuminate\Http\Request;
 class humancontroller extends Controller
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
+    print "hello world";
 }
