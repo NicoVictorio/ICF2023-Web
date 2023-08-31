@@ -20,3 +20,5 @@ Route::get('/', function () {
 Route::get('/pos', function () {
     return view('pos');
  });
+
+ Route::post('/pos',[posController::class,'simpanData'])->name('simpan.data');
