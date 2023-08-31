@@ -9,12 +9,12 @@
 </head>
 <body>
     <p><label>Nama: </label><input type="text" name = "namaPengunjung" id ="pengunjung">
-    <input type="submit" value="Submit" name="submit"></p>
+    <input type="submit" value="Submit" name="submit" onclick="simpan()"></p>
 
     <script type="text/javascript">
         const simpan =() => {
             let nama = $('#pengunjung').val();
-            let idPos = <?php $_GET("idPos"); ?>;
+            let idPos = "<?php $id_Pos = $_GET["idPos"]; echo $id_Pos;?>";
 
 
             $.ajax({
@@ -28,7 +28,7 @@
 
                 success: function(data)
                 {
-                    alert("Terimakasih sudah mengunjungi pos ini !")
+                    alert(data.message)
                 }
             })
         }
