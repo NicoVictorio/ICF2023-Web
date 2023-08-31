@@ -14,13 +14,10 @@ class posController extends Controller{
         DB::table('logs')->insert(array(
             'nama' => $nama,
             'Pos_id' => $idPos,
-
         ));
 
         return response()->json(array(
             'message'=>'success',
         ),200);
     }
-
-
 }

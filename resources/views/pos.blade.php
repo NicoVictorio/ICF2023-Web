@@ -16,7 +16,6 @@
             let nama = $('#pengunjung').val();
             let idPos = "<?php $id_Pos = $_GET["idPos"]; echo $id_Pos;?>";
 
-
             $.ajax({
                 type:"POST",
                 url:"{{route('simpan.data')}}",
@@ -32,6 +31,6 @@
                 }
             })
         }
-        </script>
+    </script>
 </body>
 </html>
