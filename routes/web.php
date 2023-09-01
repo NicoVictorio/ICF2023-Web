@@ -14,11 +14,31 @@ use App\Http\Controllers\posController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view('home');
+})->name('home');
+
+Route::get('/galery', function() {
+    return view('galery');
+})->name('galery');
+
+Route::get('/faq', function() {
+    return view('faq');
+})->name('faq');
+
+Route::get('/map', function() {
+    return view('map');
+})->name('map');
+
+Route::get('/treasure', function() {
+    return view('treasure');
+})->name('treasure');
+
+Route::get('/event', function() {
+    return view('event');
+})->name('event');
 
 Route::get('/pos', function () {
     return view('pos');
- });
+});
 
- Route::post('/pos',[posController::class,'simpanData'])->name('simpan.data');
+Route::post('/pos',[posController::class,'simpanData'])->name('simpan.data');
