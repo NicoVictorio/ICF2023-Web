@@ -70,6 +70,25 @@
             aspect-ratio:1/1;
             border-radius: 20%;
         }
+        .img-border-logo {
+            background: white;
+            width: 30px;
+            height: 30px; 
+            border-radius: 50%; 
+            position: relative;
+        }
+
+        .img-border-logo img{
+            width: 20px;
+            height: 20px; 
+            object-fit: contain;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            aspect-ratio:1/1;
+            border-radius: 20%;
+        }
     </style>
 </head>
 
@@ -131,6 +150,37 @@
                         </div>
                         <br>
                     </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <h5 class="mb-3" style="letter-spacing: 2px; color: white;">Contact Us</h5>
+                        <ul class="list-unstyled mb-0">
+                            <li class="mb-1">
+                            <div class="brand-text mb-0 d-flex m-0">
+                            <div class= "img-border-logo">
+                                <img src="{{ asset('assets') }}/img/whatsapp.png">
+                            </div>
+                                <a style="color: white;">081216339241 (Gabriel)</a>
+                            </li>
+                            <li class="mb-1">
+                                <a style="color: white;">087780452066(Aurel)</a>
+                            </li>
+                            <li class="mb-1">
+                            <div class= "img-border-logo">
+                                <img src="{{ asset('assets') }}/img/mail.png">
+                            </div>
+                                <a style="color: white;">icfubaya@gmail.com</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <h5 class="mb-3" style="letter-spacing: 2px; color: white;">Follow Us</h5>
+                        <ul class="list-unstyled mb-0">
+                            <li class="mb-1">
+                                <a href ="https://www.instagram.com/icfubaya2023/" target ="_blank" style="color: white;">icfubaya2023</a>
+                            </li>
+                        </ul>
+                    </div>
+
                     <p class="mt-2">
                         <span class="float-md-start d-block d-md-inline-block mt-25 ">Copyright © ICF 2023 Committee</span>
                     </p>
