@@ -23,7 +23,7 @@
 
             success: function(data)
             {
-                alert("Terimakasih karena telah mengunjungi pos" + idPos + "Silahkan tukarkan ini kepada panitia.")
+                alert("Terima kasih karena telah mengunjungi pos " + idPos + ". Tunjukan ini ke penjaga pos untuk Wheel Spin.")
             }
             })
         }

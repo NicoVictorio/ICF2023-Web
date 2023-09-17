@@ -32,9 +32,20 @@
     <style type="text/css">
         @import url('https://fonts.cdnfonts.com/css/montserrat');
 
+        * {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        /* NAVBAR */
+        .navbar {
+            background-color: #E83434;
+        }
+
         .navbar-brand {
             font-family: 'Montserrat', sans-serif;
             font-weight: bold;
+            padding-left: 2%;
+            margin: 0;
         }
 
         .navbar-collapse {
@@ -45,49 +56,94 @@
         }
 
         .nav-item {
-            margin: 0px 10px;
+            margin: 0px 30px;
         }
 
-        .footer-left .header {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: bold;
+        .nav-link {
+            color: white;
         }
-        .img-border{
+
+        .navbar-toggler {
+            border: none;
+        }
+
+        .container-fluid img {
+            height: 30px;
+            margin-right: 2%;
+            margin-left: 5%;
+        }
+
+        /* FOOTER */
+        .footer-container {
+            background-color: #E83434;
+            width: 100vw;
+        }
+
+        .img-border {
             background: white;
             width: 60px;
-            height: 60px; 
-            border-radius: 50%; 
+            height: 60px;
+            border-radius: 50%;
             position: relative;
         }
-        .img-border img{
+
+        .img-border img {
             width: 40px;
-            height: 40px; 
+            height: 40px;
             object-fit: contain;
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            aspect-ratio:1/1;
+            aspect-ratio: 1/1;
             border-radius: 20%;
         }
+
         .img-border-logo {
             background: white;
             width: 30px;
-            height: 30px; 
-            border-radius: 50%; 
+            height: 30px;
+            border-radius: 50%;
             position: relative;
         }
 
-        .img-border-logo img{
+        .img-border-logo img {
             width: 20px;
-            height: 20px; 
+            height: 20px;
             object-fit: contain;
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            aspect-ratio:1/1;
+            aspect-ratio: 1/1;
             border-radius: 20%;
+        }
+
+        .contact-us {
+            transform: translateX(-20%);
+        }
+
+        @media screen and (max-width:768px) {
+            #maskot {
+                display: none;
+            }
+
+            .vr {
+                display: none;
+            }
+
+            .contact-us {
+                transform: translateX(0%) !important;
+                padding: 0;
+            }
+
+            .follow-us {
+                padding: 0;
+            }
+            .footer-container p{
+                padding: 10% 0 0 0;
+
+            }
         }
     </style>
 </head>
@@ -95,97 +151,109 @@
 <body>
     <div id="app">
         {{-- Navbar --}}
-        <nav class="navbar navbar-expand-sm navbar-dark bg-danger" aria-label="Third navbar example">
+        <nav class="navbar navbar-expand-md" aria-label="Third navbar example">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">ICF 2023</a>
+                <a class="navbar-brand text-white" href="{{ route('home') }}">ICF 2023</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarsExample03" aria-controls="navbarsExample03" aria-expanded="false"
                     aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                    <img src="{{ asset('assets') }}/img/iconMaskot.png">
                 </button>
-
                 <div class="collapse navbar-collapse w-100" id="navbarsExample03">
                     <ul class="navbar-nav mb-2 mb-sm-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            <a class="nav-link" aria-current="page" href="{{ route('home') }}">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Galery</a>
+                            <a class="nav-link" aria-current="page" href="{{ route('gallery') }}">Gallery</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">FAQ</a>
+                            <a class="nav-link" aria-current="page" href="{{ route('faq') }}">FAQ</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Map</a>
+                            <a class="nav-link" aria-current="page" href="{{ route('map') }}">Map</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Treasure</a>
+                            <a class="nav-link" aria-current="page" href="{{ route('treasure') }}">Treasure</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Event</a>
+                            <a class="nav-link" aria-current="page" href="{{ route('event') }}">Event</a>
                         </li>
                     </ul>
                 </div>
+                <img id="maskot" src="{{ asset('assets') }}/img/iconMaskot.png">
             </div>
         </nav>
         {{-- End Navbar --}}
+
         <main class="">
             @yield('content')
         </main>
+
         {{-- Footer --}}
-        <div class="footer-container pt-5 bg-danger text-white">
-            <footer class="footer-bs mt-3">
-                <div class="row w-100 p-5">
-                    <div class="col-md-5 footer-brand animated fadeInLeft">
-                        <h2 style="">ICF 2023</h2>
-                        <p>Sebuah festival yang memamerkan hasil-hasil karya mahasiswa dari Informatika Universitas Surabaya.</p>
-                        <br>
-                        <div class="brand-text mb-0 d-flex m-0">
-                            <div class= "img-border">
-                                <img src="{{ asset('assets') }}/img/logo-ubaya.png">
+        <div class="footer-container text-white">
+            <div class="row w-100 p-5 m-0">
+                <div class="col-md-5 footer-left">
+                    <h4><b>ICF 2023</b></h4>
+                    <p>Sebuah festival yang memamerkan hasil-hasil karya
+                        mahasiswa dari Informatika Universitas Surabaya.</p>
+                    <br>
+                    <div class="mb-0 d-flex m-0">
+                        <div class="img-border">
+                            <img src="{{ asset('assets') }}/img/logo-ubaya.png">
+                        </div>
+                        <div class="img-border mx-2">
+                            <img src="{{ asset('assets') }}/img/logo-icf.png">
+                        </div>
+                    </div>
+                    <br>
+                </div>
+                <div class="col-md-2">
+                    <div class="d-flex justify-content-center" style="height: 90%;">
+                        <div class="vr" style="width:0.1rem; opacity:100%;">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5 footer-right">
+                    <div class="row">
+                        <div class="contact-us col-6">
+                            <h4 class="mb-3"><b>Contact Us</b></h4>
+                            <div class="row">
+                                <div class="col-2 p-0">
+                                    <img class="w-100 p-md-0" src="{{ asset('assets') }}/img/whatsapp.png">
+                                </div>
+                                <div class="col-10">
+                                    <a style="color: white;">081216339241 (Gabriel)</a>
+                                    <a style="color: white;">087780452066 (Aurel)</a>
+                                </div>
                             </div>
-                            <div class= "img-border mx-2">
-                                <img src="{{ asset('assets') }}/img/logo-icf.png">
+                            <br>
+                            <div class="row">
+                                <div class="col-2 p-0">
+                                    <img class="w-100" src="{{ asset('assets') }}/img/email.png">
+                                </div>
+                                <div class="col-10">
+                                    <a style="color: white;">icfubaya@gmail.com</a>
+                                    <br>
+                                </div>
                             </div>
                         </div>
-                        <br>
-                    </div>
-                    <div class="col-lg-3 col-md-6 mb-4">
-                        <h5 class="mb-3" style="letter-spacing: 2px; color: white;">Contact Us</h5>
-                        <ul class="list-unstyled mb-0">
-                            <li class="mb-1">
-                            <div class="brand-text mb-0 d-flex m-0">
-                            <div class= "img-border-logo">
-                                <img src="{{ asset('assets') }}/img/whatsapp.png">
+                        <div class="follow-us col-6">
+                            <h4 class="mb-3""><b>Follow Us</b></h4>
+                            <div class=" row">
+                                <div class="col-2 p-0">
+                                    <img class="w-100" src="{{ asset('assets') }}/img/instagram.png">
+                                </div>
+                                <div class="col-10">
+                                    <a href=" https://www.instagram.com/icfubaya2023/" target="_blank"
+                                        style="color: white;">@icfubaya2023</a>
+                                </div>
                             </div>
-                                <a style="color: white;">081216339241 (Gabriel)</a>
-                            </li>
-                            <li class="mb-1">
-                                <a style="color: white;">087780452066(Aurel)</a>
-                            </li>
-                            <li class="mb-1">
-                            <div class= "img-border-logo">
-                                <img src="{{ asset('assets') }}/img/mail.png">
-                            </div>
-                                <a style="color: white;">icfubaya@gmail.com</a>
-                            </li>
-                        </ul>
+                        </div>
                     </div>
-
-                    <div class="col-lg-3 col-md-6 mb-4">
-                        <h5 class="mb-3" style="letter-spacing: 2px; color: white;">Follow Us</h5>
-                        <ul class="list-unstyled mb-0">
-                            <li class="mb-1">
-                                <a href ="https://www.instagram.com/icfubaya2023/" target ="_blank" style="color: white;">icfubaya2023</a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <p class="mt-2">
-                        <span class="float-md-start d-block d-md-inline-block mt-25 ">Copyright © ICF 2023 Committee</span>
-                    </p>
                 </div>
-            </footer>
+                <p class="m-0">Copyright © ICF 2023 Committee</p>
+            </div>
         </div>
         {{-- End Footer --}}
     </div>
