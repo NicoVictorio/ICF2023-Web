@@ -5,7 +5,6 @@
         padding: 0;
         margin: 0;
         height: 100%;
-        width: 100vw;
         background: linear-gradient(to right,
                 #EE6767 0%,
                 #EE6767 50%,
@@ -47,7 +46,7 @@
         width: 30vw;
     }
 </style>
-<div class="container-treasure">
+<div class="container-treasure w-100">
     <div class="text-top">
         <h1 class="text-white m-0">COMING</h1>
         <h1 class="text-white m-0">SOON</h1>

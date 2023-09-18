@@ -76,7 +76,6 @@
         /* FOOTER */
         .footer-container {
             background-color: #E83434;
-            width: 100vw;
         }
 
         .img-border {
@@ -142,7 +141,6 @@
             }
             .footer-container p{
                 padding: 10% 0 0 0;
-
             }
         }
     </style>
