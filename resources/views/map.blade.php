@@ -59,5 +59,4 @@
         <h1 class="text-white m-0 d-flex justify-content-end">SOON</h1>    
     </div>
 </div>
-@yield('content')
 @endsection

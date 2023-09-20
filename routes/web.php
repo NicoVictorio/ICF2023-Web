@@ -41,4 +41,8 @@ Route::get('/pos', function () {
     return view('pos');
 });
 
+Route::get('/regismlbb', function () {
+    return view('regis-mlbb');
+});
+
 Route::post('/pos',[posController::class,'simpanData'])->name('simpan.data');
