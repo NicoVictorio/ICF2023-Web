@@ -82,7 +82,7 @@
         border-radius: 30px;
         display: flex;
         padding: 5px;
-        width: 40%;
+        width: 300px;
         height: 60px;
     }
 
@@ -342,17 +342,12 @@
 
         <div class="spacer"></div>
 
-
-
-
-
-
-
         <div class="competition m-0 p-0">
             <div class="judul d-flex justify-content-center">
                 <h1 class="text-white m-0 p-0"><b>COMPETITIONS</b></h1>
             </div>
             <br><br>
+
             <div class="competition-cards">
                 <div class="row w-100 p-5 m-0">
                     <div class="label">
@@ -388,7 +383,46 @@
                     </div>
                 </div>      
             </div>
+            <br><br>
+
+            <div class="competition-cards">
+                <div class="row w-100 p-5 m-0">
+                    <div class="label">
+                        <div class="row">
+                            <div class="col-md-1 free">
+                                <img src="{{ asset('assets') }}/img/free.png">
+                                <h6 class="m-0" style="color: white;">Free</h6>
+                            </div>
+                            <div class="col-md-2 certificate">
+                                <img src="{{ asset('assets') }}/img/certificate.png">
+                                <h6 class="m-0" style="color: white;">E-Certificate</h6>
+                            </div>  
+                            <div class="col-md-2 rewards">
+                                <img src="{{ asset('assets') }}/img/rewards.png">
+                                <h6 class="m-0" style="color: white;">Rewards</h6>
+                            </div>    
+                        </div>
+                    </div>
+                </div>
+                <div class="row w-100 p-5 m-0 pt-0">
+                    <div class="judul">
+                        <h1 class="text-white"><b>Mobile Legends: Bang Bang</b></h1>
+                    </div>
+                    <div class="description text-white">
+                        <p>05 November 2023</p>
+                        <p>Mobile Legends: Bang Bang adalah ajang kompetisi e-sport bagi para pemain game mobile. Dalam kompetisi ini, pemain akan bersaing dalam tim untuk bersaing strategi, keterampilan, dan keahlian mereka dalam pertempuran tim 5 vs 5 yang intens. Untuk informasi lebih lanjut terdapat di mechanisms.</p>
+                    </div>
+                </div>
+                <div class="row w-100 p-5 m-0" id="btn-regist">
+                    <div class="col-6 registration m-0 p-0 mr-5">
+                        <button class="border border-white text-grey btn-regist fs-3 d-inline-block justify-content-center align-items-center me-3"><b>Registration</b></button>
+                        <button class="border border-white text-grey btn-regist fs-3 d-inline-block justify-content-center align-items-center"><b>Mechanisms</b></button>
+                    </div>
+                </div>      
+            </div>
         </div>
+        
+        <div class="spacer"></div>
     </div>
 </div>
 @endsection
