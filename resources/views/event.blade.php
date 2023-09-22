@@ -228,7 +228,7 @@
                 </div>
                 <div class="row w-100 p-5 m-0 pt-0">
                     <div class="judul">
-                        <h1 class="text-white"><b>How to be Main Character</b></h1>
+                        <h1 class="text-white"><b>How to be the Main Character</b></h1>
                     </div>
                     <div class="description text-white">
                         <p>03 November 2023 || Shannia Olivia</p>
@@ -324,7 +324,7 @@
                 </div>
                 <div class="row w-100 p-5 m-0 pt-0">
                     <div class="judul">
-                        <h1 class="text-white"><b>Behind the Production Gamecom</b></h1>
+                        <h1 class="text-white"><b>Behind the Production of Gamecom Team</b></h1>
                     </div>
                     <div class="description text-white">
                         <p>05 November 2023 || Josevina Gaby</p>

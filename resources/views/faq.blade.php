@@ -1,9 +1,6 @@
 @extends('layouts.app')
-
 @section('content')
 <style type="text/css">
-    @import url('https://fonts.cdnfonts.com/css/montserrat');
-
 body
 {
     display: flex;

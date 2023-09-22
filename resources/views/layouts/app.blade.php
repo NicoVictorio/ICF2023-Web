@@ -25,6 +25,9 @@
         integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous">
+    // <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/hoomanbahreini/bootstrap-half-and-quarter-grid/fractional-grid.css">
+    // <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/hoomanbahreini/bootstrap-half-and-quarter-grid/fractional-grid.min.css">
+         
     </script>
     {{-- CSS --}}
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -122,11 +125,13 @@
             transform: translateX(-20%);
         }
 
-        @media screen and (max-width:768px) {
+        @media(max-width:992px) {
             #maskot {
                 display: none;
             }
+        }
 
+        @media screen and (max-width:768px) {
             .vr {
                 display: none;
             }
@@ -139,7 +144,8 @@
             .follow-us {
                 padding: 0;
             }
-            .footer-container p{
+
+            .footer-container p {
                 padding: 10% 0 0 0;
             }
         }
@@ -149,9 +155,9 @@
 <body>
     <div id="app">
         {{-- Navbar --}}
-        <nav class="navbar navbar-expand-md" aria-label="Third navbar example">
+        <nav class="navbar navbar-expand-lg" aria-label="Third navbar example">
             <div class="container-fluid">
-                <a class="navbar-brand text-white" href="{{ route('home') }}">ICF 2023</a>
+                <a class="navbar-brand text-white fs-3" href="{{ route('home') }}">ICF 2023</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarsExample03" aria-controls="navbarsExample03" aria-expanded="false"
                     aria-label="Toggle navigation">
@@ -246,14 +252,14 @@
                                     <a href=" https://www.instagram.com/icfubaya2023/" target="_blank"
                                         style="color: white;">@icfubaya2023</a>
                                 </div>
-                            </div>
                         </div>
                     </div>
                 </div>
-                <p class="m-0">Copyright © ICF 2023 Committee</p>
             </div>
+            <p class="m-0">Copyright © ICF 2023 Committee</p>
         </div>
-        {{-- End Footer --}}
+    </div>
+    {{-- End Footer --}}
     </div>
 </body>
 

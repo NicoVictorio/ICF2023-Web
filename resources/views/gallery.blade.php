@@ -54,9 +54,12 @@
 </style>
 <div class="container">
     <div class="title">
-        <ul>
+        <h1><b>
+            INFORMATICS <font style="color:#E83434">CREATIVE</font> <font style="color: #5CABDF">FESTIVAL 2022</font>
+        </b></h1>
+        {{-- <ul>
             <l1>INFORMATICS  </l1><l2 style="color:#ee6767">  CREATIVE </l2><l3 style="color:#85c0e7"> FESTIVAL 2022</l3>
-        </ul>
+        </ul> --}}
     </div>
     <div class="photo-section">
         <div class="col-lg-5">
