@@ -22,6 +22,19 @@
         width: auto;
     }
 
+    .spacer-2 {
+        height: 0px;
+        width: 5%;
+    }
+
+    .container-bubble img {
+        height: 60%;
+    }
+
+    .container-bubble2 img {
+        height: 60%;
+    }
+
     .competition .card {
         border-radius: 10px;
         background-color: #5CABDF;
@@ -30,11 +43,13 @@
     .seminar-cards .card-left {
         border-radius: 15px;
         border: 2px solid #E83434;
+        width: 47.5%;
     }
 
-    .seminar-cards .card-right {
+    .seminar-cards .card-center {
         border-radius: 15px;
         border: 2px solid #E83434;
+        width: 47.5%;
     }
 
     .seminar-cards .details {
@@ -49,6 +64,16 @@
         background: linear-gradient(to bottom right, white, #E83434);
     }
 
+    .timeline-card{
+        background-color: #5CABDF;
+        color: #223883;
+        height: auto;
+        border-radius: 30px;
+        padding: 15px;
+        margin: 10px;
+        width: 31%;
+    }
+
     @media (max-width: 768px) {
         .spacer {
             height: 100px;
@@ -57,6 +82,11 @@
         .spacer-1 {
             height: 70px;
             width: auto;
+        }
+
+        .spacer-2{
+            height: 70px;
+            width: 100%;
         }
 
         .container-1 {
@@ -121,7 +151,7 @@
     {{-- Competitions --}}
     <div class="container-1 row my-5 competition">
         <div class="col-lg-12 d-flex flex-wrap justify-content-end p-0">
-            <h1><b>COMPETITIONS</b></h1>
+            <h1 style="margin-right: 5%;"><b>COMPETITIONS</b></h1>
         </div>
         <div class="col-lg-5 col-sm-12 p-0 d-flex flex-wrap justify-content-start">
             <img class="fix-image prize" src="{{ asset('assets') }}/img/maskot2.png" style="max-height: 800px;">
@@ -174,8 +204,8 @@
             <h2 class="m-0"><b>SEMINARS</b></h2>
         </div>
         <div class="col-12 p-0 mb-0 mt-4 seminar-cards">
-            <div class="row m-0">
-                <div class="col-lg-5 card-left p-0">
+            <div class="row m-0 justify-content-center">
+                <div class="col-lg-6 card-left p-0">
                     <div class="row m-0 h-100">
                         <div class="col-6 details p-0" style="position: relative;">
                             <div class="details ps-4 pt-4">
@@ -199,8 +229,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-1"></div>
-                <div class="col-lg-5 card-left p-0">
+                <div class="col-1 spacer-2"></div>
+                <div class="col-lg-6 card-left p-0">
                     <div class="row m-0 h-100">
                         <div class="col-6 details p-0" style="position: relative;">
                             <div class="details ps-4 pt-4">
@@ -226,10 +256,10 @@
                 </div>
             </div>
 
-            <div class="spacer"></div>
+            <div class="spacer-1"></div>
 
-            <div class="row m-0">
-                <div class="col-lg-5 card-left p-0">
+            <div class="row m-0 justify-content-center">
+                <div class="col-lg-6 card-left p-0">
                     <div class="row m-0 h-100">
                         <div class="col-6 details p-0" style="position: relative;">
                             <div class="details ps-4 pt-4">
@@ -253,8 +283,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-1"></div>
-                <div class="col-lg-5 card-left p-0">
+                <div class="col-1 spacer-2"></div>
+                <div class="col-lg-6 card-left p-0">
                     <div class="row m-0 h-100">
                         <div class="col-6 details p-0" style="position: relative;">
                             <div class="details ps-4 pt-4">
@@ -280,10 +310,10 @@
                 </div>
             </div>
 
-            <div class="spacer"></div>
+            <div class="spacer-1"></div>
 
-            <div class="row m-0">
-                <div class="col-lg-5 card-left p-0">
+            <div class="row m-0 justify-content-center">
+                <div class="col-lg-5 card-center p-0">
                     <div class="row m-0 h-100">
                         <div class="col-6 details p-0" style="position: relative;">
                             <div class="details ps-4 pt-4">
@@ -316,39 +346,39 @@
     <div class="spacer"></div>
 
     {{-- Others --}}
-    <div class="container-others" style="width:100%; height:auto;">
+    <div class="container-others" style="width:100%;">
         <div class="row m-0 p-0">
-            <div class="col-xl-2 p-0">
-                <img src="{{ asset('assets') }}/img/bubble2.png">
-            </div>
-            <div class="col-xl-8 p-0" style="text-align: center;">
-                <div class="col-lg-12 judul">
-                    <h1 class="m-0 p-0" style="display: flex; flex:wrap; justify-content:center;"><b>OTHERS</b></h1>
-                    <br>
-                    <br>
+            <div class="col-xl-10 p-0">
+                <div class="row m-0 p-0" style="height: 80px;">
+                    <div class="col-xl-2 p-0"></div>
+                    <div class="col-xl-10 p-0 text-center">
+                        <h1 class="m-0 p-0"><b>OTHERS</b></h1>
+                    </div>
                 </div>
-                <div class="col-xl-12 content">
-                    <h2>Dalam acara ini, kamu akan menemukan beragam hiburan seru yang tak bisa dilewatkan! <b>
-                            <font color="#E83434">Mini games</font>
-                        </b> menghibur,
-                        <b>
-                            <font color="#E83434">board game</font>
-                        </b> mengasyikkan, dan jangan lewatkan kesempatan memenangkan <b>
-                            <font color="#E83434">doorprize</font>
-                        </b> menarik dari kedua game ini.
-                        Ayo bergabung dan ramaikan acara tak terlupakan ini!
-                    </h2>
+
+                <div class="row m-0 p-0">
+                    <div class="col-xl-2 p-0 container-bubble2 d-flex align-items-center justify-content-center">
+                        <img src="{{ asset('assets') }}/img/bubble2.png">
+                    </div>
+                    <div class="col-xl-10 p-0 text-center">
+                        <h2>Dalam acara ini, kamu akan menemukan beragam hiburan seru yang tak bisa dilewatkan! <b>
+                                    <font color="#E83434">Mini games</font>
+                                </b> menghibur,
+                                <b>
+                                    <font color="#E83434">board game</font>
+                                </b> mengasyikkan, dan jangan lewatkan kesempatan memenangkan <b>
+                                    <font color="#E83434">doorprize</font>
+                                </b> menarik dari kedua game ini.
+                                Ayo bergabung dan ramaikan acara tak terlupakan ini!</h2>
+                    </div>
                 </div>
             </div>
-            <div class="col-xl-2 p-0">
+            <div class="col-xl-2 p-0 container-bubble text-center">
                 <img src="{{ asset('assets') }}/img/bubble.png">
             </div>
         </div>
     </div>
     {{-- End of Others --}}
-
-    <div class="spacer"></div>
-    <div class="spacer"></div>
 
     {{-- Timeline --}}
     <div class="container-timeline">
@@ -356,17 +386,49 @@
             <div class="col-12 text-center">
                 <h1><b>TIMELINE</b></h1>
             </div>
-            <div class="col-lg-4">
-
-            </div>
-            <div class="col-lg-4">
-                
-            </div>
-            <div class="col-lg-4">
-                
+            <div class="row m-0 p-0 d-flex justify-content-center">
+                <div class="col-lg-4 timeline-card text-center">
+                    <h1><b>DAY 1</b></h1>
+                    <h3>03 November 2023</h3>
+                    <div style="margin: 10%;">
+                       <ul>
+                            <li><h4><b>14.00-14.50</b></h4></li>
+                            <h5>Chat GPT allies or enemies</h5>
+                            <li><h4><b>5.00-16.00</b></h4></li>
+                            <h5>How to be Main Character</h5>
+                        </ul> 
+                    </div>
+                </div>
+                <div class="col-lg-4 timeline-card text-center">
+                    <h1><b>DAY 2</b></h1>
+                    <h4>04 November 2023</h4>
+                    <div style="margin: 10%;">
+                       <ul>
+                            <li><h4><b>12.00-13.00</b></h4></li>
+                            <h5>UI/UX in Digital Product</h5>
+                            <li><h4><b>14.00-15.00</b></h4></li>
+                            <h5>Navigating the Data Jungle</h5>
+                        </ul> 
+                    </div>
+                </div>
+                <div class="col-lg-4 timeline-card text-center">
+                    <h1><b>DAY 3</b></h1>
+                    <h4>05 November 2023</h4>
+                    <div style="margin: 10%;">
+                       <ul>
+                            <li><h4><b>13.00-14.00</b></h4></li>
+                            <h5>Behind the Production Gamecom</h5>
+                            <li><h4><b>14.00-16.00</b></h4></li>
+                            <h5>Gamecom TeamBooth Exclusive</h5>
+                        </ul> 
+                    </div>
+                </div>
             </div>
         </div>
     </div>
     {{-- End of Timeline --}}
+
+    <div class="spacer"></div>
+    <div class="spacer"></div>
 </div>
 @endsection
