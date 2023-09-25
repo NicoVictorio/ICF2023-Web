@@ -231,7 +231,7 @@
                         {{-- <div class="col-1"></div> --}}
                         <div class="col-6 p-3">
                             <div class="border foto p-3">
-                                <img src="{{ asset('assets') }}/img/vincent.jpg" style="width:100%; height:100%;">
+                                <img src="{{ asset('assets') }}/img/vincentius.jpg" style="width:100%; height:100%;">
                             </div>
                         </div>
                     </div>
