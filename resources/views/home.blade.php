@@ -76,7 +76,7 @@
         width: 31%;
     }
 
-    .background-location{
+    .background-location {
         background-color: #E83434;
         border-radius: 3%;
     }
@@ -399,48 +399,30 @@
                     <h1><b>DAY 1</b></h1>
                     <h3>03 November 2023</h3>
                     <div style="margin: 10%;">
-                        <ul>
-                            <li>
-                                <h4><b>14.00-14.50</b></h4>
-                            </li>
-                            <h5>Chat GPT allies or enemies</h5>
-                            <li>
-                                <h4><b>5.00-16.00</b></h4>
-                            </li>
-                            <h5>How to be Main Character</h5>
-                        </ul>
+                        <h4><b>14.00-14.50</b></h4>
+                        <h5>Chat GPT allies or enemies</h5>
+                        <h4><b>5.00-16.00</b></h4>
+                        <h5>How to be Main Character</h5>
                     </div>
                 </div>
                 <div class="col-lg-4 timeline-card text-center">
                     <h1><b>DAY 2</b></h1>
                     <h4>04 November 2023</h4>
                     <div style="margin: 10%;">
-                        <ul>
-                            <li>
-                                <h4><b>12.00-13.00</b></h4>
-                            </li>
-                            <h5>UI/UX in Digital Product</h5>
-                            <li>
-                                <h4><b>14.00-15.00</b></h4>
-                            </li>
-                            <h5>Navigating the Data Jungle</h5>
-                        </ul>
+                        <h4><b>12.00-13.00</b></h4>
+                        <h5>UI/UX in Digital Product</h5>
+                        <h4><b>14.00-15.00</b></h4>
+                        <h5>Navigating the Data Jungle</h5>
                     </div>
                 </div>
                 <div class="col-lg-4 timeline-card text-center">
                     <h1><b>DAY 3</b></h1>
                     <h4>05 November 2023</h4>
                     <div style="margin: 10%;">
-                        <ul>
-                            <li>
-                                <h4><b>13.00-14.00</b></h4>
-                            </li>
-                            <h5>Behind the Production Gamecom</h5>
-                            <li>
-                                <h4><b>14.00-16.00</b></h4>
-                            </li>
-                            <h5>Gamecom TeamBooth Exclusive</h5>
-                        </ul>
+                        <h4><b>13.00-14.00</b></h4>
+                        <h5>Behind the Production Gamecom</h5>
+                        <h4><b>14.00-16.00</b></h4>
+                        <h5>Gamecom TeamBooth Exclusive</h5>
                     </div>
                 </div>
             </div>
@@ -466,9 +448,9 @@
                         <b>V-Junction Lt 3 <br> Ciputra World Surabaya</b>
                     </h4>
                     <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1836.620385866795!2d112.71896786846303!3d-7.293308027074949!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fb8bdc3056ef%3A0xb940ebcd5368b020!2sCiputra%20World%2C%20Gn.%20Sari%2C%20Kec.%20Dukuhpakis%2C%20Surabaya%2C%20Jawa%20Timur!5e0!3m2!1sen!2sid!4v1695630405605!5m2!1sen!2sid"
-                    width="100%" height="83%" style="border:0; border-radius: 3%;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1836.620385866795!2d112.71896786846303!3d-7.293308027074949!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fb8bdc3056ef%3A0xb940ebcd5368b020!2sCiputra%20World%2C%20Gn.%20Sari%2C%20Kec.%20Dukuhpakis%2C%20Surabaya%2C%20Jawa%20Timur!5e0!3m2!1sen!2sid!4v1695630405605!5m2!1sen!2sid"
+                        width="100%" height="83%" style="border:0; border-radius: 3%;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
                 <div class="col-3 container-bubble text-center">
                     <img src="{{ asset('assets') }}/img/bubble.png">
