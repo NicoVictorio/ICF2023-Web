@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\EventController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\posController;
 /*
@@ -46,3 +47,5 @@ Route::get('/regismlbb', function () {
 });
 
 Route::post('/pos',[posController::class,'simpanData'])->name('simpan.data');
+
+Route::post('/seminar-registration', [EventController::class, 'hiddenSeminar'])->name('seminar.name');

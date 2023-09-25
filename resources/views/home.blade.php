@@ -64,7 +64,7 @@
         background: linear-gradient(to bottom right, white, #E83434);
     }
 
-    .timeline-card{
+    .timeline-card {
         background-color: #5CABDF;
         color: #223883;
         height: auto;
@@ -84,7 +84,7 @@
             width: auto;
         }
 
-        .spacer-2{
+        .spacer-2 {
             height: 70px;
             width: 100%;
         }
@@ -362,14 +362,15 @@
                     </div>
                     <div class="col-xl-10 p-0 text-center">
                         <h2>Dalam acara ini, kamu akan menemukan beragam hiburan seru yang tak bisa dilewatkan! <b>
-                                    <font color="#E83434">Mini games</font>
-                                </b> menghibur,
-                                <b>
-                                    <font color="#E83434">board game</font>
-                                </b> mengasyikkan, dan jangan lewatkan kesempatan memenangkan <b>
-                                    <font color="#E83434">doorprize</font>
-                                </b> menarik dari kedua game ini.
-                                Ayo bergabung dan ramaikan acara tak terlupakan ini!</h2>
+                                <font color="#E83434">Mini games</font>
+                            </b> menghibur,
+                            <b>
+                                <font color="#E83434">board game</font>
+                            </b> mengasyikkan, dan jangan lewatkan kesempatan memenangkan <b>
+                                <font color="#E83434">doorprize</font>
+                            </b> menarik dari kedua game ini.
+                            Ayo bergabung dan ramaikan acara tak terlupakan ini!
+                        </h2>
                     </div>
                 </div>
             </div>
@@ -391,36 +392,48 @@
                     <h1><b>DAY 1</b></h1>
                     <h3>03 November 2023</h3>
                     <div style="margin: 10%;">
-                       <ul>
-                            <li><h4><b>14.00-14.50</b></h4></li>
+                        <ul>
+                            <li>
+                                <h4><b>14.00-14.50</b></h4>
+                            </li>
                             <h5>Chat GPT allies or enemies</h5>
-                            <li><h4><b>5.00-16.00</b></h4></li>
+                            <li>
+                                <h4><b>5.00-16.00</b></h4>
+                            </li>
                             <h5>How to be Main Character</h5>
-                        </ul> 
+                        </ul>
                     </div>
                 </div>
                 <div class="col-lg-4 timeline-card text-center">
                     <h1><b>DAY 2</b></h1>
                     <h4>04 November 2023</h4>
                     <div style="margin: 10%;">
-                       <ul>
-                            <li><h4><b>12.00-13.00</b></h4></li>
+                        <ul>
+                            <li>
+                                <h4><b>12.00-13.00</b></h4>
+                            </li>
                             <h5>UI/UX in Digital Product</h5>
-                            <li><h4><b>14.00-15.00</b></h4></li>
+                            <li>
+                                <h4><b>14.00-15.00</b></h4>
+                            </li>
                             <h5>Navigating the Data Jungle</h5>
-                        </ul> 
+                        </ul>
                     </div>
                 </div>
                 <div class="col-lg-4 timeline-card text-center">
                     <h1><b>DAY 3</b></h1>
                     <h4>05 November 2023</h4>
                     <div style="margin: 10%;">
-                       <ul>
-                            <li><h4><b>13.00-14.00</b></h4></li>
+                        <ul>
+                            <li>
+                                <h4><b>13.00-14.00</b></h4>
+                            </li>
                             <h5>Behind the Production Gamecom</h5>
-                            <li><h4><b>14.00-16.00</b></h4></li>
+                            <li>
+                                <h4><b>14.00-16.00</b></h4>
+                            </li>
                             <h5>Gamecom TeamBooth Exclusive</h5>
-                        </ul> 
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -430,5 +443,35 @@
 
     <div class="spacer"></div>
     <div class="spacer"></div>
-</div>
-@endsection
+
+    {{-- Location --}}
+    <div class="container-location">
+        <div class="row m-0 p-0">
+            <div class="col-12 text-center">
+                <h1><b>LOCATION</b></h1>
+            </div>
+            <div class="row m-0 p-0">
+                <div class="col-3">
+                    <img src="" alt="">
+                </div>
+                <div class="col-6 text-center bg-danger p-5">
+                    <h3>
+                        V-Junction Lt 3
+                        Ciputra World Surabaya
+                    </h3>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1836.620385866795!2d112.71896786846303!3d-7.293308027074949!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fb8bdc3056ef%3A0xb940ebcd5368b020!2sCiputra%20World%2C%20Gn.%20Sari%2C%20Kec.%20Dukuhpakis%2C%20Surabaya%2C%20Jawa%20Timur!5e0!3m2!1sen!2sid!4v1695630405605!5m2!1sen!2sid"
+                        width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <div class="col-3">
+                        <img src="" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{-- End of Location --}}
+
+        <div class="spacer"></div>
+        <div class="spacer"></div>
+    </div>
+    @endsection
