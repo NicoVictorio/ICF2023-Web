@@ -29,10 +29,12 @@
 
     .container-bubble img {
         height: 60%;
+        transform: scale(0.8, 0.8);
     }
 
     .container-bubble2 img {
         height: 60%;
+        transform: scale(0.8, 0.8);
     }
 
     .competition .card {
@@ -72,6 +74,11 @@
         padding: 15px;
         margin: 10px;
         width: 31%;
+    }
+
+    .background-location{
+        background-color: #E83434;
+        border-radius: 3%;
     }
 
     @media (max-width: 768px) {
@@ -448,30 +455,31 @@
     <div class="container-location">
         <div class="row m-0 p-0">
             <div class="col-12 text-center">
-                <h1><b>LOCATION</b></h1>
+                <h1 class="p-3"><b>LOCATION</b></h1>
             </div>
             <div class="row m-0 p-0">
-                <div class="col-3">
-                    <img src="" alt="">
+                <div class="col-3 container-bubble text-center">
+                    <img src="{{ asset('assets') }}/img/bubble.png" style="transform: rotate(180deg) scale(0.8, 0.8);">
                 </div>
-                <div class="col-6 text-center bg-danger p-5">
-                    <h3>
-                        V-Junction Lt 3
-                        Ciputra World Surabaya
-                    </h3>
+                <div class="col-6 text-center background-location p-4">
+                    <h4 class="pb-3 text-white">
+                        <b>V-Junction Lt 3 <br> Ciputra World Surabaya</b>
+                    </h4>
                     <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1836.620385866795!2d112.71896786846303!3d-7.293308027074949!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fb8bdc3056ef%3A0xb940ebcd5368b020!2sCiputra%20World%2C%20Gn.%20Sari%2C%20Kec.%20Dukuhpakis%2C%20Surabaya%2C%20Jawa%20Timur!5e0!3m2!1sen!2sid!4v1695630405605!5m2!1sen!2sid"
-                        width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    <div class="col-3">
-                        <img src="" alt="">
-                    </div>
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1836.620385866795!2d112.71896786846303!3d-7.293308027074949!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fb8bdc3056ef%3A0xb940ebcd5368b020!2sCiputra%20World%2C%20Gn.%20Sari%2C%20Kec.%20Dukuhpakis%2C%20Surabaya%2C%20Jawa%20Timur!5e0!3m2!1sen!2sid!4v1695630405605!5m2!1sen!2sid"
+                    width="100%" height="83%" style="border:0; border-radius: 3%;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="col-3 container-bubble text-center">
+                    <img src="{{ asset('assets') }}/img/bubble.png">
                 </div>
             </div>
         </div>
-        {{-- End of Location --}}
-
-        <div class="spacer"></div>
-        <div class="spacer"></div>
     </div>
-    @endsection
+    {{-- End of Location --}}
+
+    <div class="spacer"></div>
+    <div class="spacer"></div>
+    <div class="spacer"></div>
+</div>
+@endsection
