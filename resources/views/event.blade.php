@@ -492,12 +492,12 @@
                     <div class="table-responsive">
                         <div class="judul">
                             <h1 class="fs-3 text-danger" style="text-align: center;"><b>Registration</b></h1>
-                            <h2 class="fs-5" style="text-align: center; color:#223883;">{{ "(Judul Seminar)" }}</h2>
+                            <h2 class="fs-5" style="text-align: center; color:#223883;">{{ "" }}</h2>
                         </div>
                         <div class="content m-5">
                             <div class="col-md-12">
                                 <label class="fs-2 mx-4" style="color: #223883">Nama</label>
-                                <input type="text" name="namaTim" class="textbox fs-3 text-white"
+                                <input type="text" name="nama" class="textbox fs-3 text-white"
                                     placeholder="Isikan Nama Lengkap" required>
                             </div>
                             <br>
@@ -538,36 +538,31 @@
 
 @section('script')
 <script type="text/javascript">
-    const hiddenSeminar = (seminarName) => {
-        $.ajax({
-            type: 'POST',
-            url: '{{ route("seminar.name") }}',
-            data: {
-                '_token': '<?php echo csrf_token(); ?>',
-                'name': seminarName,
-            },
-            success: function(data) {
-                'name' => name,
-            }
-        })
-    } 
-</script>
+    const simpanData = () => {
+        let nama = $('namaTim').val();
+        let noHp = $('nohp').val();
+        let email = $('email').val();
+        let asal = $('asal').val();
 
-
-{{-- <script type="text/javascript">
-    const registration = () => {
-        $.ajax({
-            type: 'POST',
-            url: '{{ route("#") }}',
-            data: {
-                '_token': '<?php echo csrf_token(); ?>',
-            },
-            success: function(data) {
-                alert(data.message)
-                $('#').modal('hide')
-            }
-        })
     }
+        
+        $.ajax({
+            type: 'POST',
+            url: '{{ route("registration") }}',
+            data: {
+                '_token': '<?php echo csrf_token(); ?>',
+                'nama' : nama,
+                'noHp' : noHp,
+                'email' : email,
+                'asal' : asal,
+
+            },
+            success: function(data) {
+                alert("Data berhasil dimasukkan")
+                
+            }
+        })
+    
     const hiddenSeminar = (seminarName) => {
         let name = seminarName
         $.ajax({
@@ -582,5 +577,5 @@
             }
         })
     } 
-</script> --}}
+</script>
 @endsection
