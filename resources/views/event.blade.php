@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
 <style>
-    p {
+    .description .p {
         font-size: 36px;
     }
 
@@ -234,7 +234,7 @@
                         <button
                             class="border border-white text-grey btn-regist fs-3 d-flex justify-content-center align-items-center"
                             data-bs-toggle="modal" data-bs-target="#regis-seminar"
-                            onclick="hiddenSeminar({{ 'ChatGPT Allies or Enemies' }})"><b>Registration</b></button>
+                            onclick=""><b>Registration</b></button>
                     </div>
                 </div>
             </div>
@@ -271,7 +271,7 @@
                         <button
                             class="border border-white text-grey btn-regist fs-3 d-flex justify-content-center align-items-center"
                             data-bs-toggle="modal" data-bs-target="#regis-seminar"
-                            onclick="hiddenSeminar({{ 'How to be the Main Character' }})"><b>Registration</b></button>
+                            onclick=""><b>Registration</b></button>
                     </div>
                 </div>
             </div>
@@ -308,7 +308,7 @@
                         <button
                             class="border border-white text-grey btn-regist fs-3 d-flex justify-content-center align-items-center"
                             data-bs-toggle="modal" data-bs-target="#regis-seminar"
-                            onclick="hiddenSeminar({{ 'UI/UX in Digital Product' }})"><b>Registration</b></button>
+                            onclick=""><b>Registration</b></button>
                     </div>
                 </div>
             </div>
@@ -345,7 +345,7 @@
                         <button
                             class="border border-white text-grey btn-regist fs-3 d-flex justify-content-center align-items-center"
                             data-bs-toggle="modal" data-bs-target="#regis-seminar"
-                            onclick="hiddenSeminar({{ 'Navigating the Data Jungle' }})"><b>Registration</b></button>
+                            onclick=""><b>Registration</b></button>
                     </div>
                 </div>
             </div>
@@ -382,7 +382,7 @@
                         <button
                             class="border border-white text-grey btn-regist fs-3 d-flex justify-content-center align-items-center"
                             data-bs-toggle="modal" data-bs-target="#regis-seminar"
-                            onclick="hiddenSeminar({{ 'Behind the Production of Gamecom Team' }})"><b>Registration</b></button>
+                            onclick=""><b>Registration</b></button>
                     </div>
                 </div>
             </div>
@@ -538,28 +538,27 @@
 
 @section('script')
 <script type="text/javascript">
-    const simpanData = () => {
-        let nama = $('namaTim').val();
-        let noHp = $('nohp').val();
-        let email = $('email').val();
-        let asal = $('asal').val();
+    $('#asal').on('change', function(){
+        var asal = $('#asal').val();
+        
         $.ajax({
             type: 'POST',
-            url: '{{ route("registration") }}',
+            url: '{{ route('event.getAsalName') }}',
             data: {
                 '_token': '<?php echo csrf_token(); ?>',
-                'nama' : nama,
-                'noHp' : noHp,
-                'email' : email,
-                'asal' : asal,
-
+                'asal': asal,
             },
             success: function(data) {
-                alert("Registration Completed")
+                // $('#tableBodyRBT').html(data.data);
+            },
+            error: function(XMLHttpRequest, textStatus, errorThrown) {
+                alert('Terjadi Kesalahan, Hubungi Tim Panitia.\nError Message [Asal OnChange]: ' +
+                    errorThrown);
             }
-        })
-    }
+        });
+    });
 </script>
+
 
 {{-- <script type="text/javascript">
     const simpanData = () => {
@@ -567,9 +566,6 @@
         let noHp = $('nohp').val();
         let email = $('email').val();
         let asal = $('asal').val();
-
-    }
-        
         $.ajax({
             type: 'POST',
             url: '{{ route("registration") }}',
@@ -585,20 +581,26 @@
                 alert("Registration Completed")
             }
         })
+    }
     
-    const hiddenSeminar = (seminarName) => {
-        let name = seminarName
+    $('#asal').on('change', function(){
+        var asal = $('#asal').val();
+        dd(asal);
         $.ajax({
             type: 'POST',
-            url: '{{ route("seminar.name") }}',
+            url: '{{ route('event.getAsalName') }}',
             data: {
                 '_token': '<?php echo csrf_token(); ?>',
-                'name': name,
+                'asal': asal,
             },
             success: function(data) {
-                `<input type="hidden" id="seminarName" value = "${name}">`
+                // $('#tableBodyRBT').html(data.data);
+            },
+            error: function(XMLHttpRequest, textStatus, errorThrown) {
+                alert('Terjadi Kesalahan, Hubungi Tim Panitia.\nError Message [Asal OnChange]: ' +
+                    errorThrown);
             }
-        })
-    } 
+        });
+    });
 </script> --}}
 @endsection

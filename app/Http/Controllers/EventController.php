@@ -35,7 +35,18 @@ class EventController extends Controller
             'namaAsal'=>$namaAsal,
             'seminars_id'=>$seminarId
         ));
+    }
 
-
+    public function getAsal(Request $request)
+    {
+        $asal = $request->get('asal');
+        dd($asal);
+        if ($asal == 'sekolah') {
+            return response()->json("sekolah", 200);
+        } else if ($asal == 'instansi') {
+            return response()->json("instansi", 200);
+        } else if ($asal == 'umum') {
+            return response()->json("umum", 200);
+        }
     }
 }
