@@ -121,7 +121,7 @@
         padding: 40px;
     }
 
-    .combobox{
+    .combobox {
         width: 100%;
         height: 75px;
         border-radius: 40px;
@@ -515,8 +515,8 @@
                             <br>
                             <div class="col-md-12" style="color: #223883;">
                                 <label class="fs-2 mx-4">Asal</label>
-                                <select class="form-control combobox fs-3" name="asal">
-                                    <option selected>Pilih Asal</option>
+                                <select class="form-control combobox fs-3" name="asal" id="asal">
+                                    <option value="" selected>Pilih Asal</option>
                                     <option value="sekolah">Sekolah</option>
                                     <option value="instansi">Instansi</option>
                                     <option value="masyarakat">Masyarakat Umum</option>
@@ -543,6 +543,30 @@
         let noHp = $('nohp').val();
         let email = $('email').val();
         let asal = $('asal').val();
+        $.ajax({
+            type: 'POST',
+            url: '{{ route("registration") }}',
+            data: {
+                '_token': '<?php echo csrf_token(); ?>',
+                'nama' : nama,
+                'noHp' : noHp,
+                'email' : email,
+                'asal' : asal,
+
+            },
+            success: function(data) {
+                alert("Registration Completed")
+            }
+        })
+    }
+</script>
+
+{{-- <script type="text/javascript">
+    const simpanData = () => {
+        let nama = $('namaTim').val();
+        let noHp = $('nohp').val();
+        let email = $('email').val();
+        let asal = $('asal').val();
 
     }
         
@@ -558,8 +582,7 @@
 
             },
             success: function(data) {
-                alert("Data berhasil dimasukkan")
-                
+                alert("Registration Completed")
             }
         })
     
@@ -577,5 +600,5 @@
             }
         })
     } 
-</script>
+</script> --}}
 @endsection
