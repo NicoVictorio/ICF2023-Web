@@ -13,9 +13,13 @@
         font-size: 24px;
     }
 
+    button {
+        font-size: 28px;
+    }
+
     .container-event {
         background-image: url("{{ asset('assets') }}/img/bg-event.png");
-        min-height: 600vh;
+        min-height: 500vh;
         width: 100%;
         background-size: cover;
         position: relative;
@@ -174,6 +178,10 @@
             font-size: 12px;
         }
 
+        button {
+            font-size: 12px;
+        }
+
         .container-event .seminar .seminar-cards .label img {
             height: 15px;
         }
@@ -192,6 +200,16 @@
 
         .spacer {
             height: 100px;
+        }
+
+        .registration .btn-regist {
+            height: 40px;
+            margin: 10px;
+        }
+
+        .mechanism .btn-mechanism {
+            height: 40px;
+            margin: 10px;
         }
     }
 </style>
@@ -232,7 +250,7 @@
                 <div class="row w-100 p-5 m-0" id="btn-regist">
                     <div class="col-4 registration m-0 p-0">
                         <button
-                            class="border border-white text-grey btn-regist fs-3 d-flex justify-content-center align-items-center"
+                            class="border border-white text-grey btn-regist d-flex justify-content-center align-items-center"
                             data-bs-toggle="modal" data-bs-target="#regis-seminar"
                             onclick=""><b>Registration</b></button>
                     </div>
@@ -269,7 +287,7 @@
                 <div class="row w-100 p-5 m-0" id="btn-regist">
                     <div class="col-4 registration m-0 p-0">
                         <button
-                            class="border border-white text-grey btn-regist fs-3 d-flex justify-content-center align-items-center"
+                            class="border border-white text-grey btn-regist d-flex justify-content-center align-items-center"
                             data-bs-toggle="modal" data-bs-target="#regis-seminar"
                             onclick=""><b>Registration</b></button>
                     </div>
@@ -306,7 +324,7 @@
                 <div class="row w-100 p-5 m-0" id="btn-regist">
                     <div class="col-4 registration m-0 p-0">
                         <button
-                            class="border border-white text-grey btn-regist fs-3 d-flex justify-content-center align-items-center"
+                            class="border border-white text-grey btn-regist d-flex justify-content-center align-items-center"
                             data-bs-toggle="modal" data-bs-target="#regis-seminar"
                             onclick=""><b>Registration</b></button>
                     </div>
@@ -343,7 +361,7 @@
                 <div class="row w-100 p-5 m-0" id="btn-regist">
                     <div class="col-4 registration m-0 p-0">
                         <button
-                            class="border border-white text-grey btn-regist fs-3 d-flex justify-content-center align-items-center"
+                            class="border border-white text-grey btn-regist d-flex justify-content-center align-items-center"
                             data-bs-toggle="modal" data-bs-target="#regis-seminar"
                             onclick=""><b>Registration</b></button>
                     </div>
@@ -380,13 +398,12 @@
                 <div class="row w-100 p-5 m-0" id="btn-regist">
                     <div class="col-4 registration m-0 p-0">
                         <button
-                            class="border border-white text-grey btn-regist fs-3 d-flex justify-content-center align-items-center"
+                            class="border border-white text-grey btn-regist d-flex justify-content-center align-items-center"
                             data-bs-toggle="modal" data-bs-target="#regis-seminar"
                             onclick=""><b>Registration</b></button>
                     </div>
                 </div>
             </div>
-            <br><br>
         </div>
 
         <div class="spacer"></div>
@@ -430,11 +447,11 @@
                 <div class="row w-100 p-5 m-0" id="btn-regist">
                     <div class="col-4 registration m-0 p-0 mr-5">
                         <button
-                            class="border border-white text-grey btn-regist fs-3 d-inline-block justify-content-center align-items-center me-3"><b>Registration</b></button>
+                            class="border border-white text-grey btn-regist d-inline-block justify-content-center align-items-center me-3"><b>Registration</b></button>
                     </div>
                     <div class="col-4 registration m-0 p-0 mr-5">
                         <button
-                            class="border border-white text-grey btn-regist fs-3 d-inline-block justify-content-center align-items-center"><b>Mechanisms</b></button>
+                            class="border border-white text-grey btn-regist d-inline-block justify-content-center align-items-center"><b>Mechanisms</b></button>
                     </div>
                 </div>
             </div>
@@ -473,12 +490,12 @@
                 <div class="row w-100 p-5 m-0" id="btn-regist">
                     <div class="col-4 registration m-0 p-0 mr-5">
                         <button
-                            class="border border-white text-grey btn-regist fs-3 d-inline-block justify-content-center align-items-center me-3"
+                            class="border border-white text-grey btn-regist d-inline-block justify-content-center align-items-center me-3"
                             onclick="registration()"><b>Registration</b></button>
                     </div>
                     <div class="col-4 registration m-0 p-0 mr-5">
                         <button
-                            class="border border-white text-grey btn-regist fs-3 d-inline-block justify-content-center align-items-center"><b>Mechanisms</b></button>
+                            class="border border-white text-grey btn-regist d-inline-block justify-content-center align-items-center"><b>Mechanisms</b></button>
                     </div>
                 </div>
             </div>

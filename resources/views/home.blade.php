@@ -81,6 +81,12 @@
         border-radius: 3%;
     }
 
+    @media(max-width: 992px){
+        h3{
+            font-size: 20px;
+        }
+    }
+
     @media (max-width: 768px) {
         .spacer {
             height: 100px;
@@ -105,8 +111,9 @@
             max-height: 350px !important;
         }
 
-        .maskot {
+        .maskot1 {
             max-height: 300px !important;
+            width: 100%;
         }
 
         .prize {
@@ -126,6 +133,14 @@
             width: 100vw;
             margin: 0 !important;
             padding: 0 !important;
+        }
+
+        h1{
+            font-size: 32px;
+        }
+
+        h3{
+            font-size: 18px;
         }
     }
 </style>
@@ -147,7 +162,7 @@
                 </font> yang tidak kalah
                 serunya. Apalagi semua kegiatan di festival ini <font color="#E83434">GRATIS</font> lho!</h3>
         </div>
-        <div class="col-6 d-flex flex-wrap justify-content-end maskot1">
+        <div class="col-6 d-flex flex-wrap justify-content-center maskot1">
             <img class="fix-image headline" src="{{ asset('assets') }}/img/maskot1.png" style="max-height: 600px;">
         </div>
     </div>
