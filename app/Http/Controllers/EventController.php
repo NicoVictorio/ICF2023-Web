@@ -35,6 +35,11 @@ class EventController extends Controller
             'namaAsal'=>$namaAsal,
             'seminars_id'=>$seminarId
         ));
+        
+        return response()->json(array(
+            'message'=>'success',
+        ),200);
+
     }
 
     public function getAsal(Request $request)
