@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
 <style>
-    .description .p {
+    .description p {
         font-size: 36px;
     }
 
@@ -82,7 +82,7 @@
         border-radius: 30px;
         display: flex;
         padding: 5px;
-        width: 300px;
+        width: 90%;
         height: 60px;
     }
 
@@ -90,7 +90,7 @@
         border-radius: 30px;
         display: flex;
         padding: 5px;
-        width: 300px;
+        width: 90%;
         height: 60px;
     }
 
@@ -162,7 +162,7 @@
             width: 120px;
         }
 
-        p {
+        .description p {
             font-size: 16px;
         }
 
@@ -230,7 +230,7 @@
                     </div>
                 </div>
                 <div class="row w-100 p-5 m-0" id="btn-regist">
-                    <div class="col-md-2 registration m-0 p-0">
+                    <div class="col-4 registration m-0 p-0">
                         <button
                             class="border border-white text-grey btn-regist fs-3 d-flex justify-content-center align-items-center"
                             data-bs-toggle="modal" data-bs-target="#regis-seminar"
@@ -267,7 +267,7 @@
                     </div>
                 </div>
                 <div class="row w-100 p-5 m-0" id="btn-regist">
-                    <div class="col-md-2 registration m-0 p-0">
+                    <div class="col-4 registration m-0 p-0">
                         <button
                             class="border border-white text-grey btn-regist fs-3 d-flex justify-content-center align-items-center"
                             data-bs-toggle="modal" data-bs-target="#regis-seminar"
@@ -304,7 +304,7 @@
                     </div>
                 </div>
                 <div class="row w-100 p-5 m-0" id="btn-regist">
-                    <div class="col-md-2 registration m-0 p-0">
+                    <div class="col-4 registration m-0 p-0">
                         <button
                             class="border border-white text-grey btn-regist fs-3 d-flex justify-content-center align-items-center"
                             data-bs-toggle="modal" data-bs-target="#regis-seminar"
@@ -341,7 +341,7 @@
                     </div>
                 </div>
                 <div class="row w-100 p-5 m-0" id="btn-regist">
-                    <div class="col-md-2 registration m-0 p-0">
+                    <div class="col-4 registration m-0 p-0">
                         <button
                             class="border border-white text-grey btn-regist fs-3 d-flex justify-content-center align-items-center"
                             data-bs-toggle="modal" data-bs-target="#regis-seminar"
@@ -378,7 +378,7 @@
                     </div>
                 </div>
                 <div class="row w-100 p-5 m-0" id="btn-regist">
-                    <div class="col-md-2 registration m-0 p-0">
+                    <div class="col-4 registration m-0 p-0">
                         <button
                             class="border border-white text-grey btn-regist fs-3 d-flex justify-content-center align-items-center"
                             data-bs-toggle="modal" data-bs-target="#regis-seminar"
@@ -428,9 +428,11 @@
                     </div>
                 </div>
                 <div class="row w-100 p-5 m-0" id="btn-regist">
-                    <div class="col-6 registration m-0 p-0 mr-5">
+                    <div class="col-4 registration m-0 p-0 mr-5">
                         <button
                             class="border border-white text-grey btn-regist fs-3 d-inline-block justify-content-center align-items-center me-3"><b>Registration</b></button>
+                    </div>
+                    <div class="col-4 registration m-0 p-0 mr-5">
                         <button
                             class="border border-white text-grey btn-regist fs-3 d-inline-block justify-content-center align-items-center"><b>Mechanisms</b></button>
                     </div>
@@ -469,10 +471,12 @@
                     </div>
                 </div>
                 <div class="row w-100 p-5 m-0" id="btn-regist">
-                    <div class="col-6 registration m-0 p-0 mr-5">
+                    <div class="col-4 registration m-0 p-0 mr-5">
                         <button
                             class="border border-white text-grey btn-regist fs-3 d-inline-block justify-content-center align-items-center me-3"
                             onclick="registration()"><b>Registration</b></button>
+                    </div>
+                    <div class="col-4 registration m-0 p-0 mr-5">
                         <button
                             class="border border-white text-grey btn-regist fs-3 d-inline-block justify-content-center align-items-center"><b>Mechanisms</b></button>
                     </div>
