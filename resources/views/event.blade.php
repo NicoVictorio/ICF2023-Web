@@ -515,7 +515,7 @@
                             <h1 class="fs-3 text-danger" style="text-align: center;"><b>Registration</b></h1>
                             <h2 class="fs-5" style="text-align: center; color:#223883;">{{ "" }}</h2>
                         </div>
-                        <div class="content m-5">
+                        <div class="content m-5" id="contentModal">
                             <div class="col-md-12">
                                 <label class="fs-2 mx-4" style="color: #223883">Nama</label>
                                 <input type="text" name="nama" class="textbox fs-3 text-white"
@@ -537,7 +537,7 @@
                             <div class="col-md-12" style="color: #223883;">
                                 <label class="fs-2 mx-4">Asal</label>
                                 <select class="form-control combobox fs-3" name="asal" id="asal">
-                                    <option value="" selected>Pilih Asal</option>
+                                    <option value="" selected disabled>Pilih Asal</option>
                                     <option value="sekolah">Sekolah</option>
                                     <option value="instansi">Instansi</option>
                                     <option value="masyarakat">Masyarakat Umum</option>
@@ -561,16 +561,34 @@
 <script type="text/javascript">
     $('#asal').on('change', function(){
         var asal = $('#asal').val();
-        
         $.ajax({
             type: 'POST',
-            url: '{{ route('event.getAsalName') }}',
+            url: '{{ route("event.getAsalName") }}',
             data: {
                 '_token': '<?php echo csrf_token(); ?>',
                 'asal': asal,
             },
             success: function(data) {
-                // $('#tableBodyRBT').html(data.data);
+                if(data.message == "sekolah"){
+                    contentModal.innerHTML += `
+                        <br>
+                        <div class="col-md-12">
+                            <label class="fs-2 mx-4" style="color: #223883">Asal Sekolah</label>
+                            <input type="text" name="sekolah" class="textbox fs-3 text-white"
+                                placeholder="Isikan Nama Sekolah" required>
+                        </div>
+                    `
+                }
+                else if(data.message == "instansi"){
+                    contentModal.innerHTML += `
+                        <br>
+                        <div class="col-md-12">
+                            <label class="fs-2 mx-4" style="color: #223883">Asal Instansi</label>
+                            <input type="text" name="instansi" class="textbox fs-3 text-white"
+                                placeholder="Isikan Nama Instansi" required>
+                        </div>
+                    `
+                }
             },
             error: function(XMLHttpRequest, textStatus, errorThrown) {
                 alert('Terjadi Kesalahan, Hubungi Tim Panitia.\nError Message [Asal OnChange]: ' +
@@ -579,7 +597,6 @@
         });
     });
 </script>
-
 
 {{-- <script type="text/javascript">
     const simpanData = () => {
@@ -591,12 +608,11 @@
             type: 'POST',
             url: '{{ route("registration") }}',
             data: {
-                '_token': '<?php echo csrf_token(); ?>',
+                '_token': '',
                 'nama' : nama,
                 'noHp' : noHp,
                 'email' : email,
                 'asal' : asal,
-
             },
             success: function(data) {
                 alert("Registration Completed")
@@ -606,16 +622,15 @@
     
     $('#asal').on('change', function(){
         var asal = $('#asal').val();
-        dd(asal);
         $.ajax({
             type: 'POST',
-            url: '{{ route('event.getAsalName') }}',
+            url: '{{ route("event.getAsalName") }}',
             data: {
-                '_token': '<?php echo csrf_token(); ?>',
+                '_token': '',
                 'asal': asal,
             },
             success: function(data) {
-                // $('#tableBodyRBT').html(data.data);
+                alert(data.message);
             },
             error: function(XMLHttpRequest, textStatus, errorThrown) {
                 alert('Terjadi Kesalahan, Hubungi Tim Panitia.\nError Message [Asal OnChange]: ' +

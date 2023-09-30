@@ -261,6 +261,7 @@
     </div>
     {{-- End Footer --}}
     </div>
+    @yield('script')
 </body>
 
 </html>

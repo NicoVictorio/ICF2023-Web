@@ -45,13 +45,18 @@ class EventController extends Controller
     public function getAsal(Request $request)
     {
         $asal = $request->get('asal');
-        dd($asal);
-        if ($asal == 'sekolah') {
-            return response()->json("sekolah", 200);
-        } else if ($asal == 'instansi') {
-            return response()->json("instansi", 200);
-        } else if ($asal == 'umum') {
-            return response()->json("umum", 200);
+        if ($asal === 'sekolah') {
+            return response()->json(array(
+                'message' => "sekolah",
+            ), 200);    
+        } else if ($asal === 'instansi') {
+            return response()->json(array(
+                'message' => "instansi",
+            ), 200);    
+        } else if ($asal === 'umum') {
+            return response()->json(array(
+                'message' => "umum",
+            ), 200);    
         }
     }
 }
