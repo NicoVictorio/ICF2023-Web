@@ -256,11 +256,11 @@
         }
 
         .game .card {
-            width: 45%;
+            width: 40%;
         }
 
         .cpd .card {
-            width: 100%;
+            width: 90%;
             height: 90%;
         }
 
@@ -345,7 +345,7 @@
                             <div class="col-3 p-0"></div>
                         </div>
                         <div class="nama mx-4 mb-2 text-white d-flex justify-content-center">
-                            <p class="fs-4"><b>Creative Programming and Design</b></p>
+                            <p class="fs-4 text-center"><b>Creative Programming and Design</b></p>
                         </div>
                     </div>
                 </div>
