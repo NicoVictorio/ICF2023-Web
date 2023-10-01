@@ -168,7 +168,7 @@
         }
 
         .container-others{
-            margin-left: 6%;
+            padding-left: 12%;
         }
 
         .container-others h2 {
@@ -221,7 +221,7 @@
         }
 
         .divhps{
-            width: 0%;            
+            width: 0% !important;
         }
 
         .container-others .row{
