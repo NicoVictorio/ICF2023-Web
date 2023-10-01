@@ -28,13 +28,18 @@
     }
 
     .container-bubble img {
-        height: 60%;
+        height: 50%;
         transform: scale(0.8, 0.8);
     }
 
     .container-bubble2 img {
-        height: 60%;
+        height: 50%;
         transform: scale(0.8, 0.8);
+    }
+
+    .container-bubble3 img {
+        height: 50%;
+        transform: rotate(180deg) scale(0.8, 0.8);
     }
 
     .competition .card {
@@ -81,24 +86,46 @@
         border-radius: 3%;
     }
 
-    @media(max-width: 992px){
-        h3{
+    .more-details {
+        background-color: #E83434;
+        border: 3px solid white;
+        border-radius: 12px;
+        position: absolute;
+        bottom: 5%;
+        left: 5%;
+        height: 40px;
+        width: 110px;
+        font-size: 14px;
+        z-index: 0;
+    }
+
+    .bg-seminar {
+        width: 80%;
+        height: auto;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        z-index: -1;
+    }
+
+    @media(max-width: 992px) {
+        h3 {
             font-size: 20px;
         }
     }
 
     @media (max-width: 768px) {
         .spacer {
-            height: 100px;
+            height: 50px;
         }
 
         .spacer-1 {
-            height: 70px;
+            height: 50px;
             width: auto;
         }
 
         .spacer-2 {
-            height: 70px;
+            height: 50px;
             width: 100%;
         }
 
@@ -117,7 +144,8 @@
         }
 
         .prize {
-            max-height: 230px !important;
+            max-height: 360px !important;
+            padding-top: 30% !important;
         }
 
         .headline {
@@ -135,12 +163,117 @@
             padding: 0 !important;
         }
 
-        h1{
+        h1 {
             font-size: 32px;
         }
 
-        h3{
-            font-size: 18px;
+        .container-others{
+            margin-left: 6%;
+        }
+
+        .container-others h2 {
+            font-size: 14px;
+        }
+
+        h3 {
+            font-size: 16px;
+        }
+
+        .seminar h1 {
+            margin-top: 10% !important;
+            margin-left: 10% !important;
+        }
+
+        .card-left,
+        .card-center {
+            width: 80% !important;
+        }
+
+        .card-left h4,
+        .card-center h4 {
+            font-size: 14px;
+        }
+
+        .card-left h5,
+        .card-center h5 {
+            font-size: 10px;
+        }
+
+        .card-left h6,
+        .card-center h6 {
+            font-size: 8px;
+        }
+
+        .details {
+            padding: 7px 0px 0px 7px !important;
+        }
+
+        .more-details {
+            border-radius: 8px;
+            height: 20px;
+            width: 63px;
+            font-size: 8px;
+            border: 2px solid white;
+        }
+
+        .container-bubble img, .container-bubble2 img, .container-bubble3 img {
+            display: none;
+        }
+
+        .divhps{
+            width: 0%;            
+        }
+
+        .container-others .row{
+            width: 100%;
+        }
+
+        .text-others{
+            margin: 5% 2% 20% 2%;
+            width: 120%;
+        }
+
+        .text-others2{
+            width: 120%;
+        }
+
+        .timeline-card {
+            width: 80%;
+            margin-bottom: 0%;
+        }
+
+        .background-location h4 {
+            font-size: 16px;
+        }
+
+        .background-location {
+            width: 80%;
+            padding: 4% !important;
+        }
+
+        .background-location iframe{
+            height: 72% !important;
+        }
+
+        .game .card {
+            width: 45%;
+        }
+
+        .cpd .card {
+            width: 100%;
+            height: 90%;
+        }
+
+        .nama p {
+            font-size: 10px !important;
+        }
+
+        .gambarmaskot{
+            margin: 20% !important;
+        }
+
+        .game{
+            padding-bottom: 10% !important;
         }
     }
 </style>
@@ -172,45 +305,48 @@
 
     {{-- Competitions --}}
     <div class="container-1 row my-5 competition">
-        <div class="col-lg-12 d-flex flex-wrap justify-content-end p-0">
+        <div class="col-12 d-flex flex-wrap justify-content-end p-0">
             <h1 style="margin-right: 5%;"><b>COMPETITIONS</b></h1>
         </div>
-        <div class="col-lg-5 col-sm-12 p-0 d-flex flex-wrap justify-content-start">
-            <img class="fix-image prize" src="{{ asset('assets') }}/img/maskot2.png" style="max-height: 800px;">
-        </div>
-        <div class="col-lg-7 col-sm-12 p-0 d-flex flex-wrap justify-content-start">
-            <div class="row py-5 m-0 game w-100" style="height: 50%;">
-                <div class="col-5 card p-0">
-                    <div class="gambar m-5">
-                        <img src="{{ asset('assets') }}/img/iconMaskot.png" style="width:100%; height:100%;">
-                    </div>
-                    <div class="nama mx-4 mb-2 text-white d-flex justify-content-center">
-                        <p class="fs-4 text-center"><b>Asset Game: Main Character Design</b></p>
-                    </div>
-                </div>
-                <div class="col-1"></div>
-                <div class="col-5 card p-0">
-                    <div class="gambar m-5">
-                        <img src="{{ asset('assets') }}/img/iconMaskot.png" style="width:100%; height:100%;">
-                    </div>
-                    <div class="nama mx-4 mb-2 text-white d-flex justify-content-center">
-                        <p class="fs-4 text-center"><b>Mobile Legends: Bang Bang</b></p>
-                    </div>
-                </div>
+        <div class="row h-100 w-100 p-0">
+            <div class="col-5 p-0 d-flex flex-wrap align-items-center justify-content-center">
+                <img class="fix-image prize" src="{{ asset('assets') }}/img/maskot2.png" style="max-height: 800px;">
             </div>
-            <div class="row m-0 cpd w-100" style="height: 40%">
-                <div class="col-11 card p-0">
-                    <div class="row m-0">
-                        <div class="col-3 m-0"></div>
-                        <div class="col-6 d-flex justify-content-center">
-                            <div class="gambar m-5">
-                                <img src="{{ asset('assets') }}/img/iconMaskot.png" style="width:100%; height:100%;">
-                            </div>
+            <div class="col-7 p-0 d-flex flex-wrap justify-content-center">
+                <div class="row py-5 m-0 game w-100">
+                    <div class="col-5 card p-0">
+                        <div class="gambarmaskot m-5 text-center">
+                            <img src="{{ asset('assets') }}/img/iconMaskot.png" style="width:100%; height:100%;">
                         </div>
-                        <div class="col-3 p-0"></div>
+                        <div class="nama mx-4 mb-2 text-white d-flex justify-content-center">
+                            <p class="fs-4 text-center"><b>Asset Game: Main Character Design</b></p>
+                        </div>
                     </div>
-                    <div class="nama mx-4 mb-2 text-white d-flex justify-content-center">
-                        <p class="fs-4"><b>Creative Programming and Design</b></p>
+                    <div class="col-1"></div>
+                    <div class="col-5 card p-0">
+                        <div class="gambarmaskot m-5 text-center">
+                            <img src="{{ asset('assets') }}/img/iconMaskot.png" style="width:100%; height:100%;">
+                        </div>
+                        <div class="nama mx-4 mb-2 text-white d-flex justify-content-center">
+                            <p class="fs-4 text-center"><b>Mobile Legends: Bang Bang</b></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row m-0 cpd w-100" style="height: 40%">
+                    <div class="col-11 card p-0">
+                        <div class="row m-0">
+                            <div class="col-3 m-0"></div>
+                            <div class="col-6 d-flex justify-content-center">
+                                <div class="gambarmaskot m-5 text-center">
+                                    <img src="{{ asset('assets') }}/img/iconMaskot.png"
+                                        style="width:100%; height:100%;">
+                                </div>
+                            </div>
+                            <div class="col-3 p-0"></div>
+                        </div>
+                        <div class="nama mx-4 mb-2 text-white d-flex justify-content-center">
+                            <p class="fs-4"><b>Creative Programming and Design</b></p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -223,7 +359,7 @@
     {{-- Seminars --}}
     <div class="row w-100 m-0 seminar">
         <div class="col-12 p-0">
-            <h2 class="m-0"><b>SEMINARS</b></h2>
+            <h1 class="m-0"><b>SEMINARS</b></h1>
         </div>
         <div class="col-12 p-0 mb-0 mt-4 seminar-cards">
             <div class="row m-0 justify-content-center">
@@ -239,9 +375,9 @@
                                 <h6>
                                     <font color="#E83434">Lecture UBAYA</font>
                                 </h6>
+                                <button class="more-details text-white" id="seminar1">More Detail</button>
                             </div>
-                            <img src="{{ asset('assets') }}/img/bg-card.png" class="p-0"
-                                style="width:80%; height:auto; position: absolute; left:0; bottom:0;">
+                            <img src="{{ asset('assets') }}/img/bg-card.png" class="p-0 bg-seminar">
                         </div>
                         {{-- <div class="col-1"></div> --}}
                         <div class="col-6 p-3">
@@ -264,9 +400,9 @@
                                 <h6>
                                     <font color="#E83434">Illustrator at Gamecom Team</font>
                                 </h6>
+                                <button class="more-details text-white" id="seminar2">More Detail</button>
                             </div>
-                            <img src="{{ asset('assets') }}/img/bg-card.png" class="p-0"
-                                style="width:80%; height:auto; position: absolute; left:0; bottom:0;">
+                            <img src="{{ asset('assets') }}/img/bg-card.png" class="p-0 bg-seminar">
                         </div>
                         {{-- <div class="col-1"></div> --}}
                         <div class="col-6 p-3">
@@ -293,9 +429,9 @@
                                 <h6>
                                     <font color="#E83434">Lecture UBAYA</font>
                                 </h6>
+                                <button class="more-details text-white" id="seminar3">More Detail</button>
                             </div>
-                            <img src="{{ asset('assets') }}/img/bg-card.png" class="p-0"
-                                style="width:80%; height:auto; position: absolute; left:0; bottom:0;">
+                            <img src="{{ asset('assets') }}/img/bg-card.png" class="p-0 bg-seminar">
                         </div>
                         {{-- <div class="col-1"></div> --}}
                         <div class="col-6 p-3">
@@ -318,9 +454,9 @@
                                 <h6>
                                     <font color="#E83434">Business Research Consultant at Patria & Co</font>
                                 </h6>
+                                <button class="more-details text-white" id="seminar4">More Detail</button>
                             </div>
-                            <img src="{{ asset('assets') }}/img/bg-card.png" class="p-0"
-                                style="width:80%; height:auto; position: absolute; left:0; bottom:0;">
+                            <img src="{{ asset('assets') }}/img/bg-card.png" class="p-0 bg-seminar">
                         </div>
                         {{-- <div class="col-1"></div> --}}
                         <div class="col-6 p-3">
@@ -347,9 +483,9 @@
                                 <h6>
                                     <font color="#E83434">Community Manager at Gamecom Team</font>
                                 </h6>
+                                <button class="more-details text-white" id="seminar5">More Detail</button>
                             </div>
-                            <img src="{{ asset('assets') }}/img/bg-card.png" class="p-0"
-                                style="width:80%; height:auto; position: absolute; left:0; bottom:0;">
+                            <img src="{{ asset('assets') }}/img/bg-card.png" class="p-0 bg-seminar">
                         </div>
                         {{-- <div class="col-1"></div> --}}
                         <div class="col-6 p-3">
@@ -368,21 +504,21 @@
     <div class="spacer"></div>
 
     {{-- Others --}}
-    <div class="container-others" style="width:100%;">
+    <div class="container-others" style="width:100%; height:auto;">
         <div class="row m-0 p-0">
-            <div class="col-xl-10 p-0">
-                <div class="row m-0 p-0" style="height: 80px;">
-                    <div class="col-xl-2 p-0"></div>
-                    <div class="col-xl-10 p-0 text-center">
+            <div class="col-10 p-0">
+                <div class="row m-0 p-0">
+                    <div class="col-2 p-0 divhps"></div>
+                    <div class="col-10 p-0 text-center text-others2">
                         <h1 class="m-0 p-0"><b>OTHERS</b></h1>
                     </div>
                 </div>
 
                 <div class="row m-0 p-0">
-                    <div class="col-xl-2 p-0 container-bubble2 d-flex align-items-center justify-content-center">
+                    <div class="col-2 p-0 container-bubble2 d-flex align-items-center justify-content-center divhps">
                         <img src="{{ asset('assets') }}/img/bubble2.png">
                     </div>
-                    <div class="col-xl-10 p-0 text-center">
+                    <div class="col-10 p-0 text-center text-others">
                         <h2>Dalam acara ini, kamu akan menemukan beragam hiburan seru yang tak bisa dilewatkan! <b>
                                 <font color="#E83434">Mini games</font>
                             </b> menghibur,
@@ -396,7 +532,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-xl-2 p-0 container-bubble text-center">
+            <div class="col-2 p-0 container-bubble align-items-center justify-content-center divhps">
                 <img src="{{ asset('assets') }}/img/bubble.png">
             </div>
         </div>
@@ -454,11 +590,11 @@
             <div class="col-12 text-center">
                 <h1 class="p-3"><b>LOCATION</b></h1>
             </div>
-            <div class="row m-0 p-0">
-                <div class="col-3 container-bubble text-center">
-                    <img src="{{ asset('assets') }}/img/bubble.png" style="transform: rotate(180deg) scale(0.8, 0.8);">
+            <div class="row m-0 p-0 d-flex justify-content-center">
+                <div class="col-3 container-bubble3 text-center divhps">
+                    <img src="{{ asset('assets') }}/img/bubble.png">
                 </div>
-                <div class="col-6 text-center background-location p-4">
+                <div class="col-6 text-center background-location p-4" style="height: auto;">
                     <h4 class="pb-3 text-white">
                         <b>V-Junction Lt 3 <br> Ciputra World Surabaya</b>
                     </h4>
@@ -467,7 +603,7 @@
                         width="100%" height="83%" style="border:0; border-radius: 3%;" allowfullscreen="" loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
-                <div class="col-3 container-bubble text-center">
+                <div class="col-3 container-bubble text-center divhps">
                     <img src="{{ asset('assets') }}/img/bubble.png">
                 </div>
             </div>

@@ -251,8 +251,8 @@
                     <div class="col-4 registration m-0 p-0">
                         <button
                             class="border border-white text-grey btn-regist d-flex justify-content-center align-items-center"
-                            data-bs-toggle="modal" data-bs-target="#regis-seminar"
-                            onclick=""><b>Registration</b></button>
+                            data-bs-toggle="modal" data-bs-target="#regis-seminar-1">
+                            <b>Registration</b></button>
                     </div>
                 </div>
             </div>
@@ -288,7 +288,7 @@
                     <div class="col-4 registration m-0 p-0">
                         <button
                             class="border border-white text-grey btn-regist d-flex justify-content-center align-items-center"
-                            data-bs-toggle="modal" data-bs-target="#regis-seminar"
+                            data-bs-toggle="modal" data-bs-target="#regis-seminar-2"
                             onclick=""><b>Registration</b></button>
                     </div>
                 </div>
@@ -325,7 +325,7 @@
                     <div class="col-4 registration m-0 p-0">
                         <button
                             class="border border-white text-grey btn-regist d-flex justify-content-center align-items-center"
-                            data-bs-toggle="modal" data-bs-target="#regis-seminar"
+                            data-bs-toggle="modal" data-bs-target="#regis-seminar-3"
                             onclick=""><b>Registration</b></button>
                     </div>
                 </div>
@@ -362,7 +362,7 @@
                     <div class="col-4 registration m-0 p-0">
                         <button
                             class="border border-white text-grey btn-regist d-flex justify-content-center align-items-center"
-                            data-bs-toggle="modal" data-bs-target="#regis-seminar"
+                            data-bs-toggle="modal" data-bs-target="#regis-seminar-4"
                             onclick=""><b>Registration</b></button>
                     </div>
                 </div>
@@ -399,7 +399,7 @@
                     <div class="col-4 registration m-0 p-0">
                         <button
                             class="border border-white text-grey btn-regist d-flex justify-content-center align-items-center"
-                            data-bs-toggle="modal" data-bs-target="#regis-seminar"
+                            data-bs-toggle="modal" data-bs-target="#regis-seminar-5"
                             onclick=""><b>Registration</b></button>
                     </div>
                 </div>
@@ -505,7 +505,7 @@
     </div>
 
     <!-- Modal -->
-    <div class="modal fade" id="regis-seminar" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    <div class="modal fade" id="regis-seminar-1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
         aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
             <div class="modal-content">
@@ -513,130 +513,325 @@
                     <div class="table-responsive">
                         <div class="judul">
                             <h1 class="fs-3 text-danger" style="text-align: center;"><b>Registration</b></h1>
-                            <h2 class="fs-5" style="text-align: center; color:#223883;">{{ "" }}</h2>
+                            <h2 class="fs-5" style="text-align: center; color:#223883;">{{ ('ChatGPT Allies or Enemies')
+                                }}</h2>
                         </div>
                         <div class="content m-5" id="contentModal">
                             <div class="col-md-12">
                                 <label class="fs-2 mx-4" style="color: #223883">Nama</label>
-                                <input type="text" name="nama" class="textbox fs-3 text-white"
+                                <input type="text" class="textbox fs-3 text-white nama"
                                     placeholder="Isikan Nama Lengkap" required>
                             </div>
                             <br>
                             <div class="col-md-12">
                                 <label class="fs-2 mx-4" style="color: #223883">No. Hp</label>
-                                <input type="text" name="nohp" class="textbox fs-3 text-white"
+                                <input type="tel" class="textbox fs-3 text-white nohp"
                                     placeholder="Isikan Nomor Hp yang aktif" required>
                             </div>
                             <br>
                             <div class="col-md-12">
                                 <label class="fs-2 mx-4" style="color: #223883">Email</label>
-                                <input type="text" name="email" class="textbox fs-3 text-white"
+                                <input type="email" class="textbox fs-3 text-white email"
                                     placeholder="Isikan Email yang aktif" required>
                             </div>
                             <br>
                             <div class="col-md-12" style="color: #223883;">
                                 <label class="fs-2 mx-4">Asal</label>
-                                <select class="form-control combobox fs-3" name="asal" id="asal">
+                                <select class="form-control combobox fs-3" id="asalCombobox">
                                     <option value="" selected disabled>Pilih Asal</option>
                                     <option value="sekolah">Sekolah</option>
                                     <option value="instansi">Instansi</option>
-                                    <option value="masyarakat">Masyarakat Umum</option>
+                                    <option value="umum">Masyarakat Umum</option>
                                 </select>
+                            </div>
+                            <br>
+                            <div class="col-md-12" id="tbAsal">
+                            </div>
+                            <input type="hidden" class="idSeminar" value="1">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-success" onclick="simpanData()"><i
+                            class="fa-solid fa-download edit-icon" style="color: #ffffff;"></i>Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{-- <div class="modal fade" id="regis-seminar-2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="table-responsive">
+                        <div class="judul">
+                            <h1 class="fs-3 text-danger" style="text-align: center;"><b>Registration</b></h1>
+                            <h2 class="fs-5" style="text-align: center; color:#223883;">{{ ('How to be the Main
+                                Character')
+                                }}</h2>
+                        </div>
+                        <div class="content m-5" id="contentModal">
+                            <div class="col-md-12">
+                                <label class="fs-2 mx-4" style="color: #223883">Nama</label>
+                                <input type="text" class="textbox fs-3 text-white nama"
+                                    placeholder="Isikan Nama Lengkap" required>
+                            </div>
+                            <br>
+                            <div class="col-md-12">
+                                <label class="fs-2 mx-4" style="color: #223883">No. Hp</label>
+                                <input type="tel" class="textbox fs-3 text-white nohp"
+                                    placeholder="Isikan Nomor Hp yang aktif" required>
+                            </div>
+                            <br>
+                            <div class="col-md-12">
+                                <label class="fs-2 mx-4" style="color: #223883">Email</label>
+                                <input type="email" class="textbox fs-3 text-white email"
+                                    placeholder="Isikan Email yang aktif" required>
+                            </div>
+                            <br>
+                            <div class="col-md-12" style="color: #223883;">
+                                <label class="fs-2 mx-4">Asal</label>
+                                <select class="form-control combobox fs-3" id="asalCombobox">
+                                    <option value="" selected disabled>Pilih Asal</option>
+                                    <option value="sekolah">Sekolah</option>
+                                    <option value="instansi">Instansi</option>
+                                    <option value="umum">Masyarakat Umum</option>
+                                </select>
+                            </div>
+                            <br>
+                            <div class="col-md-12" id="tbAsal">
+                                <input type="hidden" class="idSeminar" value="2">
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-success" onclick="regisSeminar()"><i
+                    <button type="button" class="btn btn-success" onclick="simpanData()"><i
                             class="fa-solid fa-download edit-icon" style="color: #ffffff;"></i>Submit</button>
                 </div>
             </div>
         </div>
     </div>
+    <div class="modal fade" id="regis-seminar-3" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="table-responsive">
+                        <div class="judul">
+                            <h1 class="fs-3 text-danger" style="text-align: center;"><b>Registration</b></h1>
+                            <h2 class="fs-5" style="text-align: center; color:#223883;">{{ ('UI/UX in Digital Product')
+                                }}</h2>
+                        </div>
+                        <div class="content m-5" id="contentModal">
+                            <div class="col-md-12">
+                                <label class="fs-2 mx-4" style="color: #223883">Nama</label>
+                                <input type="text" class="textbox fs-3 text-white nama"
+                                    placeholder="Isikan Nama Lengkap" required>
+                            </div>
+                            <br>
+                            <div class="col-md-12">
+                                <label class="fs-2 mx-4" style="color: #223883">No. Hp</label>
+                                <input type="tel" class="textbox fs-3 text-white nohp"
+                                    placeholder="Isikan Nomor Hp yang aktif" required>
+                            </div>
+                            <br>
+                            <div class="col-md-12">
+                                <label class="fs-2 mx-4" style="color: #223883">Email</label>
+                                <input type="email" class="textbox fs-3 text-white email"
+                                    placeholder="Isikan Email yang aktif" required>
+                            </div>
+                            <br>
+                            <div class="col-md-12" style="color: #223883;">
+                                <label class="fs-2 mx-4">Asal</label>
+                                <select class="form-control combobox fs-3" id="asalCombobox">
+                                    <option value="" selected disabled>Pilih Asal</option>
+                                    <option value="sekolah">Sekolah</option>
+                                    <option value="instansi">Instansi</option>
+                                    <option value="umum">Masyarakat Umum</option>
+                                </select>
+                            </div>
+                            <br>
+                            <div class="col-md-12" id="tbAsal">
+                                <input type="hidden" class="idSeminar" value="3">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-success" onclick="simpanData()"><i
+                            class="fa-solid fa-download edit-icon" style="color: #ffffff;"></i>Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="regis-seminar-4" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="table-responsive">
+                        <div class="judul">
+                            <h1 class="fs-3 text-danger" style="text-align: center;"><b>Registration</b></h1>
+                            <h2 class="fs-5" style="text-align: center; color:#223883;">{{ ('Navigating the Data
+                                Jungle')
+                                }}</h2>
+                        </div>
+                        <div class="content m-5" id="contentModal">
+                            <div class="col-md-12">
+                                <label class="fs-2 mx-4" style="color: #223883">Nama</label>
+                                <input type="text" class="textbox fs-3 text-white nama"
+                                    placeholder="Isikan Nama Lengkap" required>
+                            </div>
+                            <br>
+                            <div class="col-md-12">
+                                <label class="fs-2 mx-4" style="color: #223883">No. Hp</label>
+                                <input type="tel" class="textbox fs-3 text-white nohp"
+                                    placeholder="Isikan Nomor Hp yang aktif" required>
+                            </div>
+                            <br>
+                            <div class="col-md-12">
+                                <label class="fs-2 mx-4" style="color: #223883">Email</label>
+                                <input type="email" class="textbox fs-3 text-white email"
+                                    placeholder="Isikan Email yang aktif" required>
+                            </div>
+                            <br>
+                            <div class="col-md-12" style="color: #223883;">
+                                <label class="fs-2 mx-4">Asal</label>
+                                <select class="form-control combobox fs-3" id="asalCombobox">
+                                    <option value="" selected disabled>Pilih Asal</option>
+                                    <option value="sekolah">Sekolah</option>
+                                    <option value="instansi">Instansi</option>
+                                    <option value="umum">Masyarakat Umum</option>
+                                </select>
+                            </div>
+                            <br>
+                            <div class="col-md-12" id="tbAsal">
+                                <input type="hidden" class="idSeminar" value='4'>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-success" onclick="simpanData()"><i
+                            class="fa-solid fa-download edit-icon" style="color: #ffffff;"></i>Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="regis-seminar-5" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="table-responsive">
+                        <div class="judul">
+                            <h1 class="fs-3 text-danger" style="text-align: center;"><b>Registration</b></h1>
+                            <h2 class="fs-5" style="text-align: center; color:#223883;">{{ ('Behind the Production of
+                                Gamecom Team')
+                                }}</h2>
+                        </div>
+                        <div class="content m-5" id="contentModal">
+                            <div class="col-md-12">
+                                <label class="fs-2 mx-4" style="color: #223883">Nama</label>
+                                <input type="text" class="textbox fs-3 text-white nama"
+                                    placeholder="Isikan Nama Lengkap" required>
+                            </div>
+                            <br>
+                            <div class="col-md-12">
+                                <label class="fs-2 mx-4" style="color: #223883">No. Hp</label>
+                                <input type="tel" class="textbox fs-3 text-white nohp"
+                                    placeholder="Isikan Nomor Hp yang aktif" required>
+                            </div>
+                            <br>
+                            <div class="col-md-12">
+                                <label class="fs-2 mx-4" style="color: #223883">Email</label>
+                                <input type="email" class="textbox fs-3 text-white email"
+                                    placeholder="Isikan Email yang aktif" required>
+                            </div>
+                            <br>
+                            <div class="col-md-12" style="color: #223883;">
+                                <label class="fs-2 mx-4">Asal</label>
+                                <select class="form-control combobox fs-3" id="asalCombobox">
+                                    <option value="" selected disabled>Pilih Asal</option>
+                                    <option value="sekolah">Sekolah</option>
+                                    <option value="instansi">Instansi</option>
+                                    <option value="umum">Masyarakat Umum</option>
+                                </select>
+                            </div>
+                            <br>
+                            <div class="col-md-12" id="tbAsal">
+                                <input type="hidden" class="idSeminar" value="5">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-success" onclick="simpanData()"><i
+                            class="fa-solid fa-download edit-icon" style="color: #ffffff;"></i>Submit</button>
+                </div>
+            </div>
+        </div>
+    </div> --}}
+    {{-- End of Modal --}}
 </div>
 @endsection
 
 @section('script')
 <script type="text/javascript">
-    $('#asal').on('change', function(){
-        var asal = $('#asal').val();
-        $.ajax({
-            type: 'POST',
-            url: '{{ route("event.getAsalName") }}',
-            data: {
-                '_token': '<?php echo csrf_token(); ?>',
-                'asal': asal,
-            },
-            success: function(data) {
-                if(data.message == "sekolah"){
-                    contentModal.innerHTML += `
-                        <br>
-                        <div class="col-md-12">
-                            <label class="fs-2 mx-4" style="color: #223883">Asal Sekolah</label>
-                            <input type="text" name="sekolah" class="textbox fs-3 text-white"
-                                placeholder="Isikan Nama Sekolah" required>
-                        </div>
-                    `
-                }
-                else if(data.message == "instansi"){
-                    contentModal.innerHTML += `
-                        <br>
-                        <div class="col-md-12">
-                            <label class="fs-2 mx-4" style="color: #223883">Asal Instansi</label>
-                            <input type="text" name="instansi" class="textbox fs-3 text-white"
-                                placeholder="Isikan Nama Instansi" required>
-                        </div>
-                    `
-                }
-            },
-            error: function(XMLHttpRequest, textStatus, errorThrown) {
-                alert('Terjadi Kesalahan, Hubungi Tim Panitia.\nError Message [Asal OnChange]: ' +
-                    errorThrown);
-            }
-        });
-    });
-</script>
+    asalCombobox.onchange = function () {
+        if(this.value == "sekolah"){
+            tbAsal.innerHTML = "";
+            tbAsal.innerHTML += `
+                <label class="fs-2 mx-4" style="color: #223883">Asal Sekolah</label>
+                <input type="text" class="textbox fs-3 text-white namaAsal"
+                    placeholder="Isikan Nama Sekolah" required>
+            `
+        }
+        else if(this.value == "instansi"){
+            tbAsal.innerHTML = "";
+            tbAsal.innerHTML += `
+                <label class="fs-2 mx-4" style="color: #223883">Asal Instansi</label>
+                <input type="text" class="textbox fs-3 text-white namaAsal"
+                    placeholder="Isikan Nama Instansi" required>
+            `
+        }
+        else if(this.value == "umum"){
+            tbAsal.innerHTML = "";
+        }
+    }
 
-{{-- <script type="text/javascript">
     const simpanData = () => {
-        let nama = $('namaTim').val();
-        let noHp = $('nohp').val();
-        let email = $('email').val();
-        let asal = $('asal').val();
+        let nama = $('.nama').val();
+        let noHp = $('.nohp').val();
+        let email = $('.email').val();
+        let asal = $('#asalCombobox').val();
+        let namaAsal = $('.namaAsal').val();
+        let idSeminar = $('.idSeminar').val();
+
+        alert(idSeminar);
         $.ajax({
             type: 'POST',
             url: '{{ route("registration") }}',
             data: {
-                '_token': '',
+                '_token': '<?php echo csrf_token(); ?>',
                 'nama' : nama,
                 'noHp' : noHp,
                 'email' : email,
                 'asal' : asal,
+                'namaAsal' : namaAsal,
+                'id' : idSeminar,
             },
             success: function(data) {
                 alert("Registration Completed")
+                $('regis-seminar').modal('hide');
             }
         })
     }
-    
-    $('#asal').on('change', function(){
-        var asal = $('#asal').val();
-        $.ajax({
-            type: 'POST',
-            url: '{{ route("event.getAsalName") }}',
-            data: {
-                '_token': '',
-                'asal': asal,
-            },
-            success: function(data) {
-                alert(data.message);
-            },
-            error: function(XMLHttpRequest, textStatus, errorThrown) {
-                alert('Terjadi Kesalahan, Hubungi Tim Panitia.\nError Message [Asal OnChange]: ' +
-                    errorThrown);
-            }
-        });
-    });
-</script> --}}
+</script>
 @endsection

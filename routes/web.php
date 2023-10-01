@@ -48,6 +48,5 @@ Route::get('/regismlbb', function () {
 
 Route::post('/pos',[posController::class,'simpanData'])->name('simpan.data');
 
-Route::post('/seminar-registration', [EventController::class, 'hiddenSeminar'])->name('seminar.name');
-Route::post('/seminar-registration', [EventController::class, 'simpanData'])->name('registration');
-Route::post('/seminar-registration', [EventController::class, 'getAsal'])->name('event.getAsalName');
+Route::post('/event', [EventController::class, 'hiddenSeminar'])->name('seminar.name');
+Route::post('/event', [EventController::class, 'simpanData'])->name('registration');

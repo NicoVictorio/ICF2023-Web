@@ -25,38 +25,22 @@ class EventController extends Controller
         $email = $request->get('email');
         $asal = $request->get('asal');
         $namaAsal = $request->get('namaAsal');
-        $seminarId = $request->get('seminars_id');
+        $seminarId = $request->get('id');
 
-        DB::table('pseminars')->insert(array(
+        // DB::insert('insert into pseminars (nama, noHp, email, asal, namaAsal, seminars_id) values (?, ?, ?, ?, ?, ?)', [$nama, $noHp, $email, $asal, $namaAsal, 1]);
+
+        DB::table('pseminars')->insert([
             'nama' => $nama,
             'noHp' => $noHp,
             'email'=> $email,
             'asal'=>$asal,
             'namaAsal'=>$namaAsal,
-            'seminars_id'=>$seminarId
-        ));
+            'seminars_id'=>$seminarId,
+        ]);
         
         return response()->json(array(
             'message'=>'success',
         ),200);
 
-    }
-
-    public function getAsal(Request $request)
-    {
-        $asal = $request->get('asal');
-        if ($asal === 'sekolah') {
-            return response()->json(array(
-                'message' => "sekolah",
-            ), 200);    
-        } else if ($asal === 'instansi') {
-            return response()->json(array(
-                'message' => "instansi",
-            ), 200);    
-        } else if ($asal === 'umum') {
-            return response()->json(array(
-                'message' => "umum",
-            ), 200);    
-        }
     }
 }
