@@ -25,9 +25,10 @@ class EventController extends Controller
         $email = $request->get('email');
         $asal = $request->get('asal');
         $namaAsal = $request->get('namaAsal');
-        $seminarId = $request->get('id');
+        $seminarId = $request->get('idSeminars');
 
-        // DB::insert('insert into pseminars (nama, noHp, email, asal, namaAsal, seminars_id) values (?, ?, ?, ?, ?, ?)', [$nama, $noHp, $email, $asal, $namaAsal, 1]);
+        // var_dump($nama + $noHp + $email + $asal + $namaAsal + $seminarId);
+        // DB::insert('insert into pseminars (nama, noHp, email, asal, namaAsal, seminars_id) values (?, ?, ?, ?, ?, ?)', [$nama, $noHp, $email, $asal, $namaAsal, $seminarId]);
 
         DB::table('pseminars')->insert([
             'nama' => $nama,

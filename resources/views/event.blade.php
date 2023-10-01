@@ -251,7 +251,8 @@
                     <div class="col-4 registration m-0 p-0">
                         <button
                             class="border border-white text-grey btn-regist d-flex justify-content-center align-items-center"
-                            data-bs-toggle="modal" data-bs-target="#regis-seminar-1">
+                            data-bs-toggle="modal" data-bs-target="#regis-seminar"
+                            onclick="showSeminarName('ChatGPT Allies or Enemies', 1)">
                             <b>Registration</b></button>
                     </div>
                 </div>
@@ -288,8 +289,9 @@
                     <div class="col-4 registration m-0 p-0">
                         <button
                             class="border border-white text-grey btn-regist d-flex justify-content-center align-items-center"
-                            data-bs-toggle="modal" data-bs-target="#regis-seminar-2"
-                            onclick=""><b>Registration</b></button>
+                            data-bs-toggle="modal" data-bs-target="#regis-seminar"
+                            onclick="showSeminarName('How to be the Main Character', 2)">
+                            <b>Registration</b></button>
                     </div>
                 </div>
             </div>
@@ -325,8 +327,9 @@
                     <div class="col-4 registration m-0 p-0">
                         <button
                             class="border border-white text-grey btn-regist d-flex justify-content-center align-items-center"
-                            data-bs-toggle="modal" data-bs-target="#regis-seminar-3"
-                            onclick=""><b>Registration</b></button>
+                            data-bs-toggle="modal" data-bs-target="#regis-seminar"
+                            onclick="showSeminarName('UI/UX in Digital Product', 3)">
+                            <b>Registration</b></button>
                     </div>
                 </div>
             </div>
@@ -362,8 +365,9 @@
                     <div class="col-4 registration m-0 p-0">
                         <button
                             class="border border-white text-grey btn-regist d-flex justify-content-center align-items-center"
-                            data-bs-toggle="modal" data-bs-target="#regis-seminar-4"
-                            onclick=""><b>Registration</b></button>
+                            data-bs-toggle="modal" data-bs-target="#regis-seminar"
+                            onclick="showSeminarName('Navigating the Data Jungle', 4)">
+                            <b>Registration</b></button>
                     </div>
                 </div>
             </div>
@@ -399,8 +403,9 @@
                     <div class="col-4 registration m-0 p-0">
                         <button
                             class="border border-white text-grey btn-regist d-flex justify-content-center align-items-center"
-                            data-bs-toggle="modal" data-bs-target="#regis-seminar-5"
-                            onclick=""><b>Registration</b></button>
+                            data-bs-toggle="modal" data-bs-target="#regis-seminar"
+                            onclick="showSeminarName('Behind the Production of Gamecom Team', 5)">
+                            <b>Registration</b></button>
                     </div>
                 </div>
             </div>
@@ -450,8 +455,11 @@
                             class="border border-white text-grey btn-regist d-inline-block justify-content-center align-items-center me-3"><b>Registration</b></button>
                     </div>
                     <div class="col-4 registration m-0 p-0 mr-5">
-                        <button
-                            class="border border-white text-grey btn-regist d-inline-block justify-content-center align-items-center"><b>Mechanisms</b></button>
+                        <a
+                            href="https://docs.google.com/document/d/17yYj_G8_9kg1OtlZOkFjp7ay1wKFnp4NKDOWnfHVcmU/edit?usp=sharing">
+                            <button
+                                class="border border-white text-grey btn-regist d-inline-block justify-content-center align-items-center"><b>Mechanisms</b></button>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -494,8 +502,11 @@
                             onclick="registration()"><b>Registration</b></button>
                     </div>
                     <div class="col-4 registration m-0 p-0 mr-5">
-                        <button
-                            class="border border-white text-grey btn-regist d-inline-block justify-content-center align-items-center"><b>Mechanisms</b></button>
+                        <a
+                            href="https://docs.google.com/document/d/1UNOkSqfzVBBBitEJ_O7Xm1NgG0oWmi4moLkvSvVJ1zE/edit?usp=sharing">
+                            <button
+                                class="border border-white text-grey btn-regist d-inline-block justify-content-center align-items-center"><b>Mechanisms</b></button>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -505,7 +516,7 @@
     </div>
 
     <!-- Modal -->
-    <div class="modal fade" id="regis-seminar-1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    <div class="modal fade" id="regis-seminar" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
         aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
             <div class="modal-content">
@@ -513,8 +524,7 @@
                     <div class="table-responsive">
                         <div class="judul">
                             <h1 class="fs-3 text-danger" style="text-align: center;"><b>Registration</b></h1>
-                            <h2 class="fs-5" style="text-align: center; color:#223883;">{{ ('ChatGPT Allies or Enemies')
-                                }}</h2>
+                            <h2 class="fs-5" style="text-align: center; color:#223883;" id="namaSeminar"></h2>
                         </div>
                         <div class="content m-5" id="contentModal">
                             <div class="col-md-12">
@@ -537,301 +547,98 @@
                             <br>
                             <div class="col-md-12" style="color: #223883;">
                                 <label class="fs-2 mx-4">Asal</label>
-                                <select class="form-control combobox fs-3" id="asalCombobox">
-                                    <option value="" selected disabled>Pilih Asal</option>
+                                <select class="form-control combobox fs-3 asalCombobox">
+                                    <option value="0" selected disabled>Pilih Asal</option>
                                     <option value="sekolah">Sekolah</option>
                                     <option value="instansi">Instansi</option>
                                     <option value="umum">Masyarakat Umum</option>
                                 </select>
                             </div>
                             <br>
-                            <div class="col-md-12" id="tbAsal">
+                            <div class="col-md-12 tbAsal">
                             </div>
-                            <input type="hidden" class="idSeminar" value="1">
                         </div>
                     </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <input type="hidden" id="idSeminar">
                     <button type="button" class="btn btn-success" onclick="simpanData()"><i
                             class="fa-solid fa-download edit-icon" style="color: #ffffff;"></i>Submit</button>
                 </div>
             </div>
         </div>
     </div>
-    {{-- <div class="modal fade" id="regis-seminar-2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-        aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <div class="table-responsive">
-                        <div class="judul">
-                            <h1 class="fs-3 text-danger" style="text-align: center;"><b>Registration</b></h1>
-                            <h2 class="fs-5" style="text-align: center; color:#223883;">{{ ('How to be the Main
-                                Character')
-                                }}</h2>
-                        </div>
-                        <div class="content m-5" id="contentModal">
-                            <div class="col-md-12">
-                                <label class="fs-2 mx-4" style="color: #223883">Nama</label>
-                                <input type="text" class="textbox fs-3 text-white nama"
-                                    placeholder="Isikan Nama Lengkap" required>
-                            </div>
-                            <br>
-                            <div class="col-md-12">
-                                <label class="fs-2 mx-4" style="color: #223883">No. Hp</label>
-                                <input type="tel" class="textbox fs-3 text-white nohp"
-                                    placeholder="Isikan Nomor Hp yang aktif" required>
-                            </div>
-                            <br>
-                            <div class="col-md-12">
-                                <label class="fs-2 mx-4" style="color: #223883">Email</label>
-                                <input type="email" class="textbox fs-3 text-white email"
-                                    placeholder="Isikan Email yang aktif" required>
-                            </div>
-                            <br>
-                            <div class="col-md-12" style="color: #223883;">
-                                <label class="fs-2 mx-4">Asal</label>
-                                <select class="form-control combobox fs-3" id="asalCombobox">
-                                    <option value="" selected disabled>Pilih Asal</option>
-                                    <option value="sekolah">Sekolah</option>
-                                    <option value="instansi">Instansi</option>
-                                    <option value="umum">Masyarakat Umum</option>
-                                </select>
-                            </div>
-                            <br>
-                            <div class="col-md-12" id="tbAsal">
-                                <input type="hidden" class="idSeminar" value="2">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-success" onclick="simpanData()"><i
-                            class="fa-solid fa-download edit-icon" style="color: #ffffff;"></i>Submit</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="modal fade" id="regis-seminar-3" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-        aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <div class="table-responsive">
-                        <div class="judul">
-                            <h1 class="fs-3 text-danger" style="text-align: center;"><b>Registration</b></h1>
-                            <h2 class="fs-5" style="text-align: center; color:#223883;">{{ ('UI/UX in Digital Product')
-                                }}</h2>
-                        </div>
-                        <div class="content m-5" id="contentModal">
-                            <div class="col-md-12">
-                                <label class="fs-2 mx-4" style="color: #223883">Nama</label>
-                                <input type="text" class="textbox fs-3 text-white nama"
-                                    placeholder="Isikan Nama Lengkap" required>
-                            </div>
-                            <br>
-                            <div class="col-md-12">
-                                <label class="fs-2 mx-4" style="color: #223883">No. Hp</label>
-                                <input type="tel" class="textbox fs-3 text-white nohp"
-                                    placeholder="Isikan Nomor Hp yang aktif" required>
-                            </div>
-                            <br>
-                            <div class="col-md-12">
-                                <label class="fs-2 mx-4" style="color: #223883">Email</label>
-                                <input type="email" class="textbox fs-3 text-white email"
-                                    placeholder="Isikan Email yang aktif" required>
-                            </div>
-                            <br>
-                            <div class="col-md-12" style="color: #223883;">
-                                <label class="fs-2 mx-4">Asal</label>
-                                <select class="form-control combobox fs-3" id="asalCombobox">
-                                    <option value="" selected disabled>Pilih Asal</option>
-                                    <option value="sekolah">Sekolah</option>
-                                    <option value="instansi">Instansi</option>
-                                    <option value="umum">Masyarakat Umum</option>
-                                </select>
-                            </div>
-                            <br>
-                            <div class="col-md-12" id="tbAsal">
-                                <input type="hidden" class="idSeminar" value="3">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-success" onclick="simpanData()"><i
-                            class="fa-solid fa-download edit-icon" style="color: #ffffff;"></i>Submit</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="modal fade" id="regis-seminar-4" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-        aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <div class="table-responsive">
-                        <div class="judul">
-                            <h1 class="fs-3 text-danger" style="text-align: center;"><b>Registration</b></h1>
-                            <h2 class="fs-5" style="text-align: center; color:#223883;">{{ ('Navigating the Data
-                                Jungle')
-                                }}</h2>
-                        </div>
-                        <div class="content m-5" id="contentModal">
-                            <div class="col-md-12">
-                                <label class="fs-2 mx-4" style="color: #223883">Nama</label>
-                                <input type="text" class="textbox fs-3 text-white nama"
-                                    placeholder="Isikan Nama Lengkap" required>
-                            </div>
-                            <br>
-                            <div class="col-md-12">
-                                <label class="fs-2 mx-4" style="color: #223883">No. Hp</label>
-                                <input type="tel" class="textbox fs-3 text-white nohp"
-                                    placeholder="Isikan Nomor Hp yang aktif" required>
-                            </div>
-                            <br>
-                            <div class="col-md-12">
-                                <label class="fs-2 mx-4" style="color: #223883">Email</label>
-                                <input type="email" class="textbox fs-3 text-white email"
-                                    placeholder="Isikan Email yang aktif" required>
-                            </div>
-                            <br>
-                            <div class="col-md-12" style="color: #223883;">
-                                <label class="fs-2 mx-4">Asal</label>
-                                <select class="form-control combobox fs-3" id="asalCombobox">
-                                    <option value="" selected disabled>Pilih Asal</option>
-                                    <option value="sekolah">Sekolah</option>
-                                    <option value="instansi">Instansi</option>
-                                    <option value="umum">Masyarakat Umum</option>
-                                </select>
-                            </div>
-                            <br>
-                            <div class="col-md-12" id="tbAsal">
-                                <input type="hidden" class="idSeminar" value='4'>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-success" onclick="simpanData()"><i
-                            class="fa-solid fa-download edit-icon" style="color: #ffffff;"></i>Submit</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="modal fade" id="regis-seminar-5" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-        aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <div class="table-responsive">
-                        <div class="judul">
-                            <h1 class="fs-3 text-danger" style="text-align: center;"><b>Registration</b></h1>
-                            <h2 class="fs-5" style="text-align: center; color:#223883;">{{ ('Behind the Production of
-                                Gamecom Team')
-                                }}</h2>
-                        </div>
-                        <div class="content m-5" id="contentModal">
-                            <div class="col-md-12">
-                                <label class="fs-2 mx-4" style="color: #223883">Nama</label>
-                                <input type="text" class="textbox fs-3 text-white nama"
-                                    placeholder="Isikan Nama Lengkap" required>
-                            </div>
-                            <br>
-                            <div class="col-md-12">
-                                <label class="fs-2 mx-4" style="color: #223883">No. Hp</label>
-                                <input type="tel" class="textbox fs-3 text-white nohp"
-                                    placeholder="Isikan Nomor Hp yang aktif" required>
-                            </div>
-                            <br>
-                            <div class="col-md-12">
-                                <label class="fs-2 mx-4" style="color: #223883">Email</label>
-                                <input type="email" class="textbox fs-3 text-white email"
-                                    placeholder="Isikan Email yang aktif" required>
-                            </div>
-                            <br>
-                            <div class="col-md-12" style="color: #223883;">
-                                <label class="fs-2 mx-4">Asal</label>
-                                <select class="form-control combobox fs-3" id="asalCombobox">
-                                    <option value="" selected disabled>Pilih Asal</option>
-                                    <option value="sekolah">Sekolah</option>
-                                    <option value="instansi">Instansi</option>
-                                    <option value="umum">Masyarakat Umum</option>
-                                </select>
-                            </div>
-                            <br>
-                            <div class="col-md-12" id="tbAsal">
-                                <input type="hidden" class="idSeminar" value="5">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-success" onclick="simpanData()"><i
-                            class="fa-solid fa-download edit-icon" style="color: #ffffff;"></i>Submit</button>
-                </div>
-            </div>
-        </div>
-    </div> --}}
     {{-- End of Modal --}}
 </div>
 @endsection
 
 @section('script')
 <script type="text/javascript">
-    asalCombobox.onchange = function () {
+    const showSeminarName = (name, id) => {
+        $('#namaSeminar').text(name);
+        $('#idSeminar').val(id);
+    }
+
+    $('.asalCombobox').on('change', function() {
         if(this.value == "sekolah"){
-            tbAsal.innerHTML = "";
-            tbAsal.innerHTML += `
+            $('.tbAsal').html(`
                 <label class="fs-2 mx-4" style="color: #223883">Asal Sekolah</label>
                 <input type="text" class="textbox fs-3 text-white namaAsal"
                     placeholder="Isikan Nama Sekolah" required>
-            `
+            `);
         }
         else if(this.value == "instansi"){
-            tbAsal.innerHTML = "";
-            tbAsal.innerHTML += `
+            $('.tbAsal').html(`
                 <label class="fs-2 mx-4" style="color: #223883">Asal Instansi</label>
                 <input type="text" class="textbox fs-3 text-white namaAsal"
                     placeholder="Isikan Nama Instansi" required>
-            `
+            `);
         }
         else if(this.value == "umum"){
-            tbAsal.innerHTML = "";
+            $('.tbAsal').html(``);
         }
-    }
+    });
 
     const simpanData = () => {
         let nama = $('.nama').val();
         let noHp = $('.nohp').val();
         let email = $('.email').val();
-        let asal = $('#asalCombobox').val();
-        let namaAsal = $('.namaAsal').val();
-        let idSeminar = $('.idSeminar').val();
+        let asal = $('.asalCombobox').val();
+        let namaAsal = "gaada";
+        if(asal != 'umum'){
+            namaAsal = $('.namaAsal').val();
+        }
+        let idSeminar = $('#idSeminar').val();
 
-        alert(idSeminar);
-        $.ajax({
-            type: 'POST',
-            url: '{{ route("registration") }}',
-            data: {
-                '_token': '<?php echo csrf_token(); ?>',
-                'nama' : nama,
-                'noHp' : noHp,
-                'email' : email,
-                'asal' : asal,
-                'namaAsal' : namaAsal,
-                'id' : idSeminar,
-            },
-            success: function(data) {
-                alert("Registration Completed")
-                $('regis-seminar').modal('hide');
-            }
-        })
+        if(nama=="" || noHp=="" || email=="" || asal==0 || namaAsal==""){
+            alert("Pastikan semua data telah terisi.");
+        }
+        else{
+            $.ajax({
+                type: 'POST',
+                url: '{{ route("registration") }}',
+                data: {
+                    '_token': '<?php echo csrf_token(); ?>',
+                    'nama' : nama,
+                    'noHp' : noHp,
+                    'email' : email,
+                    'asal' : asal,
+                    'namaAsal' : namaAsal,
+                    'idSeminars' : idSeminar,
+                },
+                success: function(data) {
+                    alert("Registration Completed");
+                    $('#regis-seminar').modal('hide');
+                    $('.nama').val("");
+                    $('.nohp').val("");
+                    $('.email').val("");
+                    $('.asalCombobox').val('0').change();
+                    $('.namaAsal').val("");
+                    $('.tbAsal').html(``);
+                }
+            });
+        }
     }
 </script>
 @endsection
