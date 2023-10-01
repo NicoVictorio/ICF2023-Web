@@ -617,7 +617,7 @@
         else{
             $.ajax({
                 type: 'POST',
-                url: '{{ route("registration") }}',
+                url: '{{ route("seminar.registration") }}',
                 data: {
                     '_token': '<?php echo csrf_token(); ?>',
                     'nama' : nama,
