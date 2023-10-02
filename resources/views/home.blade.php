@@ -552,7 +552,7 @@
                     <div style="margin: 10%;">
                         <h4><b>14.00-14.50</b></h4>
                         <h5>Chat GPT allies or enemies</h5>
-                        <h4><b>5.00-16.00</b></h4>
+                        <h4><b>15.00-16.00</b></h4>
                         <h5>How to be Main Character</h5>
                     </div>
                 </div>
