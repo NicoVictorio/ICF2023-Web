@@ -7,17 +7,6 @@ use Illuminate\Support\Facades\DB;
 
 class EventController extends Controller
 {
-    public function hiddenSeminar(Request $request)
-    {
-        $nama = $request->get('name');
-        $id = $request->get('id');
-
-        return response()->json(array(
-            'name' => $nama,
-            'id' => $id,
-        ), 200);
-    }
-
     public function simpanData(Request $request)
     {
         $nama = $request->get('nama');
@@ -39,6 +28,23 @@ class EventController extends Controller
             'seminars_id'=>$seminarId,
         ]);
         
+        return response()->json(array(
+            'message'=>'success',
+        ),200);
+    }
+
+    public function simpanDataLomba(Request $request)
+    {
+        $nama = $request->get('nama');
+        $noHp = $request->get('noHp');
+        $email = $request->get('email');
+
+        DB::table('pMainCharDesign')->insert([
+            'nama' => $nama,
+            'noHp' => $noHp,
+            'email'=> $email,
+        ]);
+
         return response()->json(array(
             'message'=>'success',
         ),200);

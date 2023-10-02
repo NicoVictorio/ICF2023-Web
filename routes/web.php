@@ -38,15 +38,17 @@ Route::get('/event', function() {
     return view('event');
 })->name('event');
 
+Route::get('/regismlbb', function () {
+    return view('regis-mlbb');
+})->name('regismlbb');
+
 Route::get('/pos', function () {
     return view('pos');
 });
 
-Route::get('/regismlbb', function () {
-    return view('regis-mlbb');
-});
-
 Route::post('/pos',[posController::class,'simpanData'])->name('simpan.data');
 
-Route::post('/event', [EventController::class, 'hiddenSeminar'])->name('seminar.name');
-Route::post('/event', [EventController::class, 'simpanData'])->name('seminar.registration');
+Route::post('/seminarregis', [EventController::class, 'simpanData'])->name('seminar.registration');
+Route::post('/lombaregis', [EventController::class, 'simpanDataLomba'])->name('lomba.registration');
+
+Route::post('/mlbbregis', [GameController::class, 'simpanData'])->name('mlbb.registration');

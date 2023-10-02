@@ -452,7 +452,9 @@
                 <div class="row w-100 p-5 m-0" id="btn-regist">
                     <div class="col-4 registration m-0 p-0 mr-5">
                         <button
-                            class="border border-white text-grey btn-regist d-inline-block justify-content-center align-items-center me-3"><b>Registration</b></button>
+                            class="border border-white text-grey btn-regist d-inline-block justify-content-center align-items-center me-3"
+                            data-bs-toggle="modal" data-bs-target="#regis-lomba">
+                            <b>Registration</b></button>
                     </div>
                     <div class="col-4 registration m-0 p-0 mr-5">
                         <a
@@ -497,9 +499,11 @@
                 </div>
                 <div class="row w-100 p-5 m-0" id="btn-regist">
                     <div class="col-4 registration m-0 p-0 mr-5">
-                        <button
-                            class="border border-white text-grey btn-regist d-inline-block justify-content-center align-items-center me-3"
-                            onclick="registration()"><b>Registration</b></button>
+                        <a class="nav-link" aria-current="page" href="{{ route('regismlbb') }}">
+                            <button
+                                class="border border-white text-grey btn-regist d-inline-block justify-content-center align-items-center me-3">
+                                <b>Registration</b></button>
+                        </a>
                     </div>
                     <div class="col-4 registration m-0 p-0 mr-5">
                         <a
@@ -564,6 +568,47 @@
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                     <input type="hidden" id="idSeminar">
                     <button type="button" class="btn btn-success" onclick="simpanData()"><i
+                            class="fa-solid fa-download edit-icon" style="color: #ffffff;"></i>Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="regis-lomba" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="table-responsive">
+                        <div class="judul">
+                            <h1 class="fs-3 text-danger" style="text-align: center;"><b>Registration</b></h1>
+                            <h2 class="fs-5" style="text-align: center; color:#223883;">Asset Game: Main Character Design</h2>
+                        </div>
+                        <div class="content m-5" id="contentModal">
+                            <div class="col-md-12">
+                                <label class="fs-2 mx-4" style="color: #223883">Nama</label>
+                                <input type="text" class="textbox fs-3 text-white namaLomba"
+                                    placeholder="Isikan Nama Lengkap" required>
+                            </div>
+                            <br>
+                            <div class="col-md-12">
+                                <label class="fs-2 mx-4" style="color: #223883">No. Hp</label>
+                                <input type="tel" class="textbox fs-3 text-white noHpLomba"
+                                    placeholder="Isikan Nomor Hp yang aktif" required>
+                            </div>
+                            <br>
+                            <div class="col-md-12">
+                                <label class="fs-2 mx-4" style="color: #223883">Email</label>
+                                <input type="email" class="textbox fs-3 text-white emailLomba"
+                                    placeholder="Isikan Email yang aktif" required>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <input type="hidden" id="idSeminar">
+                    <button type="button" class="btn btn-success" onclick="simpanDataLomba()"><i
                             class="fa-solid fa-download edit-icon" style="color: #ffffff;"></i>Submit</button>
                 </div>
             </div>
@@ -636,6 +681,36 @@
                     $('.asalCombobox').val('0').change();
                     $('.namaAsal').val("");
                     $('.tbAsal').html(``);
+                }
+            });
+        }
+    }
+
+    const simpanDataLomba = () => {
+        let nama = $('.namaLomba').val();
+        let noHp = $('.noHpLomba').val();
+        let email = $('.emailLomba').val();
+
+        if(nama=="" || noHp=="" || email==""){
+            alert("Pastikan semua data telah terisi.");
+        }
+        else{
+            alert(nama + noHp + email);
+            $.ajax({
+                type: 'POST',
+                url: '{{ route("lomba.registration") }}',
+                data: {
+                    '_token': '<?php echo csrf_token(); ?>',
+                    'nama' : nama,
+                    'noHp' : noHp,
+                    'email' : email,
+                },
+                success: function(data) {
+                    alert("Registration Completed");
+                    $('#regis-lomba').modal('hide');
+                    $('.namaLomba').val("");
+                    $('.noHpLomba').val("");
+                    $('.emailLomba').val("");
                 }
             });
         }
