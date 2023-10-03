@@ -1,6 +1,10 @@
 @extends('layouts.app')
 @section('content')
 <style>
+    input[type="file"] {
+        display: none;
+    }
+
     h2,
     h3 {
         color: #223883;
@@ -43,6 +47,15 @@
         font-size: 26px;
     }
 
+    .inputfile {
+        padding: 0;
+        padding-top: 15px;
+        padding-right: 40px;
+        align-items: center;
+        color: #223883;
+        font-weight: bold;
+    }
+
     @media (max-width: 1026px) {
         h2 {
             font-size: 24px;
@@ -61,6 +74,13 @@
         .min-6 {
             width: 28px;
             height: 28px;
+        }
+
+        .inputfile {
+            padding: 0;
+            padding-top: 10px;
+            padding-right: 40px;
+            align-items: center;
         }
     }
 
@@ -107,6 +127,13 @@
             width: 20px;
             height: 20px;
         }
+
+        .inputfile {
+            padding: 0;
+            padding-top: 12px;
+            padding-right: 20px;
+            align-items: center;
+        }
     }
 </style>
 
@@ -150,10 +177,15 @@
         </div>
         <div class="col-12">
             <label>Identitas KTM/KTP</label>
-            <input type="file" id="file-input" name="idKTMKetua" class="textbox fs-3 text-white" accept="image/*"
-                required>
+            <input type="file" id="file-upload" name="idKTMKetua" class="textbox fs-3 text-white" accept="image/*" required>
+            <label for="file-upload" id= "uploadfile" class="textbox fs-3 m-0 text-end inputfile">
+            <span id="filenamecoba">Choose File</span>
+            </label>
+            <!-- <label for="file-upload" class="textbox fs-3 text-white"> Choose file</label>
+            <input id="file-upload" class = "textbox fs-3 text-white" name='upload_cont_img' type="file" style="display:none;"> -->
         </div>
     </div>
+    
 
     <div class="row w-100 p-5 m-0 pb-0">
         <div class="col-4">
@@ -176,7 +208,9 @@
         </div>
         <div class="col-12">
             <label>Identitas KTM/KTP</label>
-            <input type="file" id="file" name="idKTM1" class="textbox fs-3 text-white" accept="image/*" required>
+            <input type="file" id="file-upload" name="idKTM1" class="textbox fs-3 text-white" accept="image/*" required>
+            <label for="file-upload" id="uploadfile" class="textbox fs-3 m-0 text-end inputfile">
+            <span id="filenamecoba">Choose File</span>
         </div>
     </div>
 
@@ -201,7 +235,9 @@
         </div>
         <div class="col-12">
             <label>Identitas KTM/KTP</label>
-            <input type="file" id="file" name="idKTM2" class="textbox fs-3 text-white" accept="image/*" required>
+            <input type="file" id="file-upload" name="idKTM2" class="textbox fs-3 text-white" accept="image/*" required>
+            <label for="file-upload" id= "uploadfile" class="textbox fs-3 m-0 text-end inputfile">
+            <span id="filenamecoba">Choose File</span>
         </div>
     </div>
 
@@ -226,7 +262,9 @@
         </div>
         <div class="col-12">
             <label>Identitas KTM/KTP</label>
-            <input type="file" id="file" name="idKTM3" class="textbox fs-3 text-white" accept="image/*" required>
+            <input type="file" id="file-upload" name="idKTM3" class="textbox fs-3 text-white" accept="image/*" required>
+            <label for="file-upload" id="uploadfile" class="textbox fs-3 m-0 text-end inputfile">
+            <span id="filenamecoba">Choose File</span>
         </div>
     </div>
 
@@ -250,8 +288,10 @@
             <input type="text" class="textbox fs-3 text-white idMlbb4" placeholder="Isikan ID MLBB" required>
         </div>
         <div class="col-12">
-            <label>Identitas KTM/KTP</label>
-            <input type="file" id="file" name="idKTM4" class="textbox fs-3 text-white" accept="image/*" required>
+        <label>Identitas KTM/KTP</label>
+            <input type="file" id="file-upload" name="idKTM4" class="textbox fs-3 text-white" accept="image/*" required>
+            <label for="file-upload" id="uploadfile" class="textbox fs-3 m-0 text-end inputfile">
+            <span id="filenamecoba">Choose File</span>
         </div>
     </div>
 
@@ -325,6 +365,13 @@ if (isset($_POST['btnsubmit'])) {
 ?>
 
 <script type="text/javascript">
+    $('#file-upload').change(function() {
+        // var i = $(this).prev('label').clone();
+        var file = $('#file-upload')[0].files[0].name;
+        $('#filenamecoba').remove();
+        $('#uploadfile').append("<span id='filenamecoba'>"+file+"</span>");
+        });
+
     const changeIconToMinus5 = () => {
         $('.anggota-5').html(`
             <div class="col-12">
@@ -343,7 +390,9 @@ if (isset($_POST['btnsubmit'])) {
             </div>
             <div class="col-12">
                 <label>Identitas KTM/KTP</label>
-                <input type="file" id="file" name="idKTM5" class="textbox fs-3 text-white" accept="image/*" required>
+                <input type="file" id="file-upload" name="idKTM5" class="textbox fs-3 text-white" accept="image/*" required>
+                <label for="file-upload" id="uploadfile" class="textbox fs-3 m-0 text-end inputfile">
+                <span id="filenamecoba">Choose File</span>
             </div>
             <div style="height: 30px;"></div>
         `);
@@ -395,7 +444,9 @@ if (isset($_POST['btnsubmit'])) {
             </div>
             <div class="col-12">
                 <label>Identitas KTM/KTP</label>
-                <input type="file" id="file" name="idKTM6" class="textbox fs-3 text-white" accept="image/*" required>
+                <input type="file" id="file-upload" name="idKTM6" class="textbox fs-3 text-white" accept="image/*" required>
+                <label for="file-upload" id="uploadfile" class="textbox fs-3 m-0 text-end inputfile">
+                <span id="filenamecoba">Choose File</span>
             </div>
             <div style="height: 30px;"></div>
         `);
