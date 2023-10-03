@@ -84,7 +84,6 @@
 
     .registration .btn-regist {
         border-radius: 30px;
-        display: flex;
         padding: 5px;
         width: 90%;
         height: 60px;
@@ -92,7 +91,6 @@
 
     .mechanism .btn-mechanism {
         border-radius: 30px;
-        display: flex;
         padding: 5px;
         width: 90%;
         height: 60px;
@@ -187,7 +185,7 @@
         }
 
         .container-event .seminar .seminar-cards {
-            height: 620px;
+            min-height: 620px;
         }
 
         .container-event .competition .competition-cards .label img {
@@ -195,7 +193,7 @@
         }
 
         .container-event .competition .competition-cards {
-            height: 620px;
+            min-height: 620px;
         }
 
         .spacer {
@@ -220,7 +218,7 @@
                 <h1 class="text-white m-0 p-0"><b>SEMINARS</b></h1>
             </div>
             <br><br>
-            <div class="seminar-cards">
+            <div class="seminar-cards container-lg">
                 <div class="row w-100 p-5 m-0">
                     <div class="label">
                         <div class="row">
@@ -258,7 +256,7 @@
                 </div>
             </div>
             <br><br>
-            <div class="seminar-cards">
+            <div class="seminar-cards container-lg">
                 <div class="row w-100 p-5 m-0">
                     <div class="label">
                         <div class="row">
@@ -296,7 +294,7 @@
                 </div>
             </div>
             <br><br>
-            <div class="seminar-cards">
+            <div class="seminar-cards container-lg">
                 <div class="row w-100 p-5 m-0">
                     <div class="label">
                         <div class="row">
@@ -334,7 +332,7 @@
                 </div>
             </div>
             <br><br>
-            <div class="seminar-cards">
+            <div class="seminar-cards container-lg">
                 <div class="row w-100 p-5 m-0">
                     <div class="label">
                         <div class="row">
@@ -372,7 +370,7 @@
                 </div>
             </div>
             <br><br>
-            <div class="seminar-cards">
+            <div class="seminar-cards container-lg">
                 <div class="row w-100 p-5 m-0">
                     <div class="label">
                         <div class="row">
@@ -656,7 +654,7 @@
         }
         let idSeminar = $('#idSeminar').val();
 
-        if(nama=="" || noHp=="" || email=="" || asal==0 || namaAsal==""){
+        if(nama=="" || noHp=="" || email=="" || asal!="sekolah" || asal!="instansi" || asal!="umum" || namaAsal==""){
             alert("Pastikan semua data telah terisi.");
         }
         else{

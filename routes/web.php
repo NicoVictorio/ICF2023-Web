@@ -50,5 +50,4 @@ Route::post('/pos',[posController::class,'simpanData'])->name('simpan.data');
 
 Route::post('/seminarregis', [EventController::class, 'simpanData'])->name('seminar.registration');
 Route::post('/lombaregis', [EventController::class, 'simpanDataLomba'])->name('lomba.registration');
-
-Route::post('/mlbbregis', [GameController::class, 'simpanData'])->name('mlbb.registration');
+Route::post('/mlbbregis', [EventController::class, 'simpanDataMLBB'])->name('mlbb.registration');
