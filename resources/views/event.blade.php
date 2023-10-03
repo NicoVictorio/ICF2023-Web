@@ -37,10 +37,11 @@
     .container-event .competition .competition-cards {
         position: relative;
         min-height: 10px;
-        background: transparent;
+        background: linear-gradient(to bottom right, rgba(71, 182, 255, 0.3), rgba(254, 43, 43, 0.3));
         border: 2px solid white;
         border-radius: 30px;
         backdrop-filter: blur(40px);
+        box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.1);
     }
 
     .free {
