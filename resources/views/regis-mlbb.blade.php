@@ -177,9 +177,9 @@
         </div>
         <div class="col-12">
             <label>Identitas KTM/KTP</label>
-            <input type="file" id="file-upload" name="idKTMKetua" class="textbox fs-3 text-white" accept="image/*" required>
-            <label for="file-upload" id= "uploadfile" class="textbox fs-3 m-0 text-end inputfile">
-            <span id="filenamecoba">Choose File</span>
+            <input type="file" id="file-upload1" name="idKTMKetua" class="textbox fs-3 text-white" accept="image/*" required>
+            <label for="file-upload1" id= "uploadfile1" class="textbox fs-3 m-0 text-end inputfile">
+            <span id="filenamecoba1">Choose File</span>
             </label>
             <!-- <label for="file-upload" class="textbox fs-3 text-white"> Choose file</label>
             <input id="file-upload" class = "textbox fs-3 text-white" name='upload_cont_img' type="file" style="display:none;"> -->
@@ -208,9 +208,9 @@
         </div>
         <div class="col-12">
             <label>Identitas KTM/KTP</label>
-            <input type="file" id="file-upload" name="idKTM1" class="textbox fs-3 text-white" accept="image/*" required>
-            <label for="file-upload" id="uploadfile" class="textbox fs-3 m-0 text-end inputfile">
-            <span id="filenamecoba">Choose File</span>
+            <input type="file" id="file-upload2" name="idKTM1" class="textbox fs-3 text-white" accept="image/*" required>
+            <label for="file-upload2" id="uploadfile2" class="textbox fs-3 m-0 text-end inputfile">
+            <span id="filenamecoba2">Choose File</span>
         </div>
     </div>
 
@@ -235,9 +235,9 @@
         </div>
         <div class="col-12">
             <label>Identitas KTM/KTP</label>
-            <input type="file" id="file-upload" name="idKTM2" class="textbox fs-3 text-white" accept="image/*" required>
-            <label for="file-upload" id= "uploadfile" class="textbox fs-3 m-0 text-end inputfile">
-            <span id="filenamecoba">Choose File</span>
+            <input type="file" id="file-upload3" name="idKTM2" class="textbox fs-3 text-white" accept="image/*" required>
+            <label for="file-upload3" id= "uploadfile3" class="textbox fs-3 m-0 text-end inputfile">
+            <span id="filenamecoba3">Choose File</span>
         </div>
     </div>
 
@@ -262,9 +262,9 @@
         </div>
         <div class="col-12">
             <label>Identitas KTM/KTP</label>
-            <input type="file" id="file-upload" name="idKTM3" class="textbox fs-3 text-white" accept="image/*" required>
-            <label for="file-upload" id="uploadfile" class="textbox fs-3 m-0 text-end inputfile">
-            <span id="filenamecoba">Choose File</span>
+            <input type="file" id="file-upload4" name="idKTM3" class="textbox fs-3 text-white" accept="image/*" required>
+            <label for="file-upload4" id="uploadfile4" class="textbox fs-3 m-0 text-end inputfile">
+            <span id="filenamecoba4">Choose File</span>
         </div>
     </div>
 
@@ -289,9 +289,9 @@
         </div>
         <div class="col-12">
         <label>Identitas KTM/KTP</label>
-            <input type="file" id="file-upload" name="idKTM4" class="textbox fs-3 text-white" accept="image/*" required>
-            <label for="file-upload" id="uploadfile" class="textbox fs-3 m-0 text-end inputfile">
-            <span id="filenamecoba">Choose File</span>
+            <input type="file" id="file-upload5" name="idKTM4" class="textbox fs-3 text-white" accept="image/*" required>
+            <label for="file-upload5" id="uploadfile5" class="textbox fs-3 m-0 text-end inputfile">
+            <span id="filenamecoba5">Choose File</span>
         </div>
     </div>
 
@@ -361,15 +361,59 @@ if (isset($_POST['btnsubmit'])) {
     // $destination = "../public/assets/ktmktp/seli" .$ext;
     // move_uploaded_file($filename, $destination);
 
+
+
 }
 ?>
 
 <script type="text/javascript">
-    $('#file-upload').change(function() {
+    $('#file-upload1').change(function() {
         // var i = $(this).prev('label').clone();
-        var file = $('#file-upload')[0].files[0].name;
-        $('#filenamecoba').remove();
-        $('#uploadfile').append("<span id='filenamecoba'>"+file+"</span>");
+        var file = $('#file-upload1')[0].files[0].name;
+        $('#filenamecoba1').remove();
+        $('#uploadfile1').append("<span id='filenamecoba1'>"+file+"</span>");
+        });
+
+    $('#file-upload2').change(function() {
+        // var i = $(this).prev('label').clone();
+        var file = $('#file-upload2')[0].files[0].name;
+        $('#filenamecoba2').remove();
+        $('#uploadfile2').append("<span id='filenamecoba2'>"+file+"</span>");
+        });
+
+    $('#file-upload3').change(function() {
+        // var i = $(this).prev('label').clone();
+        var file = $('#file-upload3')[0].files[0].name;
+        $('#filenamecoba3').remove();
+        $('#uploadfile3').append("<span id='filenamecoba3'>"+file+"</span>");
+        });
+
+    $('#file-upload4').change(function() {
+        // var i = $(this).prev('label').clone();
+        var file = $('#file-upload4')[0].files[0].name;
+        $('#filenamecoba4').remove();
+        $('#uploadfile4').append("<span id='filenamecoba4'>"+file+"</span>");
+        });
+
+    $('#file-upload5').change(function() {
+        // var i = $(this).prev('label').clone();
+        var file = $('#file-upload5')[0].files[0].name;
+        $('#filenamecoba5').remove();
+        $('#uploadfile5').append("<span id='filenamecoba5'>"+file+"</span>");
+        });
+
+    $('#file-upload6').change(function() {
+        // var i = $(this).prev('label').clone();
+        var file = $('#file-upload6')[0].files[0].name;
+        $('#filenamecoba6').remove();
+        $('#uploadfile6').append("<span id='filenamecoba6'>"+file+"</span>");
+        });
+
+    $('#file-upload7').change(function() {
+        // var i = $(this).prev('label').clone();
+        var file = $('#file-upload7')[0].files[0].name;
+        $('#filenamecoba7').remove();
+        $('#uploadfile7').append("<span id='filenamecoba7'>"+file+"</span>");
         });
 
     const changeIconToMinus5 = () => {
@@ -390,9 +434,9 @@ if (isset($_POST['btnsubmit'])) {
             </div>
             <div class="col-12">
                 <label>Identitas KTM/KTP</label>
-                <input type="file" id="file-upload" name="idKTM5" class="textbox fs-3 text-white" accept="image/*" required>
-                <label for="file-upload" id="uploadfile" class="textbox fs-3 m-0 text-end inputfile">
-                <span id="filenamecoba">Choose File</span>
+                <input type="file" id="file-upload6" name="idKTM5" class="textbox fs-3 text-white" accept="image/*" required>
+                <label for="file-upload6" id="uploadfile6" class="textbox fs-3 m-0 text-end inputfile">
+                <span id="filenamecoba6">Choose File</span>
             </div>
             <div style="height: 30px;"></div>
         `);
@@ -444,9 +488,9 @@ if (isset($_POST['btnsubmit'])) {
             </div>
             <div class="col-12">
                 <label>Identitas KTM/KTP</label>
-                <input type="file" id="file-upload" name="idKTM6" class="textbox fs-3 text-white" accept="image/*" required>
-                <label for="file-upload" id="uploadfile" class="textbox fs-3 m-0 text-end inputfile">
-                <span id="filenamecoba">Choose File</span>
+                <input type="file" id="file-upload7" name="idKTM6" class="textbox fs-3 text-white" accept="image/*" required>
+                <label for="file-upload7" id="uploadfile7" class="textbox fs-3 m-0 text-end inputfile">
+                <span id="filenamecoba7">Choose File</span>
             </div>
             <div style="height: 30px;"></div>
         `);
@@ -506,6 +550,8 @@ if (isset($_POST['btnsubmit'])) {
         let idMlbb4 = $('.idMlbb4').val();
         let idMlbb5 = $('.idMlbb5').val();
         let idMlbb6 = $('.idMlbb6').val();
+
+
 
         // alert(namaKetua + " " + namaKetua + " " + namaKetua + " " + namaKetua + " " + namaKetua + " " + 
         //       namaKetua + " " + namaKetua + " " + namaKetua + " " + namaKetua + " " + namaKetua + " " + 
