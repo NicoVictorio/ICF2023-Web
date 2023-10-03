@@ -38,7 +38,6 @@
         position: relative;
         min-height: 10px;
         background: linear-gradient(to bottom right, rgba(71, 182, 255, 0.3), rgba(254, 43, 43, 0.3));
-        border: 2px solid white;
         border-radius: 30px;
         backdrop-filter: blur(40px);
         box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.1);
@@ -130,6 +129,11 @@
         padding-left: 4%;
     }
 
+    .modal label {
+        font-size: 24px;
+        margin: 2px 0px 2px 20px;
+    }
+
     ::placeholder {
         color: white;
         opacity: 1;
@@ -205,6 +209,23 @@
         .mechanism .btn-mechanism {
             height: 40px;
             margin: 10px;
+        }
+
+        .textbox {
+            height: 45px;
+            padding: 20px;
+            font-size: 14px !important;
+        }
+
+        .combobox {
+            height: 45px;
+            padding: 0px 0px 0px 20px;
+            font-size: 14px !important;
+        }
+
+        .modal label {
+            font-size: 14px;
+            margin: 2px 0px 2px 20px;
         }
     }
 </style>
@@ -413,7 +434,7 @@
                 <h1 class="text-white m-0 p-0"><b>COMPETITIONS</b></h1>
             </div>
             <br><br>
-            <div class="competition-cards">
+            <div class="competition-cards container-lg">
                 <div class="row w-100 p-5 m-0">
                     <div class="label">
                         <div class="row">
@@ -461,7 +482,7 @@
                 </div>
             </div>
             <br><br>
-            <div class="competition-cards">
+            <div class="competition-cards container-lg">
                 <div class="row w-100 p-5 m-0">
                     <div class="label">
                         <div class="row">
@@ -527,25 +548,25 @@
                         </div>
                         <div class="content m-5" id="contentModal">
                             <div class="col-md-12">
-                                <label class="fs-2 mx-4" style="color: #223883">Nama</label>
+                                <label class="mx-4" style="color: #223883">Nama</label>
                                 <input type="text" class="textbox fs-3 text-white nama"
                                     placeholder="Isikan Nama Lengkap" required>
                             </div>
                             <br>
                             <div class="col-md-12">
-                                <label class="fs-2 mx-4" style="color: #223883">No. Hp</label>
+                                <label class="mx-4" style="color: #223883">No. Hp</label>
                                 <input type="tel" class="textbox fs-3 text-white nohp"
                                     placeholder="Isikan Nomor Hp yang aktif" required>
                             </div>
                             <br>
                             <div class="col-md-12">
-                                <label class="fs-2 mx-4" style="color: #223883">Email</label>
+                                <label class="mx-4" style="color: #223883">Email</label>
                                 <input type="email" class="textbox fs-3 text-white email"
                                     placeholder="Isikan Email yang aktif" required>
                             </div>
                             <br>
                             <div class="col-md-12" style="color: #223883;">
-                                <label class="fs-2 mx-4">Asal</label>
+                                <label class="mx-4">Asal</label>
                                 <select class="form-control combobox fs-3 asalCombobox">
                                     <option value="0" selected disabled>Pilih Asal</option>
                                     <option value="sekolah">Sekolah</option>
@@ -577,23 +598,24 @@
                     <div class="table-responsive">
                         <div class="judul">
                             <h1 class="fs-3 text-danger" style="text-align: center;"><b>Registration</b></h1>
-                            <h2 class="fs-5" style="text-align: center; color:#223883;">Asset Game: Main Character Design</h2>
+                            <h2 class="fs-5" style="text-align: center; color:#223883;">Asset Game: Main Character
+                                Design</h2>
                         </div>
                         <div class="content m-5" id="contentModal">
                             <div class="col-md-12">
-                                <label class="fs-2 mx-4" style="color: #223883">Nama</label>
+                                <label class="mx-4" style="color: #223883">Nama</label>
                                 <input type="text" class="textbox fs-3 text-white namaLomba"
                                     placeholder="Isikan Nama Lengkap" required>
                             </div>
                             <br>
                             <div class="col-md-12">
-                                <label class="fs-2 mx-4" style="color: #223883">No. Hp</label>
+                                <label class="mx-4" style="color: #223883">No. Hp</label>
                                 <input type="tel" class="textbox fs-3 text-white noHpLomba"
                                     placeholder="Isikan Nomor Hp yang aktif" required>
                             </div>
                             <br>
                             <div class="col-md-12">
-                                <label class="fs-2 mx-4" style="color: #223883">Email</label>
+                                <label class="mx-4" style="color: #223883">Email</label>
                                 <input type="email" class="textbox fs-3 text-white emailLomba"
                                     placeholder="Isikan Email yang aktif" required>
                             </div>
@@ -623,14 +645,14 @@
     $('.asalCombobox').on('change', function() {
         if(this.value == "sekolah"){
             $('.tbAsal').html(`
-                <label class="fs-2 mx-4" style="color: #223883">Asal Sekolah</label>
+                <label class="mx-4" style="color: #223883">Asal Sekolah</label>
                 <input type="text" class="textbox fs-3 text-white namaAsal"
                     placeholder="Isikan Nama Sekolah" required>
             `);
         }
         else if(this.value == "instansi"){
             $('.tbAsal').html(`
-                <label class="fs-2 mx-4" style="color: #223883">Asal Instansi</label>
+                <label class="mx-4" style="color: #223883">Asal Instansi</label>
                 <input type="text" class="textbox fs-3 text-white namaAsal"
                     placeholder="Isikan Nama Instansi" required>
             `);

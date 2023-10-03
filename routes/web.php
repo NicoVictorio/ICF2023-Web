@@ -42,6 +42,10 @@ Route::get('/regismlbb', function () {
     return view('regis-mlbb');
 })->name('regismlbb');
 
+Route::post('/regismlbb', function () {
+    return view('regis-mlbb');
+})->name('regismlbb.submit');
+
 Route::get('/pos', function () {
     return view('pos');
 });

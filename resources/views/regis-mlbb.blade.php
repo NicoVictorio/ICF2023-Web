@@ -137,6 +137,8 @@
     }
 </style>
 
+<form method ="POST" enctype="multipart/form-data" action ="{{ route('mlbb.registration') }}">
+    @csrf
 <div class="container-xl">
     <div class="row w-100 p-5 m-0 pb-0">
         <h1 class="text-danger text-center"><b>Registration</b></h1>
@@ -151,7 +153,7 @@
             <hr class="line w-100">
         </div>
         <div class="col-12">
-            <input type="text" class="textbox fs-3 text-white namaTim" placeholder="Isikan Nama Tim" required>
+            <input type="text" name = "namaTim" class="textbox fs-3 text-white namaTim" placeholder="Isikan Nama Tim" required>
         </div>
     </div>
 
@@ -164,16 +166,16 @@
         </div>
         <div class="col-12">
             <label>Nama</label>
-            <input type="text" class="textbox fs-3 text-white namaKetua" placeholder="Isikan Nama Lengkap" required>
+            <input type="text" name = "namaKetua" class="textbox fs-3 text-white namaKetua" placeholder="Isikan Nama Lengkap" required>
         </div>
         <div class="col-12">
             <label>No. Hp</label>
-            <input type="text" class="textbox fs-3 text-white noHpKetua" placeholder="Isikan Nomor Hp yang aktif"
+            <input type="text" name="noHpKetua" class="textbox fs-3 text-white noHpKetua" placeholder="Isikan Nomor Hp yang aktif"
                 required>
         </div>
         <div class="col-12">
             <label>ID MLBB</label>
-            <input type="text" class="textbox fs-3 text-white idMlbbKetua" placeholder="Isikan ID MLBB" required>
+            <input type="text" name="idKetua" class="textbox fs-3 text-white idMlbbKetua" placeholder="Isikan ID MLBB" required>
         </div>
         <div class="col-12">
             <label>Identitas KTM/KTP</label>
@@ -196,15 +198,15 @@
         </div>
         <div class="col-12">
             <label>Nama</label>
-            <input type="text" class="textbox fs-3 text-white nama1" placeholder="Isikan Nama Lengkap" required>
+            <input type="text" name="nama1" class="textbox fs-3 text-white nama1" placeholder="Isikan Nama Lengkap" required>
         </div>
         <div class="col-12">
             <label>No. Hp</label>
-            <input type="text" class="textbox fs-3 text-white noHp1" placeholder="Isikan Nomor Hp yang aktif" required>
+            <input type="text" name="noHp1" class="textbox fs-3 text-white noHp1" placeholder="Isikan Nomor Hp yang aktif" required>
         </div>
         <div class="col-12">
             <label>ID MLBB</label>
-            <input type="text" class="textbox fs-3 text-white idMlbb1" placeholder="Isikan ID MLBB" required>
+            <input type="text" name="id1" class="textbox fs-3 text-white idMlbb1" placeholder="Isikan ID MLBB" required>
         </div>
         <div class="col-12">
             <label>Identitas KTM/KTP</label>
@@ -223,15 +225,15 @@
         </div>
         <div class="col-12">
             <label>Nama</label>
-            <input type="text" class="textbox fs-3 text-white nama2" placeholder="Isikan Nama Lengkap" required>
+            <input type="text" name="nama2" class="textbox fs-3 text-white nama2" placeholder="Isikan Nama Lengkap" required>
         </div>
         <div class="col-12">
             <label>No. Hp</label>
-            <input type="text" class="textbox fs-3 text-white noHp2" placeholder="Isikan Nomor Hp yang aktif" required>
+            <input type="text" name="noHp2"class="textbox fs-3 text-white noHp2" placeholder="Isikan Nomor Hp yang aktif" required>
         </div>
         <div class="col-12">
             <label>ID MLBB</label>
-            <input type="text" class="textbox fs-3 text-white idMlbb2" placeholder="Isikan ID MLBB" required>
+            <input type="text" name="id2" class="textbox fs-3 text-white idMlbb2" placeholder="Isikan ID MLBB" required>
         </div>
         <div class="col-12">
             <label>Identitas KTM/KTP</label>
@@ -250,15 +252,15 @@
         </div>
         <div class="col-12">
             <label>Nama</label>
-            <input type="text" class="textbox fs-3 text-white nama3" placeholder="Isikan Nama Lengkap" required>
+            <input type="text" name="nama3" class="textbox fs-3 text-white nama3" placeholder="Isikan Nama Lengkap" required>
         </div>
         <div class="col-12">
             <label>No. Hp</label>
-            <input type="text" class="textbox fs-3 text-white noHp3" placeholder="Isikan Nomor Hp yang aktif" required>
+            <input type="text" name= "noHp3" class="textbox fs-3 text-white noHp3" placeholder="Isikan Nomor Hp yang aktif" required>
         </div>
         <div class="col-12">
             <label>ID MLBB</label>
-            <input type="text" class="textbox fs-3 text-white idMlbb3" placeholder="Isikan ID MLBB" required>
+            <input type="text"  name= "id3" class="textbox fs-3 text-white idMlbb3" placeholder="Isikan ID MLBB" required>
         </div>
         <div class="col-12">
             <label>Identitas KTM/KTP</label>
@@ -277,15 +279,15 @@
         </div>
         <div class="col-12">
             <label>Nama</label>
-            <input type="text" class="textbox fs-3 text-white nama4" placeholder="Isikan Nama Lengkap" required>
+            <input type="text" name = "nama4" class="textbox fs-3 text-white nama4" placeholder="Isikan Nama Lengkap" required>
         </div>
         <div class="col-12">
             <label>No. Hp</label>
-            <input type="text" class="textbox fs-3 text-white noHp4" placeholder="Isikan Nomor Hp yang aktif" required>
+            <input type="text"  name= "noHp4" class="textbox fs-3 text-white noHp4" placeholder="Isikan Nomor Hp yang aktif" required>
         </div>
         <div class="col-12">
             <label>ID MLBB</label>
-            <input type="text" class="textbox fs-3 text-white idMlbb4" placeholder="Isikan ID MLBB" required>
+            <input type="text"  name= "id4"class="textbox fs-3 text-white idMlbb4" placeholder="Isikan ID MLBB" required>
         </div>
         <div class="col-12">
         <label>Identitas KTM/KTP</label>
@@ -339,34 +341,28 @@
 
     <div class="row w-100 p-5 m-0">
         <div>
-            <button class="text-white btn-submit text-center" name="btnsubmit" onclick="simpanData()">Submit</button>
+            <button class="text-white btn-submit text-center" name="btnsubmit">Submit</button>
         </div>
         <div style="height: 30px;"></div>
     </div>
 </div>
+</form>
 @endsection
 
 @section('script')
 <?php
-if (isset($_POST['btnsubmit'])) {
+ if (isset($_POST['btnsubmit'])) {
     if (isset($_FILES['idKTMKetua'])) {
         $filename = $_FILES['idKTMKetua']['tmp_name'];
         $ext = pathinfo($_FILES['idKTMKetua']['name'], PATHINFO_EXTENSION);
         $destination = "../public/assets/ktmktp/seli.$ext";
-        move_uploaded_file($filename, $destination);
+        move_uploaded_file($destination, $filename);
     }
-
-    // $filename = $_FILES['idKTMKetua']['tmp_name'];
-    // $ext = pathinfo($_FILES['idKTMKetua']['tmp_name'], PATHINFO_EXTENSION);
-    // $destination = "../public/assets/ktmktp/seli" .$ext;
-    // move_uploaded_file($filename, $destination);
-
-
-
 }
 ?>
 
 <script type="text/javascript">
+    
     $('#file-upload1').change(function() {
         // var i = $(this).prev('label').clone();
         var file = $('#file-upload1')[0].files[0].name;
@@ -420,17 +416,17 @@ if (isset($_POST['btnsubmit'])) {
         $('.anggota-5').html(`
             <div class="col-12">
                 <label>Nama</label>
-                <input type="text" class="textbox fs-3 text-white nama5" placeholder="Isikan Nama Lengkap"
+                <input type="text"  name= "nama5" class="textbox fs-3 text-white nama5" placeholder="Isikan Nama Lengkap"
                     required>
             </div>
             <div class="col-12">
                 <label>No. Hp</label>
-                <input type="text" class="textbox fs-3 text-white noHp5" placeholder="Isikan Nomor Hp yang aktif"
+                <input type="text"  name= "noHp5" class="textbox fs-3 text-white noHp5" placeholder="Isikan Nomor Hp yang aktif"
                     required>
             </div>
             <div class="col-12">
                 <label>ID MLBB</label>
-                <input type="text" class="textbox fs-3 text-white idMlbb5" placeholder="Isikan ID MLBB" required>
+                <input type="text"  name= "id5" class="textbox fs-3 text-white idMlbb5" placeholder="Isikan ID MLBB" required>
             </div>
             <div class="col-12">
                 <label>Identitas KTM/KTP</label>
@@ -474,17 +470,17 @@ if (isset($_POST['btnsubmit'])) {
         $('.anggota-6').html(`
             <div class="col-12">
                 <label>Nama</label>
-                <input type="text" class="textbox fs-3 text-white nama6" placeholder="Isikan Nama Lengkap"
+                <input type="text"  name= "nama6" class="textbox fs-3 text-white nama6" placeholder="Isikan Nama Lengkap"
                     required>
             </div>
             <div class="col-12">
                 <label>No. Hp</label>
-                <input type="text" class="textbox fs-3 text-white noHp6" placeholder="Isikan Nomor Hp yang aktif"
+                <input type="text"  name= "nama6" class="textbox fs-3 text-white noHp6" placeholder="Isikan Nomor Hp yang aktif"
                     required>
             </div>
             <div class="col-12">
                 <label>ID MLBB</label>
-                <input type="text" class="textbox fs-3 text-white idMlbb6" placeholder="Isikan ID MLBB" required>
+                <input type="text"  name= "nama6" class="textbox fs-3 text-white idMlbb6" placeholder="Isikan ID MLBB" required>
             </div>
             <div class="col-12">
                 <label>Identitas KTM/KTP</label>

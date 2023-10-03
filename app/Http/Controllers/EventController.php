@@ -103,8 +103,17 @@ class EventController extends Controller
             'idMLBB6' => $id6,
         ]);
 
-        return response()->json(array(
-            'message' => 'success',
-        ), 200);
+
+        $filename1 = $_FILES['idKTMKetua']['tmp_name'];
+        $filename2 = $_FILES['idKTMKetua']['name'];
+        $ext = pathinfo($_FILES['idKTMKetua']['name'], PATHINFO_EXTENSION);
+        $destination = public_path('\assets\ktmktp');
+        move_uploaded_file($filename1,$destination."/".$filename2.'.'.$ext);
+
+        return view('regis-mlbb');
+
+        // return response()->json(array(
+        //     'message' => 'success',
+        // ), 200);
     }
 }
