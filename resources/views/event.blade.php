@@ -106,10 +106,6 @@
         height: 30px;
     }
 
-    #btn-regist {
-        padding-top: 0px !important;
-    }
-
     .spacer {
         height: 200px;
     }
@@ -496,14 +492,14 @@
                     </div>
                 </div>
                 <div class="row w-100 p-5 m-0" id="btn-regist">
-                    <div class="col-4 registration m-0 p-0 mr-5">
+                    <div class="col-5 registration m-0 p-0 mr-5">
                         <a class="nav-link" aria-current="page" href="{{ route('regismlbb') }}">
                             <button
                                 class="border border-white text-grey btn-regist d-inline-block justify-content-center align-items-center me-3">
                                 <b>Registration</b></button>
                         </a>
                     </div>
-                    <div class="col-4 registration m-0 p-0 mr-5">
+                    <div class="col-5 registration m-0 p-0 mr-5">
                         <a
                             href="https://docs.google.com/document/d/1UNOkSqfzVBBBitEJ_O7Xm1NgG0oWmi4moLkvSvVJ1zE/edit?usp=sharing">
                             <button
