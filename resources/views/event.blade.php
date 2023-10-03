@@ -242,7 +242,7 @@
                     </div>
                 </div>
                 <div class="row w-100 p-5 m-0" id="btn-regist">
-                    <div class="col-4 registration m-0 p-0">
+                    <div class="col-5 registration m-0 p-0">
                         <button
                             class="border border-white text-grey btn-regist d-flex justify-content-center align-items-center"
                             data-bs-toggle="modal" data-bs-target="#regis-seminar"
@@ -280,7 +280,7 @@
                     </div>
                 </div>
                 <div class="row w-100 p-5 m-0" id="btn-regist">
-                    <div class="col-4 registration m-0 p-0">
+                    <div class="col-5 registration m-0 p-0">
                         <button
                             class="border border-white text-grey btn-regist d-flex justify-content-center align-items-center"
                             data-bs-toggle="modal" data-bs-target="#regis-seminar"
@@ -318,7 +318,7 @@
                     </div>
                 </div>
                 <div class="row w-100 p-5 m-0" id="btn-regist">
-                    <div class="col-4 registration m-0 p-0">
+                    <div class="col-5 registration m-0 p-0">
                         <button
                             class="border border-white text-grey btn-regist d-flex justify-content-center align-items-center"
                             data-bs-toggle="modal" data-bs-target="#regis-seminar"
@@ -356,7 +356,7 @@
                     </div>
                 </div>
                 <div class="row w-100 p-5 m-0" id="btn-regist">
-                    <div class="col-4 registration m-0 p-0">
+                    <div class="col-5 registration m-0 p-0">
                         <button
                             class="border border-white text-grey btn-regist d-flex justify-content-center align-items-center"
                             data-bs-toggle="modal" data-bs-target="#regis-seminar"
@@ -394,7 +394,7 @@
                     </div>
                 </div>
                 <div class="row w-100 p-5 m-0" id="btn-regist">
-                    <div class="col-4 registration m-0 p-0">
+                    <div class="col-5 registration m-0 p-0">
                         <button
                             class="border border-white text-grey btn-regist d-flex justify-content-center align-items-center"
                             data-bs-toggle="modal" data-bs-target="#regis-seminar"
@@ -444,13 +444,13 @@
                     </div>
                 </div>
                 <div class="row w-100 p-5 m-0" id="btn-regist">
-                    <div class="col-4 registration m-0 p-0 mr-5">
+                    <div class="col-5 registration m-0 p-0 mr-5">
                         <button
                             class="border border-white text-grey btn-regist d-inline-block justify-content-center align-items-center me-3"
                             data-bs-toggle="modal" data-bs-target="#regis-lomba">
                             <b>Registration</b></button>
                     </div>
-                    <div class="col-4 registration m-0 p-0 mr-5">
+                    <div class="col-5 registration m-0 p-0 mr-5">
                         <a
                             href="https://docs.google.com/document/d/17yYj_G8_9kg1OtlZOkFjp7ay1wKFnp4NKDOWnfHVcmU/edit?usp=sharing">
                             <button
