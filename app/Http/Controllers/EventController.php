@@ -39,7 +39,7 @@ class EventController extends Controller
         $noHp = $request->get('noHp');
         $email = $request->get('email');
 
-        DB::table('pMainCharDesign')->insert([
+        DB::table('pmainchardesign')->insert([
             'nama' => $nama,
             'noHp' => $noHp,
             'email' => $email,
@@ -48,7 +48,7 @@ class EventController extends Controller
         $filename1 = $_FILES['identitasKTP']['tmp_name'];
         $filename2 = $_FILES['identitasKTP']['name'];
         $ext = pathinfo($_FILES['identitasKTP']['name'], PATHINFO_EXTENSION);
-        $destination = public_path('\assets\ktmktp');
+        $destination = public_path('/assets/ktmktp');
         move_uploaded_file($filename1,$destination."/".$filename2);
 
         return response()->json(array(
