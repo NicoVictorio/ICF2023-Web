@@ -619,7 +619,8 @@
         </div>
     </div>
 
-    <form method="POST" enctype="multipart/form-data" action="{{route('lomba.registration') }}">
+    <form method="POST" enctype="multipart/form-data" action ="{{route('lomba.registration')}}">
+        @csrf
         <div class="modal fade" id="regis-lomba" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
             aria-labelledby="staticBackdropLabel" aria-hidden="true">
             <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
@@ -665,15 +666,14 @@
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                         <input type="hidden" id="idSeminar">
-                        <button type="button" class="btn btn-success"><i class="fa-solid fa-download edit-icon"
-                                style="color: #ffffff;" onclick="simpanDataLomba()"></i>Submit</button>
+                        <button type="submit" class="btn btn-success"><i class="fa-solid fa-download edit-icon" name = "btnsubmit" style="color: #ffffff;"></i>Submit</button>
                     </div>
                 </div>
             </div>
         </div>
-    </form>
     {{-- End of Modal --}}
 </div>
+</form>
 @endsection
 <?php
  if (isset($_POST['btnsubmit'])) {
@@ -694,6 +694,7 @@
         $('#filename').remove();
         $('#uploadfile').append("<span id='filename'>"+file+"</span>");
         });
+        
     const showSeminarName = (name, id) => {
         $('#namaSeminar').text(name);
         $('#idSeminar').val(id);
