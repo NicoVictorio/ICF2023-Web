@@ -25,8 +25,8 @@
             {
                 alert("Terima kasih karena telah mengunjungi pos " + idPos + ". Tunjukan ini ke penjaga pos untuk Wheel Spin.")
             }
-            })
-        }
+        })
+    }
 </script>
 @yield('content')
 @endsection

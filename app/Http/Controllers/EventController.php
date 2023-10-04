@@ -51,10 +51,9 @@ class EventController extends Controller
         $destination = public_path('\assets\ktmktp');
         move_uploaded_file($filename1,$destination."/".$filename2);
 
-        return view('event');
-        // return response()->json(array(
-        //     'message' => 'success',
-        // ), 200);
+        return response()->json(array(
+            'message' => 'success',
+        ), 200);
     }
 
     public function simpanDataMLBB(Request $request)
@@ -114,38 +113,42 @@ class EventController extends Controller
         $filename1 = $_FILES['idKTMKetua']['tmp_name'];
         $filename2 = $_FILES['idKTMKetua']['name'];
         $ext = pathinfo($_FILES['idKTMKetua']['name'], PATHINFO_EXTENSION);
-        $destination = public_path('\assets\ktmktp');
+        $destination = public_path('assets/ktmktp');
         move_uploaded_file($filename1,$destination."/".$filename2);
 
         $filename1 = $_FILES['idKTM1']['tmp_name'];
         $filename2 = $_FILES['idKTM1']['name'];
         $ext = pathinfo($_FILES['idKTM1']['name'], PATHINFO_EXTENSION);
-        $destination = public_path('\assets\ktmktp');
+        $destination = public_path('assets/ktmktp');
         move_uploaded_file($filename1,$destination."/".$filename2);
 
         $filename1 = $_FILES['idKTM2']['tmp_name'];
         $filename2 = $_FILES['idKTM2']['name'];
         $ext = pathinfo($_FILES['idKTM2']['name'], PATHINFO_EXTENSION);
-        $destination = public_path('\assets\ktmktp');
+        $destination = public_path('assets/ktmktp');
         move_uploaded_file($filename1,$destination."/".$filename2);
 
         $filename1 = $_FILES['idKTM3']['tmp_name'];
         $filename2 = $_FILES['idKTM3']['name'];
         $ext = pathinfo($_FILES['idKTM3']['name'], PATHINFO_EXTENSION);
-        $destination = public_path('\assets\ktmktp');
+        $destination = public_path('assets/ktmktp');
         move_uploaded_file($filename1,$destination."/".$filename2);
 
         $filename1 = $_FILES['idKTM4']['tmp_name'];
         $filename2 = $_FILES['idKTM4']['name'];
         $ext = pathinfo($_FILES['idKTM4']['name'], PATHINFO_EXTENSION);
-        $destination = public_path('\assets\ktmktp');
+        $destination = public_path('assets/ktmktp');
         move_uploaded_file($filename1,$destination."/".$filename2);
 
-        // $filename1 = $_FILES['idKTM5']['tmp_name'];
-        // $filename2 = $_FILES['idKTM5']['name'];
-        // $ext = pathinfo($_FILES['idKTM5']['name'], PATHINFO_EXTENSION);
-        // $destination = public_path('\assets\ktmktp');
-        // move_uploaded_file($filename1,$destination."/".$filename2);
+        
+        if (isset($_FILES['idKTM5'])) {
+            $filename1 = $_FILES['idKTM5']['tmp_name'];
+            $filename2 = $_FILES['idKTM5']['name'];
+            $ext = pathinfo($_FILES['idKTM5']['name'], PATHINFO_EXTENSION);
+            $destination = public_path('assets/ktmktp');
+            move_uploaded_file($filename1,$destination."/".$filename2);
+        }
+        
 
         // $filename1 = $_FILES['idKTM6']['tmp_name'];
         // $filename2 = $_FILES['idKTM6']['name'];

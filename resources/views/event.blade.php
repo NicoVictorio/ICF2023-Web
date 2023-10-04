@@ -619,7 +619,7 @@
         </div>
     </div>
 
-    <form method="POST" enctype="multipart/form-data" action ="{{route('lomba.registration')}}">
+    <form method="POST" enctype="multipart/form-data" action="{{route('lomba.registration')}}">
         @csrf
         <div class="modal fade" id="regis-lomba" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
             aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -666,12 +666,13 @@
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                         <input type="hidden" id="idSeminar">
-                        <button type="submit" class="btn btn-success"><i class="fa-solid fa-download edit-icon" name = "btnsubmit" style="color: #ffffff;"></i>Submit</button>
+                        <button type="submit" class="btn btn-success"><i class="fa-solid fa-download edit-icon"
+                                name="btnsubmit" style="color: #ffffff;"></i>Submit</button>
                     </div>
                 </div>
             </div>
         </div>
-    {{-- End of Modal --}}
+        {{-- End of Modal --}}
 </div>
 </form>
 @endsection
@@ -756,38 +757,6 @@
                     $('.asalCombobox').val('0').change();
                     $('.namaAsal').val("");
                     $('.tbAsal').html(``);
-                }
-            });
-        }
-    }
-    //lagi mikirin cara simpan tolong dibaca cat besok
-
-    const simpanDataLomba = () => {
-        let nama = $('.namaLomba').val();
-        let noHp = $('.noHpLomba').val();
-        let email = $('.emailLomba').val();
-
-        alert(nama + " " + noHp + " " + email);
-        if(nama=="" || noHp=="" || email==""){
-            alert("Pastikan semua data telah terisi.");
-        }
-        else{
-            alert(nama + noHp + email);
-            $.ajax({
-                type: 'POST',
-                url: '{{ route("lomba.registration") }}',
-                data: {
-                    '_token': '<?php echo csrf_token(); ?>',
-                    'nama' : nama,
-                    'noHp' : noHp,
-                    'email' : email,
-                },
-                success: function(data) {
-                    alert("Registration Completed");
-                    $('#regis-lomba').modal('hide');
-                    $('.namaLomba').val("");
-                    $('.noHpLomba').val("");
-                    $('.emailLomba').val("");
                 }
             });
         }

@@ -9,6 +9,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('assets') }}/img/logo-icf.png">
     <title>ICF 2023</title>
 
     <!-- Scripts -->
