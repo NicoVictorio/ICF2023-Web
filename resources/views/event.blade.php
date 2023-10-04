@@ -656,7 +656,7 @@
                                     <input type="file" id="file-upload" name="identitasKTP"
                                         class="textbox fs-3 text-white" accept="image/*" required>
                                     <label for="file-upload" id="uploadfile"
-                                        class="textbox fs-3 m-0 text-end inputfile">
+                                        class="textbox fs-3 m-0 text-end inputfile" onclick="messageLomba()">
                                         <span id="filename">Choose File</span>
                                 </div>
                             </div>
@@ -720,6 +720,19 @@
             $('.tbAsal').html(``);
         }
     });
+
+    const messageLomba = () => {
+        $.ajax({
+            type: 'POST',
+            url: '{{ route("lomba.registration") }}',
+            data: {
+                '_token': '<?php echo csrf_token(); ?>',
+            },
+            success: function(data) {
+                alert("Registration Completed");
+            }
+        });
+    }
 
     const simpanData = () => {
         let nama = $('.nama').val();

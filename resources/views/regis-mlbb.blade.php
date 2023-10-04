@@ -341,7 +341,7 @@
 
     <div class="row w-100 p-5 m-0">
         <div>
-            <button class="text-white btn-submit text-center" name="btnsubmit">Submit</button>
+            <button class="text-white btn-submit text-center" name="btnsubmit" onclick="messageMlbb()">Submit</button>
         </div>
         <div style="height: 30px;"></div>
     </div>
@@ -517,6 +517,19 @@
                 <b>Anggota Tim 6</b>
             </h2>
         `);
+    }
+
+    const messageMlbb = () => {
+        $.ajax({
+            type: 'POST',
+            url: '{{ route("mlbb.registration") }}',
+            data: {
+                '_token': '<?php echo csrf_token(); ?>',
+            },
+            success: function(data) {
+                alert("Registration Completed");
+            }
+        });
     }
 </script>
 @endsection
