@@ -259,13 +259,18 @@
     }
 </style>
 <div class="container-event">
-    <div class="row w-100 p-5 m-0">
+    @if (session('status'))
+    <div class="alert alert-success text-center text-white fw-bold" role="alert">
+        {{ session('status') }}
+    </div>
+    @endif
+        <div class="row w-100 p-5 m-0">
         <div class="seminar m-0 p-0">
             <div class="judul d-flex justify-content-center">
                 <h1 class="text-white m-0 p-0"><b>SEMINARS</b></h1>
             </div>
             <br><br>
-            <div class="seminar-cards container-lg">
+            <div class="seminar-cards container-lg" id="seminar1">
                 <div class="row w-100 p-5 m-0">
                     <div class="label">
                         <div class="row">
@@ -282,7 +287,7 @@
                 </div>
                 <div class="row w-100 p-5 m-0 pt-0">
                     <div class="judul">
-                        <h1 class="text-white"><b>ChatGPT Allies or Enemies</b></h1>
+                        <h1 class="text-white"><b>ChatGPT: Ally or Enemy</b></h1>
                     </div>
                     <div class="description text-white">
                         <p>03 November 2023 || Vincentius Riandaru Prasetyo, M.Cs.</p>
@@ -303,7 +308,7 @@
                 </div>
             </div>
             <br><br>
-            <div class="seminar-cards container-lg">
+            <div class="seminar-cards container-lg" id="seminar2">
                 <div class="row w-100 p-5 m-0">
                     <div class="label">
                         <div class="row">
@@ -341,7 +346,7 @@
                 </div>
             </div>
             <br><br>
-            <div class="seminar-cards container-lg">
+            <div class="seminar-cards container-lg" id="seminar3">
                 <div class="row w-100 p-5 m-0">
                     <div class="label">
                         <div class="row">
@@ -379,7 +384,7 @@
                 </div>
             </div>
             <br><br>
-            <div class="seminar-cards container-lg">
+            <div class="seminar-cards container-lg" id="seminar4">
                 <div class="row w-100 p-5 m-0">
                     <div class="label">
                         <div class="row">
@@ -417,7 +422,7 @@
                 </div>
             </div>
             <br><br>
-            <div class="seminar-cards container-lg">
+            <div class="seminar-cards container-lg" id="seminar5">
                 <div class="row w-100 p-5 m-0">
                     <div class="label">
                         <div class="row">
@@ -720,19 +725,6 @@
             $('.tbAsal').html(``);
         }
     });
-
-    const messageLomba = () => {
-        $.ajax({
-            type: 'POST',
-            url: '{{ route("lomba.registration") }}',
-            data: {
-                '_token': '<?php echo csrf_token(); ?>',
-            },
-            success: function(data) {
-                alert("Registration Completed");
-            }
-        });
-    }
 
     const simpanData = () => {
         let nama = $('.nama').val();

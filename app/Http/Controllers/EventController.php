@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Log;
+use Nette\Utils\Html;
+use Psy\Readline\Hoa\Console;
 
 class EventController extends Controller
 {
@@ -51,9 +54,7 @@ class EventController extends Controller
         $destination = public_path('/assets/ktmktp');
         move_uploaded_file($filename1,$destination."/".$filename2);
 
-        return response()->json(array(
-            'message' => 'success',
-        ), 200);
+        return redirect()->route('event')->with('status', 'Registration Completed!');
     }
 
     public function simpanDataMLBB(Request $request)
@@ -157,15 +158,6 @@ class EventController extends Controller
             move_uploaded_file($filename1,$destination."/".$filename2);
         }
 
-        // $filename1 = $_FILES['idKTM6']['tmp_name'];
-        // $filename2 = $_FILES['idKTM6']['name'];
-        // $ext = pathinfo($_FILES['idKTM6']['name'], PATHINFO_EXTENSION);
-        // $destination = public_path('\assets\ktmktp');
-        // move_uploaded_file($filename1,$destination."/".$filename2);
-
-        return response()->json(array(
-            'message' => 'success',
-        ), 200);
-        return view('event');
+        return redirect()->route('event')->with('status', 'Registration Completed!');
     }
 }

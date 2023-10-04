@@ -167,7 +167,7 @@
             font-size: 32px;
         }
 
-        .container-others{
+        .container-others {
             padding-left: 12%;
         }
 
@@ -216,24 +216,26 @@
             border: 2px solid white;
         }
 
-        .container-bubble img, .container-bubble2 img, .container-bubble3 img {
+        .container-bubble img,
+        .container-bubble2 img,
+        .container-bubble3 img {
             display: none;
         }
 
-        .divhps{
+        .divhps {
             width: 0% !important;
         }
 
-        .container-others .row{
+        .container-others .row {
             width: 100%;
         }
 
-        .text-others{
+        .text-others {
             margin: 5% 2% 20% 2%;
             width: 120%;
         }
 
-        .text-others2{
+        .text-others2 {
             width: 120%;
         }
 
@@ -251,7 +253,7 @@
             padding: 4% !important;
         }
 
-        .background-location iframe{
+        .background-location iframe {
             height: 72% !important;
         }
 
@@ -268,11 +270,11 @@
             font-size: 10px !important;
         }
 
-        .gambarmaskot{
+        .gambarmaskot {
             margin: 20% !important;
         }
 
-        .game{
+        .game {
             padding-bottom: 10% !important;
         }
     }
@@ -375,11 +377,12 @@
                                 <h6>
                                     <font color="#E83434">Lecture UBAYA</font>
                                 </h6>
-                                <button class="more-details text-white" id="seminar1">More Detail</button>
+                                <a href="{{ route('event') }}#seminar1">
+                                    <button class="more-details text-white">More Detail</button>
+                                </a>
                             </div>
                             <img src="{{ asset('assets') }}/img/bg-card.png" class="p-0 bg-seminar">
                         </div>
-                        {{-- <div class="col-1"></div> --}}
                         <div class="col-6 p-3">
                             <div class="border foto p-3">
                                 <img src="{{ asset('assets') }}/img/vincentius.jpg" style="width:100%; height:100%;">
@@ -400,11 +403,12 @@
                                 <h6>
                                     <font color="#E83434">Illustrator at Gamecom Team</font>
                                 </h6>
-                                <button class="more-details text-white" id="seminar2">More Detail</button>
+                                <a href="{{ route('event') }}#seminar2">
+                                    <button class="more-details text-white">More Detail</button>
+                                </a>
                             </div>
                             <img src="{{ asset('assets') }}/img/bg-card.png" class="p-0 bg-seminar">
                         </div>
-                        {{-- <div class="col-1"></div> --}}
                         <div class="col-6 p-3">
                             <div class="border foto p-3">
                                 <img src="{{ asset('assets') }}/img/shania.jpg" style="width:100%; height:100%;">
@@ -429,11 +433,12 @@
                                 <h6>
                                     <font color="#E83434">Lecture UBAYA</font>
                                 </h6>
-                                <button class="more-details text-white" id="seminar3">More Detail</button>
+                                <a href="{{ route('event') }}#seminar3">
+                                    <button class="more-details text-white">More Detail</button>
+                                </a>
                             </div>
                             <img src="{{ asset('assets') }}/img/bg-card.png" class="p-0 bg-seminar">
                         </div>
-                        {{-- <div class="col-1"></div> --}}
                         <div class="col-6 p-3">
                             <div class="border foto p-3">
                                 <img src="{{ asset('assets') }}/img/lisana.jpg" style="width:100%; height:100%;">
@@ -454,11 +459,12 @@
                                 <h6>
                                     <font color="#E83434">Business Research Consultant at Patria & Co</font>
                                 </h6>
-                                <button class="more-details text-white" id="seminar4">More Detail</button>
+                                <a href="{{ route('event') }}#seminar4">
+                                    <button class="more-details text-white" id="seminar4">More Detail</button>
+                                </a>
                             </div>
                             <img src="{{ asset('assets') }}/img/bg-card.png" class="p-0 bg-seminar">
                         </div>
-                        {{-- <div class="col-1"></div> --}}
                         <div class="col-6 p-3">
                             <div class="border foto p-3">
                                 <img src="{{ asset('assets') }}/img/ahmad.jpg" style="width:100%; height:100%;">
@@ -483,11 +489,12 @@
                                 <h6>
                                     <font color="#E83434">Community Manager at Gamecom Team</font>
                                 </h6>
-                                <button class="more-details text-white" id="seminar5">More Detail</button>
+                                <a href="{{ route('event') }}#seminar5">
+                                    <button class="more-details text-white" id="seminar5">More Detail</button>
+                                </a>
                             </div>
                             <img src="{{ asset('assets') }}/img/bg-card.png" class="p-0 bg-seminar">
                         </div>
-                        {{-- <div class="col-1"></div> --}}
                         <div class="col-6 p-3">
                             <div class="border foto p-3">
                                 <img src="{{ asset('assets') }}/img/josevina.jpg" style="width:100%; height:100%;">
