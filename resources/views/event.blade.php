@@ -260,11 +260,11 @@
 </style>
 <div class="container-event">
     @if (session('status'))
-    <div class="alert alert-success text-center text-white fw-bold" role="alert">
+    <div class="alert alert-success text-center text-white bg-success fw-bold" role="alert">
         {{ session('status') }}
     </div>
     @endif
-        <div class="row w-100 p-5 m-0">
+    <div class="row w-100 p-5 m-0">
         <div class="seminar m-0 p-0">
             <div class="judul d-flex justify-content-center">
                 <h1 class="text-white m-0 p-0"><b>SEMINARS</b></h1>
@@ -302,7 +302,7 @@
                         <button
                             class="border border-white text-grey btn-regist d-flex justify-content-center align-items-center"
                             data-bs-toggle="modal" data-bs-target="#regis-seminar"
-                            onclick="showSeminarName('ChatGPT Allies or Enemies', 1)">
+                            onclick="showSeminarName('ChatGPT: Ally or Enemy', 1)">
                             <b>Registration</b></button>
                     </div>
                 </div>

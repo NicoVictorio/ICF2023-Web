@@ -369,7 +369,7 @@
                     <div class="row m-0 h-100">
                         <div class="col-6 details p-0" style="position: relative;">
                             <div class="details ps-4 pt-4">
-                                <h4><b>ChatGPT Allies or Enemies</b></h4>
+                                <h4><b>ChatGPT: Ally or Enemy</b></h4>
                                 <h5><b>Speaker:</b></h5>
                                 <h5><b>
                                         <font color="#E83434">Vincentius Riandaru Prasetyo, M.Cs.</font>
@@ -395,7 +395,7 @@
                     <div class="row m-0 h-100">
                         <div class="col-6 details p-0" style="position: relative;">
                             <div class="details ps-4 pt-4">
-                                <h4><b>How to be Main Character</b></h4>
+                                <h4><b>How to be the Main Character</b></h4>
                                 <h5><b>Speaker:</b></h5>
                                 <h5><b>
                                         <font color="#E83434">Shannia Olivia</font>
@@ -558,7 +558,7 @@
                     <h3>03 November 2023</h3>
                     <div style="margin: 10%;">
                         <h4><b>14.00-14.50</b></h4>
-                        <h5>Chat GPT allies or enemies</h5>
+                        <h5>Chat GPT: Ally or Enemy</h5>
                         <h4><b>15.00-16.00</b></h4>
                         <h5>How to be Main Character</h5>
                     </div>
