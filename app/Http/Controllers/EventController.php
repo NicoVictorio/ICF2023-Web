@@ -163,10 +163,9 @@ class EventController extends Controller
         // $destination = public_path('\assets\ktmktp');
         // move_uploaded_file($filename1,$destination."/".$filename2);
 
-        return view('regis-mlbb');
-
-        // return response()->json(array(
-        //     'message' => 'success',
-        // ), 200);
+        return response()->json(array(
+            'message' => 'success',
+        ), 200);
+        return view('event');
     }
 }
