@@ -769,7 +769,7 @@
         $('.question7').css({"background-color": "#E83434", "border-radius": "8px", "color": "white"});
 
         $('.answer7').html(`
-            <h5>Untuk pendaftaran kamu bisa melihat video tutorial youtube ini:</h5>
+            <h5>Untuk pendaftaran, kamu bisa melihat video tutorial melalui link berikut: https://drive.google.com/drive/folders/1YJGMp7iHz4K-HRvpBX_eqVZMiB_zBZOz?usp=sharing</h5>
         `);
 
         $('.answer7').css({"padding": "2%"});
