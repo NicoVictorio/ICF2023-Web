@@ -149,6 +149,13 @@ class EventController extends Controller
             move_uploaded_file($filename1,$destination."/".$filename2);
         }
         
+        if (isset($_FILES['idKTM6'])) {
+            $filename1 = $_FILES['idKTM6']['tmp_name'];
+            $filename2 = $_FILES['idKTM6']['name'];
+            $ext = pathinfo($_FILES['idKTM6']['name'], PATHINFO_EXTENSION);
+            $destination = public_path('assets/ktmktp');
+            move_uploaded_file($filename1,$destination."/".$filename2);
+        }
 
         // $filename1 = $_FILES['idKTM6']['tmp_name'];
         // $filename2 = $_FILES['idKTM6']['name'];
