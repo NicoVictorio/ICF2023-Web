@@ -546,37 +546,6 @@
         let idMlbb4 = $('.idMlbb4').val();
         let idMlbb5 = $('.idMlbb5').val();
         let idMlbb6 = $('.idMlbb6').val();
-
-
-
-        // alert(namaKetua + " " + namaKetua + " " + namaKetua + " " + namaKetua + " " + namaKetua + " " + 
-        //       namaKetua + " " + namaKetua + " " + namaKetua + " " + namaKetua + " " + namaKetua + " " + 
-        //       );
-
-        // idKTMKetua.addEventListener("change", function () {
-        //     getImgData();
-        // });
-
-        // function getImgData() {
-        //     const files = chooseFile.files[0];
-        //     if (files) {
-        //         const fileReader = new FileReader();
-        //         fileReader.readAsDataURL(files);
-        //         fileReader.addEventListener("load", function () {
-        //             imgPreview.style.display = "block";
-        //             imgPreview.innerHTML = '<img src="' + this.result + '" />';
-        //         });    
-        //     }
-        // }
-        
-        // let ktmKetua = $(this).find('idKTMKetua').text();
-        // let ktm1 = $(this).find('idKTM1').text();
-        // let ktm2 = $(this).find('idKTM2').text();
-        // let ktm3 = $(this).find('idKTM3').text();
-        // let ktm4 = $(this).find('idKTM4').text();
-        // let ktm5 = $(this).find('idKTM5').text();
-        // let ktm6 = $(this).find('idKTM6').text();
-
         
         if(namaTim=="" || namaKetua=="" || nama1=="" || nama2=="" || nama3=="" || nama4=="" || 
                           noHpKetua=="" || noHp1=="" || noHp2=="" || noHp3=="" || noHp4=="" || 

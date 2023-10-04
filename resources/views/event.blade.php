@@ -152,19 +152,19 @@
         font-weight: bold;
     }
 
-    @media (max-width:1026px) {
+    /* @media (max-width:1026px) {
         .inputfile {
             padding: 0;
             padding-top: 10px;
             padding-right: 40px;
             align-items: center;
         }
-    }
+    } */
 
     @media screen and (max-width:768px) {
         .inputfile {
             padding: 0;
-            padding-top: 12px;
+            padding-top: 4% !important;
             padding-right: 20px;
             align-items: center;
         }
@@ -597,7 +597,7 @@
                             <div class="col-md-12" style="color: #223883;">
                                 <label class="mx-4">Asal</label>
                                 <select class="form-control combobox fs-3 asalCombobox">
-                                    <option value="0" selected disabled>Pilih Asal</option>
+                                    <option value="none" selected disabled>Pilih Asal</option>
                                     <option value="sekolah">Sekolah</option>
                                     <option value="instansi">Instansi</option>
                                     <option value="umum">Masyarakat Umum</option>
@@ -619,57 +619,58 @@
         </div>
     </div>
 
-<form method = "POST" enctype="multipart/form-data" action = "{{route('lomba.registration') }}">
-    <div class="modal fade" id="regis-lomba" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-        aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <div class="table-responsive">
-                        <div class="judul">
-                            <h1 class="fs-3 text-danger" style="text-align: center;"><b>Registration</b></h1>
-                            <h2 class="fs-5" style="text-align: center; color:#223883;">Asset Game: Main Character
-                                Design</h2>
-                        </div>
-                        <div class="content m-5" id="contentModal">
-                            <div class="col-md-12">
-                                <label class="mx-4" style="color: #223883">Nama</label>
-                                <input type="text" name="nama" class="textbox fs-3 text-white namaLomba"
-                                    placeholder="Isikan Nama Lengkap" required>
+    <form method="POST" enctype="multipart/form-data" action="{{route('lomba.registration') }}">
+        <div class="modal fade" id="regis-lomba" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="table-responsive">
+                            <div class="judul">
+                                <h1 class="fs-3 text-danger" style="text-align: center;"><b>Registration</b></h1>
+                                <h2 class="fs-5" style="text-align: center; color:#223883;">Asset Game: Main Character
+                                    Design</h2>
                             </div>
-                            <br>
-                            <div class="col-md-12">
-                                <label class="mx-4" style="color: #223883">No. Hp</label>
-                                <input type="tel" name="noHp" class="textbox fs-3 text-white noHpLomba"
-                                    placeholder="Isikan Nomor Hp yang aktif" required>
-                            </div>
-                            <br>
-                            <div class="col-md-12">
-                                <label class="mx-4" style="color: #223883">Email</label>
-                                <input type="email" name='email' class="textbox fs-3 text-white emailLomba"
-                                    placeholder="Isikan Email yang aktif" required>
-                            </div>
-                            <br>
-                            <div class="col-md-12">
-                                <label class="mx-4" style="color: #223883">Identitas KTP</label>
-                                <input type="file" id="file-upload" name="identitasKTP" class="textbox fs-3 text-white"
-                                    accept="image/*" required>
-                                <label for="file-upload" id="uploadfile" class="textbox fs-3 m-0 text-end inputfile">
-                                    <span id="filename">Choose File</span>
+                            <div class="content m-5" id="contentModal">
+                                <div class="col-md-12">
+                                    <label class="mx-4" style="color: #223883">Nama</label>
+                                    <input type="text" name="nama" class="textbox fs-3 text-white namaLomba"
+                                        placeholder="Isikan Nama Lengkap" required>
+                                </div>
+                                <br>
+                                <div class="col-md-12">
+                                    <label class="mx-4" style="color: #223883">No. Hp</label>
+                                    <input type="tel" name="noHp" class="textbox fs-3 text-white noHpLomba"
+                                        placeholder="Isikan Nomor Hp yang aktif" required>
+                                </div>
+                                <br>
+                                <div class="col-md-12">
+                                    <label class="mx-4" style="color: #223883">Email</label>
+                                    <input type="email" name='email' class="textbox fs-3 text-white emailLomba"
+                                        placeholder="Isikan Email yang aktif" required>
+                                </div>
+                                <br>
+                                <div class="col-md-12">
+                                    <label class="mx-4" style="color: #223883">Identitas KTP</label>
+                                    <input type="file" id="file-upload" name="identitasKTP"
+                                        class="textbox fs-3 text-white" accept="image/*" required>
+                                    <label for="file-upload" id="uploadfile"
+                                        class="textbox fs-3 m-0 text-end inputfile">
+                                        <span id="filename">Choose File</span>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <input type="hidden" id="idSeminar">
-                    <button type="button" class="btn btn-success"><i
-                            class="fa-solid fa-download edit-icon" style="color: #ffffff;"></i>Submit</button>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <input type="hidden" id="idSeminar">
+                        <button type="button" class="btn btn-success"><i class="fa-solid fa-download edit-icon"
+                                style="color: #ffffff;" onclick="simpanDataLomba()"></i>Submit</button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
     </form>
     {{-- End of Modal --}}
 </div>
@@ -687,7 +688,7 @@
 
 @section('script')
 <script type="text/javascript">
-     $('#file-upload').change(function() {
+    $('#file-upload').change(function() {
         // var i = $(this).prev('label').clone();
         var file = $('#file-upload')[0].files[0].name;
         $('#filename').remove();
@@ -729,7 +730,7 @@
         }
         let idSeminar = $('#idSeminar').val();
 
-        if(nama=="" || noHp=="" || email=="" || asal!="sekolah" || asal!="instansi" || asal!="umum" || namaAsal==""){
+        if(nama=="" || noHp=="" || email=="" || asal==null || namaAsal==""){
             alert("Pastikan semua data telah terisi.");
         }
         else{
@@ -765,6 +766,7 @@
         let noHp = $('.noHpLomba').val();
         let email = $('.emailLomba').val();
 
+        alert(nama + " " + noHp + " " + email);
         if(nama=="" || noHp=="" || email==""){
             alert("Pastikan semua data telah terisi.");
         }
