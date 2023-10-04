@@ -656,7 +656,7 @@
                                     <input type="file" id="file-upload" name="identitasKTP"
                                         class="textbox fs-3 text-white" accept="image/*" required>
                                     <label for="file-upload" id="uploadfile"
-                                        class="textbox fs-3 m-0 text-end inputfile" onclick="messageLomba()">
+                                        class="textbox fs-3 m-0 text-end inputfile">
                                         <span id="filename">Choose File</span>
                                 </div>
                             </div>
@@ -667,7 +667,7 @@
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                         <input type="hidden" id="idSeminar">
                         <button type="submit" class="btn btn-success"><i class="fa-solid fa-download edit-icon"
-                                name="btnsubmit" style="color: #ffffff;"></i>Submit</button>
+                                name="btnsubmit" style="color: #ffffff;" onclick="messageLomba()"></i>Submit</button>
                     </div>
                 </div>
             </div>
