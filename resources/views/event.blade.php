@@ -1,6 +1,10 @@
 @extends('layouts.app')
 @section('content')
 <style>
+    input[type="file"] {
+        display: none;
+    }
+
     .description p {
         font-size: 36px;
     }
@@ -139,7 +143,32 @@
         opacity: 1;
     }
 
+    .inputfile {
+        padding: 0;
+        padding-top: 15px;
+        padding-right: 40px;
+        align-items: center;
+        color: #223883;
+        font-weight: bold;
+    }
+
+    @media (max-width:1026px) {
+        .inputfile {
+            padding: 0;
+            padding-top: 10px;
+            padding-right: 40px;
+            align-items: center;
+        }
+    }
+
     @media screen and (max-width:768px) {
+        .inputfile {
+            padding: 0;
+            padding-top: 12px;
+            padding-right: 20px;
+            align-items: center;
+        }
+
         .row {
             padding: 24px !important;
         }
@@ -590,6 +619,7 @@
         </div>
     </div>
 
+<form method = "POST" enctype="multipart/form-data" action = "{{route('lomba.registration') }}">
     <div class="modal fade" id="regis-lomba" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
         aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
@@ -604,39 +634,65 @@
                         <div class="content m-5" id="contentModal">
                             <div class="col-md-12">
                                 <label class="mx-4" style="color: #223883">Nama</label>
-                                <input type="text" class="textbox fs-3 text-white namaLomba"
+                                <input type="text" name="nama" class="textbox fs-3 text-white namaLomba"
                                     placeholder="Isikan Nama Lengkap" required>
                             </div>
                             <br>
                             <div class="col-md-12">
                                 <label class="mx-4" style="color: #223883">No. Hp</label>
-                                <input type="tel" class="textbox fs-3 text-white noHpLomba"
+                                <input type="tel" name="noHp" class="textbox fs-3 text-white noHpLomba"
                                     placeholder="Isikan Nomor Hp yang aktif" required>
                             </div>
                             <br>
                             <div class="col-md-12">
                                 <label class="mx-4" style="color: #223883">Email</label>
-                                <input type="email" class="textbox fs-3 text-white emailLomba"
+                                <input type="email" name='email' class="textbox fs-3 text-white emailLomba"
                                     placeholder="Isikan Email yang aktif" required>
+                            </div>
+                            <br>
+                            <div class="col-md-12">
+                                <label class="mx-4" style="color: #223883">Identitas KTP</label>
+                                <input type="file" id="file-upload" name="identitasKTP" class="textbox fs-3 text-white"
+                                    accept="image/*" required>
+                                <label for="file-upload" id="uploadfile" class="textbox fs-3 m-0 text-end inputfile">
+                                    <span id="filename">Choose File</span>
                             </div>
                         </div>
                     </div>
                 </div>
+
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                     <input type="hidden" id="idSeminar">
-                    <button type="button" class="btn btn-success" onclick="simpanDataLomba()"><i
+                    <button type="button" class="btn btn-success"><i
                             class="fa-solid fa-download edit-icon" style="color: #ffffff;"></i>Submit</button>
                 </div>
             </div>
         </div>
     </div>
+    </form>
     {{-- End of Modal --}}
 </div>
 @endsection
+<?php
+ if (isset($_POST['btnsubmit'])) {
+    if (isset($_FILES['identitasKTP'])) {
+        $filename = $_FILES['identitasKTP']['tmp_name'];
+        $ext = pathinfo($_FILES['identitasKTP']['name'], PATHINFO_EXTENSION);
+        $destination = "../public/assets/ktmktp/seli.$ext";
+        move_uploaded_file($destination, $filename);
+    }
+}
+?>
 
 @section('script')
 <script type="text/javascript">
+     $('#file-upload').change(function() {
+        // var i = $(this).prev('label').clone();
+        var file = $('#file-upload')[0].files[0].name;
+        $('#filename').remove();
+        $('#uploadfile').append("<span id='filename'>"+file+"</span>");
+        });
     const showSeminarName = (name, id) => {
         $('#namaSeminar').text(name);
         $('#idSeminar').val(id);
@@ -702,6 +758,7 @@
             });
         }
     }
+    //lagi mikirin cara simpan tolong dibaca cat besok
 
     const simpanDataLomba = () => {
         let nama = $('.namaLomba').val();

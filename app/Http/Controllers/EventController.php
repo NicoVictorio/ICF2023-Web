@@ -45,6 +45,12 @@ class EventController extends Controller
             'email' => $email,
         ]);
 
+        $filename1 = $_FILES['identitasKTP']['tmp_name'];
+        $filename2 = $_FILES['identitasKTP']['name'];
+        $ext = pathinfo($_FILES['identitasKTP']['name'], PATHINFO_EXTENSION);
+        $destination = public_path('\assets\ktmktp');
+        move_uploaded_file($filename1,$destination."/".$filename2);
+
         return response()->json(array(
             'message' => 'success',
         ), 200);
@@ -108,7 +114,43 @@ class EventController extends Controller
         $filename2 = $_FILES['idKTMKetua']['name'];
         $ext = pathinfo($_FILES['idKTMKetua']['name'], PATHINFO_EXTENSION);
         $destination = public_path('\assets\ktmktp');
-        move_uploaded_file($filename1,$destination."/".$filename2.'.'.$ext);
+        move_uploaded_file($filename1,$destination."/".$filename2);
+
+        $filename1 = $_FILES['idKTM1']['tmp_name'];
+        $filename2 = $_FILES['idKTM1']['name'];
+        $ext = pathinfo($_FILES['idKTM1']['name'], PATHINFO_EXTENSION);
+        $destination = public_path('\assets\ktmktp');
+        move_uploaded_file($filename1,$destination."/".$filename2);
+
+        $filename1 = $_FILES['idKTM2']['tmp_name'];
+        $filename2 = $_FILES['idKTM2']['name'];
+        $ext = pathinfo($_FILES['idKTM2']['name'], PATHINFO_EXTENSION);
+        $destination = public_path('\assets\ktmktp');
+        move_uploaded_file($filename1,$destination."/".$filename2);
+
+        $filename1 = $_FILES['idKTM3']['tmp_name'];
+        $filename2 = $_FILES['idKTM3']['name'];
+        $ext = pathinfo($_FILES['idKTM3']['name'], PATHINFO_EXTENSION);
+        $destination = public_path('\assets\ktmktp');
+        move_uploaded_file($filename1,$destination."/".$filename2);
+
+        $filename1 = $_FILES['idKTM4']['tmp_name'];
+        $filename2 = $_FILES['idKTM4']['name'];
+        $ext = pathinfo($_FILES['idKTM4']['name'], PATHINFO_EXTENSION);
+        $destination = public_path('\assets\ktmktp');
+        move_uploaded_file($filename1,$destination."/".$filename2);
+
+        // $filename1 = $_FILES['idKTM5']['tmp_name'];
+        // $filename2 = $_FILES['idKTM5']['name'];
+        // $ext = pathinfo($_FILES['idKTM5']['name'], PATHINFO_EXTENSION);
+        // $destination = public_path('\assets\ktmktp');
+        // move_uploaded_file($filename1,$destination."/".$filename2);
+
+        // $filename1 = $_FILES['idKTM6']['tmp_name'];
+        // $filename2 = $_FILES['idKTM6']['name'];
+        // $ext = pathinfo($_FILES['idKTM6']['name'], PATHINFO_EXTENSION);
+        // $destination = public_path('\assets\ktmktp');
+        // move_uploaded_file($filename1,$destination."/".$filename2);
 
         return view('regis-mlbb');
 

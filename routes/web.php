@@ -38,6 +38,10 @@ Route::get('/event', function() {
     return view('event');
 })->name('event');
 
+Route::post('/event', function() {
+    return view('event');
+})->name('event.submit');
+
 Route::get('/regismlbb', function () {
     return view('regis-mlbb');
 })->name('regismlbb');
