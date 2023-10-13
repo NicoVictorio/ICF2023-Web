@@ -50,11 +50,8 @@ Route::post('/regismlbb', function () {
     return view('regis-mlbb');
 })->name('regismlbb.submit');
 
-Route::get('/pos', function () {
-    return view('pos');
-});
-
-Route::post('/pos',[posController::class,'simpanData'])->name('simpan.data');
+Route::post('/simpandata',[posController::class,'simpanData'])->name('simpan.data');
+Route::get('/pos/{id}',[posController::class,'index'])->name('pos');
 
 Route::post('/seminarregis', [EventController::class, 'simpanData'])->name('seminar.registration');
 Route::post('/lombaregis', [EventController::class, 'simpanDataLomba'])->name('lomba.registration');
