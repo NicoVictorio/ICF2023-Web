@@ -495,7 +495,7 @@
                         <p>03 November 2023</p>
                         <p>Kompetisi "Asset Game: Main Character Design" adalah lomba ICF 2023 untuk membuat sebuah
                             asset game orisinil berupa karakter utama. Selain karakter utama, terdapat beberapa alat
-                            dukung karakter yang digambar atau asset seperti pedang, sihir, dan lain-lain.  Untuk
+                            dukung karakter yang digambar atau asset seperti pedang, sihir, dan lain-lain. Untuk
                             informasi lebih lanjut terdapat di mechanisms.</p>
                     </div>
                 </div>
@@ -560,6 +560,48 @@
                             href="https://docs.google.com/document/d/1UNOkSqfzVBBBitEJ_O7Xm1NgG0oWmi4moLkvSvVJ1zE/edit?usp=sharing">
                             <button
                                 class="border border-white text-grey btn-regist d-inline-block justify-content-center align-items-center"><b>Mechanisms</b></button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <br><br>
+            <div class="competition-cards container-lg">
+                <div class="row w-100 p-5 m-0">
+                    <div class="label">
+                        <div class="row">
+                            <div class="col-md-1 free">
+                                <img src="{{ asset('assets') }}/img/free.png">
+                                <h6 class="m-0" style="color: white;">Free</h6>
+                            </div>
+                            <div class="col-md-2 certificate">
+                                <img src="{{ asset('assets') }}/img/certificate.png">
+                                <h6 class="m-0" style="color: white;">E-Certificate</h6>
+                            </div>
+                            <div class="col-md-2 rewards">
+                                <img src="{{ asset('assets') }}/img/rewards.png">
+                                <h6 class="m-0" style="color: white;">Rewards</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row w-100 p-5 m-0 pt-0">
+                    <div class="judul">
+                        <h1 class="text-white"><b>Creative Programming and Design</b></h1>
+                    </div>
+                    <div class="description text-white">
+                        <p>29 Oktober 2023</p>
+                        <p>Creative Programming and Design adalah ajang lomba yang terdiri dari Lomba Game Programming (C#) dan Lomba Figma: Mobile Game UI. 
+                            Dalam Lomba Game Programming, peserta berfokus pada pengembangan permainan menggunakan bahasa pemrograman C#. 
+                            Sementara itu, Lomba Figma: Mobile Game UI menitikberatkan pada desain antarmuka pengguna yang kreatif dan menarik untuk permainan mobile menggunakan aplikasi Figma.
+                            Untuk informasi lebih lanjut klik tombol more detail.</p>
+                    </div>
+                </div>
+                <div class="row w-100 p-5 m-0" id="btn-regist">
+                    <div class="col-5 registration m-0 p-0 mr-5">
+                        <a
+                            href="https://if.ubaya.ac.id/index.php/artikel/Berita/preview/343">
+                            <button
+                                class="border border-white text-grey btn-regist d-inline-block justify-content-center align-items-center"><b>More Detail</b></button>
                         </a>
                     </div>
                 </div>
