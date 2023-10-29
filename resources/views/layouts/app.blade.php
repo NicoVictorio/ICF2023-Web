@@ -179,9 +179,6 @@
                             <a class="nav-link" aria-current="page" href="{{ route('map') }}">Map</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="{{ route('treasure') }}">Treasure</a>
-                        </li>
-                        <li class="nav-item">
                             <a class="nav-link" aria-current="page" href="{{ route('event') }}">Event</a>
                         </li>
                     </ul>
