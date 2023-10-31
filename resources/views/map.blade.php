@@ -56,20 +56,22 @@
     .stages {
         border: 1px solid #E83434;
         border-radius: 10px;
-        height: 120px;
+        height: 140px;
+        margin-bottom: 20px;
     }
 
     .duduk {
         border: 1px solid #E83434;
         background: #E83434;
         border-radius: 10px;
-        height: 120px;
+        height: 140px;
+        margin-bottom: 20px;
     }
 
     .vr-expo {
         border: 1px solid #5CABDF;
         border-radius: 10px;
-        height: 60px;
+        height: 70px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -79,21 +81,50 @@
         border: 1px solid #5CABDF;
         background: #5CABDF;
         border-radius: 10px;
-        height: 60px;
+        height: 70px;
     }
 
     .ta {
         border: 1px solid black;
         border-radius: 10px;
         height: 50px;
+        text-align: center;
     }
 
     .bdg {
         border: 1px solid #5CABDF;
         border-radius: 10px;
         height: 100px;
+        margin: 30px 0px;
+        text-align: center;
+        color: #5CABDF;
+    }
+
+    .photobooth {
+        border: 1px solid #E83434;
+        border-radius: 10px;
+        height: 50px;
+        color: #E83434;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .gerbang {
+        border: 1px solid #E83434;
+        border-radius: 10px;
+        height: 50px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .box {
+        border: 2px solid rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        width: 100%;
+        margin-bottom: 3% !important;
     }
 </style>
+
 <!-- <div class="container-map w-100">
     <div class="text-top">
         <h1 class="text-white m-0">COMING</h1>
@@ -275,6 +306,11 @@
                             <h1><b>BOARD GAME</b></h1>
                         </div>
                     </div>
+                    <div class="row">
+                        <div class="col-12 photobooth">
+                            <h4><b>PHOTOBOOTH</b></h4>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-3">
                     <div class="row">
@@ -345,7 +381,69 @@
                     </div>
                 </div>
             </div>
+            <div class="row">
+                <div class="col-2">
+
+                </div>
+                <div class="col-8 gerbang">
+                    <h4><b>GAPURA/GERBANG PINTU MASUK TA</b></h4>
+                </div>
+                <div class="col-2">
+
+                </div>
+            </div>
+        </div>
+        <div class="row p-0 m-0 box">
+            <div class="row p-3 m-0 question1">
+                <div class="col-11">
+                    <h4>Apa itu ICF 2023?</h4>
+                </div>
+                <div class="col-1 p-0 text-center container-arrow1" onclick="q1()">
+                    <div class="arrow1">
+                        <img src="{{ asset('assets') }}/img/btnSegitigaBawah.png" style="height: 26px; width: 36px;">
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 answer1">
+            </div>
         </div>
     </div>
 </div>
+@endsection
+
+@section('script')
+<script type="text/javascript">
+    const q1 = () => {
+        $('.question1').css({ "background-color": "#E83434", "border-radius": "8px", "color": "white" });
+
+        $('.answer1').html(`
+            <h5>ICF kepanjangan dari Informatics Creative Festival merupakan festival yang memamerkan hasil karya Tugas
+                Akhir mahasiswa/i Teknik Informatika Universitas Surabaya.</h5>
+        `);
+
+        $('.answer1').css({ "padding": "2%" });
+
+        $('.arrow1').html(`
+            <img src="{{ asset('assets') }}/img/btnSegitigaAtas.png" style="height: 26px; width: 36px;">
+        `);
+
+        $('.container-arrow1').removeAttr("onclick");
+        $('.container-arrow1').attr("onclick", "c1()");
+    }
+
+    const c1 = () => {
+        $('.question1').css({ "background-color": "transparent", "color": "#212529" });
+
+        $('.answer1').html(``);
+
+        $('.answer1').css({ "padding": "0%" });
+
+        $('.arrow1').html(`
+            <img src="{{ asset('assets') }}/img/btnSegitigaBawah.png" style="height: 26px; width: 36px;">
+        `);
+
+        $('.container-arrow1').removeAttr("onclick");
+        $('.container-arrow1').attr("onclick", "q1()");
+    }
+</script>
 @endsection
