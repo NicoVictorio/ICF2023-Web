@@ -95,14 +95,14 @@
     }
 
     .bdg {
-        border: 1px solid #5CABDF;
+        border: 2px solid #5CABDF;
         height: 80px;
         width: 80%;
         color: #5CABDF;
     }
 
     .gerbang {
-        border: 1px solid #E83434;
+        border: 2px solid #E83434;
         height: 190px;
         margin: 2px;
     }
@@ -125,6 +125,11 @@
         margin: 0px;
         padding: 0px;
         text-align: center;
+    }
+
+    h4 {
+        font-weight: bold;
+        margin: 0px;
     }
 </style>
 
@@ -436,7 +441,7 @@
 
         $('.answer1').html(``);
 
-        $('css({ "padding": "0%" });
+        $('.answer1').css({ "padding": "0%" });
 
         $('.arrow1').html(`
             <img src="{{ asset('assets') }}/img/btnSegitigaBawah.png" style="height: 26px; width: 36px;">
