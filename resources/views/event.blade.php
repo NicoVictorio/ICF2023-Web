@@ -299,11 +299,9 @@
                 </div>
                 <div class="row w-100 p-5 m-0" id="btn-regist">
                     <div class="col-5 registration m-0 p-0">
-                        <button
-                            class="border border-white text-grey btn-regist d-flex justify-content-center align-items-center"
-                            data-bs-toggle="modal" data-bs-target="#regis-seminar"
-                            onclick="showSeminarName('ChatGPT: Ally or Enemy', 1)">
-                            <b>Registration</b></button>
+                        <button disabled
+                            class="border border-white text-grey btn-regist d-flex justify-content-center align-items-center">
+                            <b>Registration Closed</b></button>
                     </div>
                 </div>
             </div>
@@ -375,11 +373,9 @@
                 </div>
                 <div class="row w-100 p-5 m-0" id="btn-regist">
                     <div class="col-5 registration m-0 p-0">
-                        <button
-                            class="border border-white text-grey btn-regist d-flex justify-content-center align-items-center"
-                            data-bs-toggle="modal" data-bs-target="#regis-seminar"
-                            onclick="showSeminarName('UI/UX in Digital Product', 3)">
-                            <b>Registration</b></button>
+                        <button disabled
+                            class="border border-white text-grey btn-regist d-flex justify-content-center align-items-center">
+                            <b>Registration Closed</b></button>
                     </div>
                 </div>
             </div>
@@ -413,11 +409,9 @@
                 </div>
                 <div class="row w-100 p-5 m-0" id="btn-regist">
                     <div class="col-5 registration m-0 p-0">
-                        <button
-                            class="border border-white text-grey btn-regist d-flex justify-content-center align-items-center"
-                            data-bs-toggle="modal" data-bs-target="#regis-seminar"
-                            onclick="showSeminarName('Navigating the Data Jungle', 4)">
-                            <b>Registration</b></button>
+                        <button disabled
+                            class="border border-white text-grey btn-regist d-flex justify-content-center align-items-center">
+                            <b>Registration Closed</b></button>
                     </div>
                 </div>
             </div>
@@ -501,10 +495,9 @@
                 </div>
                 <div class="row w-100 p-5 m-0" id="btn-regist">
                     <div class="col-5 registration m-0 p-0 mr-5">
-                        <button
-                            class="border border-white text-grey btn-regist d-inline-block justify-content-center align-items-center me-3"
-                            data-bs-toggle="modal" data-bs-target="#regis-lomba">
-                            <b>Registration</b></button>
+                        <button disabled
+                            class="border border-white text-grey btn-regist d-inline-block justify-content-center align-items-center me-3">
+                            <b>Registration Closed</b></button>
                     </div>
                     <div class="col-5 registration m-0 p-0 mr-5">
                         <a

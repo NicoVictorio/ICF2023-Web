@@ -125,7 +125,7 @@
     }
 </style>
 
-<!-- <div class="container-map w-100">
+<div class="container-map w-100">
     <div class="text-top">
         <h1 class="text-white m-0">COMING</h1>
         <h1 class="text-white m-0">SOON</h1>
@@ -137,9 +137,9 @@
         <h1 class="text-white m-0 d-flex justify-content-end">COMING</h1>
         <h1 class="text-white m-0 d-flex justify-content-end">SOON</h1>    
     </div>
-</div> -->
+</div>
 
-<div class="container-xl">
+<!-- <div class="container-xl">
     <div class="row">
         <div class="col-12">
             <h1 class="text-center p-5"><b>PETA TREASURE</b></h1>
@@ -147,7 +147,7 @@
     </div>
     <div class="row">
         <div class="col-4">
-            <!-- area mini games -->
+            area mini games
         </div>
         <div class="col-7">
             <div class="row">
@@ -408,11 +408,11 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 @endsection
 
 @section('script')
-<script type="text/javascript">
+<!-- <script type="text/javascript">
     const q1 = () => {
         $('.question1').css({ "background-color": "#E83434", "border-radius": "8px", "color": "white" });
 
@@ -445,5 +445,5 @@
         $('.container-arrow1').removeAttr("onclick");
         $('.container-arrow1').attr("onclick", "q1()");
     }
-</script>
+</script> -->
 @endsection
