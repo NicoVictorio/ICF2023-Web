@@ -17,20 +17,6 @@
         font-size: 125px;
     }
 
-    @media screen and (max-width:768px) {
-        .container-map h1 {
-            font-size: 35px;
-        }
-
-        .container-map .text-top {
-            padding: 5% 0 0 3%;
-        }
-
-        .container-map .text-bottom {
-            padding: 0 5% 5% 0;
-        }
-    }
-
     .container-map .text-top {
         padding: 2% 0 0 3%;
     }
@@ -48,10 +34,6 @@
     .container-map .maskot img {
         width: 30vw;
     }
-
-    /* .row {
-        border: 1px solid black;
-    } */
 
     .stages {
         border: 2px solid #E83434;
@@ -110,8 +92,10 @@
     .box {
         border: 2px solid rgba(0, 0, 0, 0.1);
         border-radius: 10px;
-        width: 100%;
+        width: 96%;
         margin-bottom: 3% !important;
+        margin-right: 2% !important;
+        margin-left: 2% !important;
     }
 
     .stages,
@@ -121,7 +105,7 @@
     .ta,
     .vr-expo,
     .bdg,
-    .gerbang {
+    .gerbang, .minigame {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -139,6 +123,143 @@
     h4 {
         font-weight: bold;
         margin: 0px;
+    }
+
+    .ta a:link {
+        color: black;
+        text-decoration: none;
+    }
+
+    .ta a:hover {
+        color: #5CABDF;
+        text-decoration: none;
+    }
+
+    .ta a:visited {
+        color: black;
+        text-decoration: none;
+    }
+
+    @media screen and (max-width:1120px) {
+        h6 {
+            font-size: 14px;
+        }
+    }
+
+    @media screen and (max-width:1000px) {
+        h1 {
+            font-size: 28px;
+        }
+
+        h2 {
+            font-size: 24px;
+        }
+
+        h6 {
+            font-size: 12px;
+        }
+    }
+
+    @media screen and (max-width:840px) {
+        h6 {
+            font-size: 10px;
+        }
+    }
+
+    @media screen and (max-width:768px) {
+        .container-map h1 {
+            font-size: 35px;
+        }
+
+        .container-map .text-top {
+            padding: 5% 0 0 3%;
+        }
+
+        .container-map .text-bottom {
+            padding: 0 5% 5% 0;
+        }
+
+        .stages {
+            height: 70px;
+            margin-bottom: 10px;
+        }
+
+        .duduk {
+            height: 70px;
+            margin-bottom: 15px;
+        }
+
+        .mpr-booth {
+            height: 33px;
+        }
+
+        .reg {
+            height: 33px;
+        }
+
+        .reg h6{
+            font-size: 6px;
+        }
+
+        .ta {
+            height: 30px;
+            border: 1px solid black;
+        }
+
+        .vr-expo {
+            border: 1px solid #5CABDF;
+            height: 30px;
+            transform: translateX(0%);
+        }
+
+        .vr-expo2 {
+            transform: translateX(95%);
+        }
+
+        .bdg {
+            height: 60px;
+        }
+
+        .gerbang {
+            height: 95px;
+            border: 1px solid #E83434;
+        }
+
+        .minigame img{
+            height: 80% !important;
+            width: 90% !important;
+        }
+
+        .ta-atas{
+            transform: translateX(-5%) !important;
+        }
+
+        .ta-bawah{
+            transform: translateX(0.5%) !important;
+        }
+
+        h1 {
+            font-size: 22px;
+        }
+
+        h2 {
+            font-size: 14px;
+        }
+
+        h4 {
+            font-size: 16px;
+            margin: 0px;
+        }
+
+        h5 {
+            font-size: 14px;
+            padding: 0% 3%;
+            margin: 0%;
+        }
+
+        h6 {
+            font-size: 8px;
+        }
     }
 </style>
 
@@ -164,8 +285,8 @@
     </div>
     <div class="row">
         <div class="col-4">
-            <div class="row">
-                <img src="{{ asset('assets') }}/img/areaminigames.png" style="height: 50%; width: 60%;">
+            <div class="row minigame">
+                <img src="{{ asset('assets') }}/img/areaminigames.png" style="height: 60%; width: 70%;">
             </div>
         </div>
         <div class="col-7">
@@ -210,11 +331,11 @@
 
         </div>
         <div class="col-9">
-            <div class="row" style="transform: translateX(-2%); margin-bottom: 20px;">
+            <div class="row ta-atas" style="transform: translateX(-2%); margin-bottom: 15px;">
                 <div class="col-1">
 
                 </div>
-                <div class="col-1 vr-expo">
+                <div class="col-1 vr-expo vr-expo2">
                     <h6><b>VR EXPO</b></h6>
                 </div>
                 <div class="col-1">
@@ -385,7 +506,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row" style="transform: translateX(3%);">
+            <div class="row ta-bawah" style="transform: translateX(3%);">
                 <div class="col-2">
                 </div>
                 <div class="col-1 ta">

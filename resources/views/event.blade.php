@@ -335,11 +335,9 @@
                 </div>
                 <div class="row w-100 p-5 m-0" id="btn-regist">
                     <div class="col-5 registration m-0 p-0">
-                        <button
-                            class="border border-white text-grey btn-regist d-flex justify-content-center align-items-center"
-                            data-bs-toggle="modal" data-bs-target="#regis-seminar"
-                            onclick="showSeminarName('How to be the Main Character', 2)">
-                            <b>Registration</b></button>
+                        <button disabled
+                            class="border border-white text-grey btn-regist d-flex justify-content-center align-items-center">
+                            <b>Registration Closed</b></button>
                     </div>
                 </div>
             </div>
@@ -445,11 +443,9 @@
                 </div>
                 <div class="row w-100 p-5 m-0" id="btn-regist">
                     <div class="col-5 registration m-0 p-0">
-                        <button
-                            class="border border-white text-grey btn-regist d-flex justify-content-center align-items-center"
-                            data-bs-toggle="modal" data-bs-target="#regis-seminar"
-                            onclick="showSeminarName('Behind the Production of Gamecom Team', 5)">
-                            <b>Registration</b></button>
+                        <button disabled
+                            class="border border-white text-grey btn-regist d-flex justify-content-center align-items-center">
+                            <b>Registration Closed</b></button>
                     </div>
                 </div>
             </div>
